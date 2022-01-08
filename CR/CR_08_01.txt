@@ -1,0 +1,32 @@
+
+Fecha de reunión : Sábado 08/01/2022
+
+
+Notas :
+
+- Para el 23 de abril (o la feria del libro en Perú), se deberá presentar una primera demo del sitio web funcional :
+    * El sitio deberá contener el mapa con al menos 5 escritoras peruanas, la página 'Escritoras del Mapa', página 'contáctanos' y los links a Facebook e Instagram.
+- Se quiere que haya bastante afluencia de gente en el sitio, que sea atractivo e informativo, que la gente pueda encontrar eventos, novedades.
+
+- Opcional para el 23 de abril : 
+    * La página 'Eventos' y la interface Administrador que permita actualizar los datos del sitio web sin necesidad de modificar el código directamente.
+  
+
+
+
+Preguntas/Observaciones :
+
+- URL del sitio web (.com.pe ?)
+- Listas de prioridades para la feria del libros y el proyecto final, que se espera : qué funcionalidades ? Interface administrador ?  version web, tablet, movil ?
+- Constancia o certificado de prestación de servicios para cada uno que contenga (diferente fecha de inicio/fin, duración del proyecto, nombres, firma, sello etc)
+- Contrato con la librería, que medio de pago, fecha de pago ?
+
+
+
+Acciones para la proxima reunion :
+
+ - Crear base de datos MYSQL
+ - Integrar el mapa al sitio web
+ - Continuar con lel frontend (mujeres del mapa y eventos/descuentos), agregar la barra de filtros
+ - Integrar la base de datos con NodeJs
+ 
