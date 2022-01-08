@@ -27,6 +27,6 @@ Acciones para la proxima reunion :
 
  - Crear base de datos MYSQL
  - Integrar el mapa al sitio web
- - Continuar con lel frontend (mujeres del mapa y eventos/descuentos), agregar la barra de filtros
+ - Continuar con el frontend (mujeres del mapa y eventos/descuentos), agregar la barra de filtros
  - Integrar la base de datos con NodeJs
  
