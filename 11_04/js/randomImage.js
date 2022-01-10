@@ -1,4 +1,4 @@
-//Get #pageContent element
+/*//Get #pageContent element
 let pageContent = document.getElementById('pageContent');
 //get #pictInfo div
 let pictInfo = document.getElementById('pictInfo');
@@ -10,6 +10,6 @@ let images = JSON.parse(rawImages);
 let randomImage = images[Math.floor(Math.random() * images.length)];
 console.log(`url(/images/${randomImage.filename})`);
 //apply the image as the background of pageContent
-pageContent.style.backgroundImage = `url(/images/${randomImage.filename})`;
+pageContent.style.backgroundImage = `url(/images/${randomImage.filename})`;*/
 
 

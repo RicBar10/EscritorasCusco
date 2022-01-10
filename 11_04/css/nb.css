@@ -30,15 +30,15 @@ img {
     grid-template-columns: 80px 1fr;
     align-items: start;
     background-color: var(--red);
-    height: 40px;
+    height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
 }
 #logoImg{
-    padding: 5px;
+    padding: 0px;
     position: relative;
-    z-index: 1000;
+    z-index: 500;
 }
 #mainNav{
     position: absolute;
@@ -58,25 +58,27 @@ img {
 }
 #mainNav a{
     color: white;
-    text-decoration: none;
+    text-decoration:rgb(36, 238, 127);
     font-family: Cantarell, Arial, sans-serif;
-    font-size: 1.5em;
+    font-size: 2.5em;
     display:-moz-marker;
     margin: 10px;
     float:right;
-    margin-right: 180px;
+    margin-right: 120px;
     margin-top: 10px;
+    text-align: center;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 5px;
 }
 #mainNav a:hover{
     color: var(--shaded-red);
-
 }
 #menuToggle{
     background-color: transparent;
     border: none;
     background-size: cover;
     width: 40px;
-    height: 40px;;
+    height: 40px;
     align-self: start;
     margin-left: auto;
 
@@ -87,7 +89,7 @@ img {
 #pageContent {
     padding: 200px 40px;
     min-height: 100vh;
-    background-image: url(../images/image-1.jpg);
+    /*background-image: url(../images/image-1.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -98,14 +100,17 @@ img {
     align-items: flex-end;
 }
 #pictInfo {
+    position: absolute;
+    right: 20px;
+    width: 300px;
+    border: 3px solid #73AD21;
     background-color: rgba(155,155,155,0.8);
     padding: 10px;
     color: var(--white);
-    width: 300px;
     height: 300px;
     display: flex;
     flex-flow: column nowrap;
-    position: relative;
+
 }
 #pictInfo h1{
     font-family: Cantarell, Arial, sans-serif;
@@ -114,21 +119,22 @@ img {
 }
 #pictInfo p{
     margin: 20px 0;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 #pictInfo2 {
-    background-color: red;
+    position: absolute;
+    right: 700px;
+    top: 80px;
+    border: 3px solid #8287a1;
+    background-color: rgba(155,155,155,0.8);
     padding: 10px;
     color: var(--white);
-    width: 200px;
-    height: 200px;
+    height: 400px;
+    width: 400px;
     display: flex;
     flex-flow: column nowrap;
-    position:relative;
-    float:right;
-    margin-right: 180px;
-    margin-top: 10px;
+
 }
 #pictInfo2 h1{
     font-family: Cantarell, Arial, sans-serif;
@@ -137,7 +143,7 @@ img {
 }
 #pictInfo2 p{
     margin: 20px 0;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 main{
