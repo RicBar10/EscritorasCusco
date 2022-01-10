@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //Get #pageContent element
+=======
+/*//Get #pageContent element
+>>>>>>> mybranchRick
 let pageContent = document.getElementById('pageContent');
 //get #pictInfo div
 let pictInfo = document.getElementById('pictInfo');
@@ -10,6 +14,7 @@ let images = JSON.parse(rawImages);
 let randomImage = images[Math.floor(Math.random() * images.length)];
 console.log(`url(/images/${randomImage.filename})`);
 //apply the image as the background of pageContent
+<<<<<<< HEAD
 pageContent.style.backgroundImage = `url(/images/${randomImage.filename})`;
 
 if(pictInfo){
@@ -35,3 +40,8 @@ if(pictInfo){
     pictInfo.appendChild(pictData);
 
 }
+=======
+pageContent.style.backgroundImage = `url(/images/${randomImage.filename})`;*/
+
+
+>>>>>>> mybranchRick
