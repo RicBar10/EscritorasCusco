@@ -30,25 +30,15 @@ img {
     grid-template-columns: 80px 1fr;
     align-items: start;
     background-color: var(--red);
-<<<<<<< HEAD
-    height: 40px;
-=======
     height: 60px;
->>>>>>> mybranchRick
     width: 100%;
     position: fixed;
     top: 0;
 }
 #logoImg{
-<<<<<<< HEAD
-    padding: 5px;
-    position: relative;
-    z-index: 1000;
-=======
     padding: 0px;
     position: relative;
     z-index: 500;
->>>>>>> mybranchRick
 }
 #mainNav{
     position: absolute;
@@ -67,18 +57,6 @@ img {
     margin-left: 90px;
 }
 #mainNav a{
-<<<<<<< HEAD
-    color: var(--white);
-    text-decoration: none;
-    font-family: Cantarell, Arial, sans-serif;
-    font-size: 1.5em;
-    display: block;
-    margin: 10px;
-}
-#mainNav a:hover{
-    color: var(--shaded-red);
-
-=======
     color: white;
     text-decoration:rgb(36, 238, 127);
     font-family: Cantarell, Arial, sans-serif;
@@ -94,18 +72,13 @@ img {
 }
 #mainNav a:hover{
     color: var(--shaded-red);
->>>>>>> mybranchRick
 }
 #menuToggle{
     background-color: transparent;
     border: none;
     background-size: cover;
     width: 40px;
-<<<<<<< HEAD
-    height: 40px;;
-=======
     height: 40px;
->>>>>>> mybranchRick
     align-self: start;
     margin-left: auto;
 
@@ -114,15 +87,9 @@ img {
     background-image: url(../images/layout/hamburger.png);
 }
 #pageContent {
-<<<<<<< HEAD
-    padding: 100px 20px;
-    min-height: 100vh;
-    background-image: url(../images/image-1.jpg);
-=======
     padding: 200px 40px;
     min-height: 100vh;
     /*background-image: url(../images/image-1.jpg);*/
->>>>>>> mybranchRick
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -133,17 +100,6 @@ img {
     align-items: flex-end;
 }
 #pictInfo {
-<<<<<<< HEAD
-    background-color: rgba(155,155,155,0.8);
-    padding: 40px;
-    color: var(--white);
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    position: relative;
-=======
     position: absolute;
     right: 20px;
     width: 300px;
@@ -155,21 +111,10 @@ img {
     display: flex;
     flex-flow: column nowrap;
 
->>>>>>> mybranchRick
 }
 #pictInfo h1{
     font-family: Cantarell, Arial, sans-serif;
     font-size: 1.2em;
-<<<<<<< HEAD
-    margin: 10px 0;
-}
-#pictInfo p{
-    margin: 10px 0;
-    font-size: .8em;
-}
-main{
-    background-color: rgba(155,155,155,0.8);
-=======
     margin: 15px 0;
 }
 #pictInfo p{
@@ -203,7 +148,6 @@ main{
 
 main{
     background-color: var(--blue);
->>>>>>> mybranchRick
     padding: 20px;
     color: var(--white);
 }

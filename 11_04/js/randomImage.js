@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-//Get #pageContent element
-=======
 /*//Get #pageContent element
->>>>>>> mybranchRick
 let pageContent = document.getElementById('pageContent');
 //get #pictInfo div
 let pictInfo = document.getElementById('pictInfo');
@@ -14,34 +10,6 @@ let images = JSON.parse(rawImages);
 let randomImage = images[Math.floor(Math.random() * images.length)];
 console.log(`url(/images/${randomImage.filename})`);
 //apply the image as the background of pageContent
-<<<<<<< HEAD
-pageContent.style.backgroundImage = `url(/images/${randomImage.filename})`;
-
-if(pictInfo){
-    //Empty the pictInfo div
-    while(pictInfo.firstChild){
-        pictInfo.removeChild(pictInfo.firstChild);
-    }
-
-    //Create pictInfo title and add it to the Div
-    let pictTitle = document.createElement('h1');
-    let pictTitleContent = document.createTextNode(randomImage.name);
-    pictTitle.appendChild(pictTitleContent);
-    pictInfo.appendChild(pictTitle);
-
-    //Create author and exposure P and add them to pictInfo
-    let pictauthor = document.createElement('p');
-    let pictData = document.createElement('p');
-    let pictAuthorContent = document.createTextNode(randomImage.author);
-    let pictDataContent = document.createTextNode(randomImage.exposure);
-    pictauthor.appendChild(pictAuthorContent);
-    pictData.appendChild(pictDataContent);
-    pictInfo.appendChild(pictauthor);
-    pictInfo.appendChild(pictData);
-
-}
-=======
 pageContent.style.backgroundImage = `url(/images/${randomImage.filename})`;*/
 
 
->>>>>>> mybranchRick
