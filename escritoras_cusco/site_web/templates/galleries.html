@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>N&B photographies - Galeries</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <img src="images/layout/nb_logo.svg" alt="Logo NB" id="logoImg" />
+        <nav id="mainNav">
+            <ul>
+                <li><a href="{% url 'Index' %}">Inicio</a></li>
+                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
+                <li><a href="{% url 'Contact' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'About' %}">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle" class="hamburger">&nbsp;</button>
+    </header>
+
+    <section id="pageContent">
+        <div class="wrap">
+            <h1>escoge una escritora</h1>
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <a href="#" class="category_item" category="all">Todo</a>
+                    <a href="#" class="category_item" category="Escritoras">Escritoras</a>
+                    <a href="#" class="category_item" category="Poetas">Poetas</a>
+                    <a href="#" class="category_item" category="Editoras">Editoras</a>
+                    <a href="#" class="category_item" category="Ilustradoras">Ilustradoras</a>
+                    <a href="#" class="category_item" category="Antropologa">Antropóloga</a>
+                </div>
+                <section class="products-list">
+                    <div class="product-item" category="Escritoras">
+                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
+                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Editoras">
+                        <img src="{% static 'images/Escritora_02.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Escritoras">
+                        <img src="{% static 'images/Escritora_03.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Escritoras">
+                        <img src="{% static 'images/Escritora_04.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Antropologa">
+                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Ilustradoras">
+                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Escritoras">
+                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Poetas">
+                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <footer id="mainFooter">
+        <p>&copy; copyright Damien Bruyndonckx - 2019</p>
+    </footer>
+</body>
+
+</html>

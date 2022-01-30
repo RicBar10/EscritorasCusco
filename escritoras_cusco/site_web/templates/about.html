@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>N&B photographies - Contact</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
+    <script src="js/randomImage.js" defer></script>
+    <script src="js/contactForm.js" defer></script>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
+        <nav id="mainNav">
+            <ul>
+                <li><a href="{% url 'Index' %}">Inicio</a></li>
+                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
+                <li><a href="{% url 'Contact' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'About' %}">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle" class="hamburger">&nbsp;</button>
+    </header>
+
+    <section id="pageContent">
+        <main>
+            <h1>Contactez-nous</h1>
+            <p>Merci de compléter le formulaire suivant pour nous contacter. Tous les champs de ce formulaire sont
+                requis.</p>
+            <form id="frmContact" action="merci.html" novalidate>
+                <div id="leftCol">
+                    <div>
+                        <label for="fName">Prénom</label>
+                        <input type="text" name="fName" id="fName" required>
+                    </div>
+                    <div>
+                        <label for="lName">Nom de Famille</label>
+                        <input type="text" name="lName" id="lName" required>
+                    </div>
+                    <div>
+                        <label for="eMail">Adresse e-mail</label>
+                        <input type="email" name="eMail" id="eMail" required>
+                    </div>
+                </div>
+                <div id="rightCol">
+                    <div>
+                        <label for="message">Votre Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </main>
+    </section>
+    <footer id="mainFooter">
+        <p>&copy; copyright Damien Bruyndonckx - 2019</p>
+    </footer>
+</body>
+
+</html>
