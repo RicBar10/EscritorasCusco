@@ -9,6 +9,7 @@
     <title>Mapa de escritoras peruanas</title>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/nb.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font.css' %}">
     <script src="js/randomImage.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -16,7 +17,12 @@
 
 </head>
 
-<body>
+<body>    
+    <div class="social-bar">
+    <a href="https://www.facebook.com/dibujosPeru" class="icon icon-facebook" target=""_blank></a>
+    <a href="https://www.youtube.com/channel/UCh9i-VgRcAUUrRTIwrFDsIw" class="icon icon-youtube" target=""_blank></a>
+    <a href="https://www.instagram.com/rbpl.10/" class="icon icon-instagram" target=""_blank></a>
+    </div>
     <header id="mainHeader">
         <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
         <nav id="mainNav">
