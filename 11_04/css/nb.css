@@ -371,3 +371,61 @@ main ul li a{
     display: table-column;
   }
   
+/*social bar**************/
+  .social-bar{
+    position: fixed;
+    bottom: 0;
+    top: 85%;
+    font-size: 1.5rem;
+    /*display: flex;
+    flex-direction: column;*/
+    /*align-items: flex-end;*/
+    z-index: 100;
+  }
+  .social-bar a{
+    display: inline-block;
+    color: #fff;
+   /* background: #000;*/
+    padding: 10px 15px;
+    text-decoration: none;
+    -o-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+  .icon{
+    color: white;
+    text-decoration: none;
+    /*padding: .7rem;*/
+    display: flex;
+    transition: all .5s;
+  }
+
+
+  .icon-facebook{
+    background: #759af8;
+  }
+  
+  .icon-youtube {
+    background: #E83028;
+  }
+  
+  .icon-instagram{
+    background: #ba58ce;
+  }
+  
+  .icon:last-child{
+    border-radius:   0 1rem 0 0;
+  }
+  
+  /*.icon:first-child{
+    border-radius: 0 1rem 0 0  ;
+  }*/
+
+  .social-bar a:hover{
+
+      padding: 10px 60px;
+      background: #000000;
+      /*padding-left: 3rem;*/
+      border-radius: 0 1rem  0  1rem ;
+      box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
+  }

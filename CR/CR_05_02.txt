@@ -20,3 +20,5 @@ parte views de index python:
 https://stackoverflow.com/questions/2887878/importing-a-csv-file-into-a-sqlite3-database-table-using-python
 
 entrar a la base de datos : sqlite3 db.sqlite3
+
+https://www.youtube.com/watch?v=U-i9tpN06nI
