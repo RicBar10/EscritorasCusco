@@ -9,13 +9,13 @@
     <title>N&B photographies - Contact</title>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <script src="js/randomImage.js" defer></script>
-    <script src="js/contactForm.js" defer></script>
+    <script src="{% static 'js/randomImage.js' %}" defer></script>
+    <!-- <script src="{% static 'js/contactForm.js' %}" defer></script> -->
 </head>
 
 <body>
     <header id="mainHeader">
-        <img src="images/layout/nb_logo.svg" alt="Logo NB" id="logoImg" />
+        <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
         <nav id="mainNav">
             <ul>
                 <li><a href="{% url 'Index' %}">Inicio</a></li>

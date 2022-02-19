@@ -9,8 +9,8 @@
     <title>N&B photographies - Contact</title>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <script src="js/randomImage.js" defer></script>
-    <script src="js/contactForm.js" defer></script>
+    <script src="{% static 'js/randomImage.js' %}" defer></script>
+    <!-- <script src="{% static 'js/contactForm.js' %}" defer></script> -->
 </head>
 
 <body>
@@ -32,7 +32,7 @@
             <h1>Contactez-nous</h1>
             <p>Merci de compléter le formulaire suivant pour nous contacter. Tous les champs de ce formulaire sont
                 requis.</p>
-            <form id="frmContact" action="merci.html" novalidate>
+            <form id="frmContact" action="{% url 'Merci' %}" novalidate>
                 <div id="leftCol">
                     <div>
                         <label for="fName">Prénom</label>

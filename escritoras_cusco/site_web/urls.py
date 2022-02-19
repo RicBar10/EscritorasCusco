@@ -7,5 +7,6 @@ urlpatterns = [
     path('galleries', views.galleries, name='Galleries'),
     path('galleries/<int:id_escritor>', views.gallerie, name='Gallerie'),
     path('contact', views.contact, name='Contact'),
-    path('about', views.about, name='About')
+    path('about', views.about, name='About'),
+    path('merci', views.merci, name='Merci')
 ]

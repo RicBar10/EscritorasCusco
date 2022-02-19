@@ -1,6 +1,6 @@
 from django.db import models
 
-CATEGORIA = [
+TIPO_CATEGORIA = [
 		('Es','Escritora'),
 		('Pt','Poeta'),
 		('Ed','Editora'),
@@ -16,7 +16,6 @@ class Escritora(models.Model):
     fecha_nacimiento = models.DateField()
     fecha_defuncion = models.DateField()
     trayector = models.CharField(max_length=200)
-    categorizacion = models.CharField(choices = CATEGORIA, max_length=2)
 
 
 class Publicacion(models.Model):
@@ -24,3 +23,7 @@ class Publicacion(models.Model):
     nombre = models.CharField(max_length=200)
     descripcion = models.CharField(max_length=200)
     fecha = models.DateField()
+
+class Categoria(models.Model):
+    escritora = models.ForeignKey(Escritora, on_delete=models.CASCADE)
+    categorizacion = models.CharField(choices = TIPO_CATEGORIA, max_length=2)
