@@ -22,3 +22,6 @@ https://stackoverflow.com/questions/2887878/importing-a-csv-file-into-a-sqlite3-
 entrar a la base de datos : sqlite3 db.sqlite3
 
 https://www.youtube.com/watch?v=U-i9tpN06nI
+
+Archivo Excel de datos de autoras:
+https://docs.google.com/spreadsheets/d/1L2-1wf98XPRG-ahbC_1kVPC7zGm7sj1X7v1CI9QVxPU/edit?usp=sharing
