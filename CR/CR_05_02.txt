@@ -22,3 +22,8 @@ https://stackoverflow.com/questions/2887878/importing-a-csv-file-into-a-sqlite3-
 entrar a la base de datos : sqlite3 db.sqlite3
 
 https://www.youtube.com/watch?v=U-i9tpN06nI
+
+Lineas a ejecutar cada que se modifica el servidor:
+python manage.py makemigrations
+python manage.py migrate 
+python manage.py runserver  (para ejecutar y lanzar la pagina web, luego copiar pegar la direccion http de : Starting development server at http://127.0.0.1:8000/)
