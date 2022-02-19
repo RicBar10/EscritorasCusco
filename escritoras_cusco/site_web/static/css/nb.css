@@ -87,6 +87,8 @@ img {
     background-image: url(../images/layout/hamburger.png);
 }
 #pageContent {
+    /*display: table;*/
+    /*padding: 100px 10px;*/
     padding: 200px 40px;
     min-height: 100vh;
     /*background-image: url(../images/image-1.jpg);*/
@@ -97,16 +99,18 @@ img {
 #pageContent.home{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex;
 }
 #pictInfo {
     position: absolute;
     right: 20px;
+    /*width: 50%;*/
     width: 300px;
-    border: 3px solid #73AD21;
+    border: 3px solid #000000;
     background-color: rgba(155,155,155,0.8);
     padding: 10px;
     color: var(--white);
+    /*height: 50%;*/
     height: 300px;
     display: flex;
     flex-flow: column nowrap;
@@ -118,30 +122,6 @@ img {
     margin: 15px 0;
 }
 #pictInfo p{
-    margin: 20px 0;
-    font-size: .9em;
-}
-
-#pictInfo2 {
-    position: absolute;
-    right: 700px;
-    top: 80px;
-    border: 3px solid #8287a1;
-    background-color: rgba(155,155,155,0.8);
-    padding: 10px;
-    color: var(--white);
-    height: 400px;
-    width: 400px;
-    display: flex;
-    flex-flow: column nowrap;
-
-}
-#pictInfo2 h1{
-    font-family: Cantarell, Arial, sans-serif;
-    font-size: 1.2em;
-    margin: 15px 0;
-}
-#pictInfo2 p{
     margin: 20px 0;
     font-size: .9em;
 }
@@ -281,6 +261,8 @@ main ul li a{
     }   
     #pageContent.home{
         justify-content: flex-end;
+        /*display: flex;*/
+        /*justify-content: flex;*/
     }
     main ul{
         grid-template-columns: repeat(2, 1fr);
@@ -374,10 +356,23 @@ main ul li a{
     text-align: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
-}
 
+}
+.hijo1 {
+    padding: 5px;
+    margin: 5px;
+    background-color: yellow;
+    display:table-column;
+  }
+.hijo2 {
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(252, 151, 0);
+    display: table-column;
+  }
+  
 /*social bar**************/
-.social-bar{
+  .social-bar{
     position: fixed;
     bottom: 0;
     top: 85%;
@@ -396,7 +391,7 @@ main ul li a{
     -o-transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
-  }
+}
   .icon{
     color: white;
     text-decoration: none;
