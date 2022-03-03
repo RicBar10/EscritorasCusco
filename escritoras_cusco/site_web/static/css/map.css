@@ -7,6 +7,17 @@
 
 
   #leafletMap {
-    width: 300px;
-    height: 300px;
+    position:fixed;
+    left: 5%;
+    /*width: 50%;*/
+    width: 50%;
+    height: 65%;
+    border: 3px solid #847a85;
+    background-color: rgba(155,155,155,0.8);
+    /*padding: 10px;*/
+    color: var(--white);
+    /*height: 50%;*/
+
+    display: flex;
+    flex-flow: column nowrap;
 }
