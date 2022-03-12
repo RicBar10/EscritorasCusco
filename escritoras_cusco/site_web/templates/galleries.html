@@ -32,48 +32,24 @@
             <h1>escoge una escritora</h1>
             <div class="store-wrapper">
                 <div class="category_list">
-                    <a href="{% url 'Galleries' %}" class="category_item" category="all">Todo</a>
                     <a href="#" class="category_item" category="all">Todo</a>
                     <!-- <a href="{% url 'Galleries' %}" class="category_item" category="Escritoras">Escritoras</a> -->
-                    <a href="#" class="category_item" category="Escritoras">Escritoras</a>
-                    <a href="#" class="category_item" category="Poetas">Poetas</a>
-                    <a href="#" class="category_item" category="Editoras">Editoras</a>
-                    <a href="#" class="category_item" category="Ilustradoras">Ilustradoras</a>
+                    <a href="#" class="category_item" category="Escritora">Escritoras</a>
+                    <a href="#" class="category_item" category="Poeta">Poetas</a>
+                    <a href="#" class="category_item" category="Editora">Editoras</a>
+                    <a href="#" class="category_item" category="Ilustradora">Ilustradoras</a>
                     <a href="#" class="category_item" category="Antropologa">Antropóloga</a>
                 </div>
                 <section class="products-list">
-                    <div class="product-item" category="Escritoras">
-                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
+                    {% for escritora in escritoras %}
+                    <div class="product-item" category={{escritora.categorizacion}}>
+                        <img src="static/{{escritora.link_imagen}}" alt="">
+                        <a href="{% url 'Gallerie' id_escritora=escritora.id %}">{{escritora.nombre}}</a>
                     </div>
-                    <div class="product-item" category="Editoras">
-                        <img src="{% static 'images/Escritora_02.jpg' %}" alt="">
-                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
-                    </div>
-                    <div class="product-item" category="Escritoras">
-                        <img src="{% static 'images/Escritora_03.jpg' %}" alt="">
-                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
-                    </div>
-                    <div class="product-item" category="Escritoras">
-                        <img src="{% static 'images/Escritora_04.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
-                    </div>
-                    <div class="product-item" category="Antropologa">
-                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
-                    </div>
-                    <div class="product-item" category="Ilustradoras">
-                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
-                    </div>
-                    <div class="product-item" category="Escritoras">
-                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
-                    </div>
-                    <div class="product-item" category="Poetas">
-                        <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
-                    </div>
+                    {% empty %}
+                    <p class="text">Ninguna escritora por el momento.</p>
+                    {% endfor %}
+
                 </section>
             </div>
         </div>
