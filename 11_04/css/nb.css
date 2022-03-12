@@ -57,8 +57,8 @@ img {
     margin-left: 90px;
 }
 #mainNav a{
-    color: white;
-    text-decoration:rgb(36, 238, 127);
+    color: rgb(0, 0, 0);
+    text-decoration:rgb(89, 139, 112);
     font-family: Cantarell, Arial, sans-serif;
     font-size: 2.5em;
     display:-moz-marker;
@@ -375,7 +375,7 @@ main ul li a{
   .social-bar{
     position: fixed;
     bottom: 0;
-    top: 85%;
+    top: 90%;
     font-size: 1.5rem;
     /*display: flex;
     flex-direction: column;*/
@@ -410,7 +410,7 @@ main ul li a{
   }
   
   .icon-instagram{
-    background: #ba58ce;
+    background: #bf52eb;
   }
   
   .icon:last-child{
@@ -427,5 +427,5 @@ main ul li a{
       background: #000000;
       /*padding-left: 3rem;*/
       border-radius: 0 1rem  0  1rem ;
-      box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
+      box-shadow: 0 0 .5rem rgba(255, 0, 0, 0.42);
   }

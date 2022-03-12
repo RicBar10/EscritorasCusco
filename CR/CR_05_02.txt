@@ -8,9 +8,9 @@ hija del fotografo cuzqueno : chambi
 
 django
 https://docs.djangoproject.com/fr/4.0/intro/tutorial01/
-lucia fajardo18:21
+
 conda install -c anaconda django 
-lucia fajardo18:38
+
 python -m django --version
 django 3.1.2
 python -V
@@ -23,7 +23,15 @@ entrar a la base de datos : sqlite3 db.sqlite3
 
 https://www.youtube.com/watch?v=U-i9tpN06nI
 
+<<<<<<< HEAD
+ python manage.py runserver 0:8000
+
+=======
+Archivo Excel de datos de autoras:
+https://docs.google.com/spreadsheets/d/1L2-1wf98XPRG-ahbC_1kVPC7zGm7sj1X7v1CI9QVxPU/edit?usp=sharing
+
 Lineas a ejecutar cada que se modifica el servidor:
 python manage.py makemigrations
 python manage.py migrate 
 python manage.py runserver  (para ejecutar y lanzar la pagina web, luego copiar pegar la direccion http de : Starting development server at http://127.0.0.1:8000/)
+>>>>>>> e684b3be80be043add23f953cdf96b3eaf1665e4
