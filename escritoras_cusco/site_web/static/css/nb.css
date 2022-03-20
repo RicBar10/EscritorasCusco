@@ -4,7 +4,7 @@
 :root {
     --black: #333;
     --blue: #7186FF;
-    --red: #997172;
+    --red: #45db27;
     --shaded-red: rgb(223, 149, 149);
     --green: #00751F;
     --white: #FFF;
@@ -30,10 +30,10 @@ img {
     grid-template-columns: 80px 1fr;
     align-items: start;
     background-color: var(--red);
-    height: 60px;
+    height: 70px;
     width: 100%;
     position: fixed;
-    top: 0;
+
 }
 #logoImg{
     padding: 0px;
@@ -88,13 +88,16 @@ img {
 }
 #pageContent {
     /*display: table;*/
-    /*padding: 100px 10px;*/
-    padding: 200px 40px;
+    padding: 100px 10px;
+    padding: 7% 5%;
+    /*padding: 200px 40px;*/
+    /*height: 600px;*/
     min-height: 100vh;
     /*background-image: url(../images/image-1.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url(../images/arte-con-libros-1.jpg);
+    background-repeat:repeat-x;
+    background-size:cover;
+    background-attachment:fixed;
 }
 #pageContent.home{
     display: flex;
@@ -102,16 +105,17 @@ img {
     align-items: flex;
 }
 #pictInfo {
-    position: absolute;
-    right: 20px;
+    position: fixed;
+    right: 60px;
     /*width: 50%;*/
-    width: 300px;
+    width: 400px;
+    height: 400px;
     border: 3px solid #000000;
     background-color: rgba(155,155,155,0.8);
     padding: 10px;
     color: var(--white);
     /*height: 50%;*/
-    height: 300px;
+ 
     display: flex;
     flex-flow: column nowrap;
 
@@ -138,10 +142,10 @@ main form{
 main form > div > div {
     display: flex;
     flex-flow: column nowrap;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 main form > div:last-child > div:first-child{
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 main form label{
     margin-bottom: 5px;
@@ -271,10 +275,10 @@ main ul li a{
 @media screen and (min-width: 1024px){
     main form{
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
+        grid-gap: 10px;
     }
     main form button{
-        padding: 10px;
+        padding: 0px;
         background-color: var(--red);
         color: var(--white);
         border: none;
@@ -307,7 +311,7 @@ main ul li a{
 
 .category_list .category_item{
     display: block;
-    width: 90%;
+    width: 80%;
     padding: 15px 0;
     margin-bottom: 20px;
     background: #50a5d6;
@@ -359,16 +363,35 @@ main ul li a{
 
 }
 .hijo1 {
-    padding: 5px;
+    padding: 15px;
     margin: 5px;
-    background-color: yellow;
+    color: #fff;
+    border: 6px solid #000000;
+    background-color: rgba(155,155,155,0.8);
     display:table-column;
+  }
+.hijo1 iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
   }
 .hijo2 {
     padding: 5px;
     margin: 5px;
-    background-color: rgb(252, 151, 0);
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 1px rgb(0, 4, 255),
+    2px 2px 1px rgb(0, 15, 223);
+    /*background-color: rgba(155,155,155,0.8);*/
     display: table-column;
+  }
+
+.hijo2 img{
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
   }
   
 /*social bar**************/
@@ -428,4 +451,19 @@ main ul li a{
       /*padding-left: 3rem;*/
       border-radius: 0 1rem  0  1rem ;
       box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
+  }
+
+  /*Eventos************/
+  .eventos {
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(248, 174, 174);
+    display:table-column;
+  }
+
+  .wrap h1{
+    color: rgb(255, 164, 79);
+    text-shadow: 1px 1px 1px rgb(0, 4, 255),
+    2px 2px 1px rgb(0, 15, 223);
+    /*background-color: rgb(248, 174, 174);*/
   }

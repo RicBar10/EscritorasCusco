@@ -23,6 +23,10 @@ def about(request):
     template = loader.get_template('about.html')
     return HttpResponse(template.render(request=request))
 
+def eventos(request):
+    template = loader.get_template('eventos.html')
+    return HttpResponse(template.render(request=request))
+
 def merci(request):
     template = loader.get_template('merci.html')
     return HttpResponse(template.render(request=request))
