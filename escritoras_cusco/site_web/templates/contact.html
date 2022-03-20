@@ -20,8 +20,8 @@
             <ul>
                 <li><a href="{% url 'Index' %}">Inicio</a></li>
                 <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Contact' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'About' %}">Contacto</a></li>
+                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'Contact' %}">Contacto</a></li>
             </ul>
         </nav>
         <button id="menuToggle" class="hamburger">&nbsp;</button>
@@ -32,25 +32,21 @@
             <h1>Contactez-nous</h1>
             <p>Merci de compléter le formulaire suivant pour nous contacter. Tous les champs de ce formulaire sont
                 requis.</p>
-            <form id="frmContact" action="{% url 'Merci' %}" novalidate>
+            <form id="frmContact" method="POST" action="{% url 'Merci' %}" novalidate>
                 <div id="leftCol">
                     <div>
-                        <label for="fName">Prénom</label>
-                        <input type="text" name="fName" id="fName" required>
+                        <label for="name">Prénom</label>
+                        <input type="text" name="name" id="name" required>
                     </div>
                     <div>
-                        <label for="lName">Nom de Famille</label>
-                        <input type="text" name="lName" id="lName" required>
-                    </div>
-                    <div>
-                        <label for="eMail">Adresse e-mail</label>
-                        <input type="email" name="eMail" id="eMail" required>
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" name="email" id="email" required>
                     </div>
                 </div>
                 <div id="rightCol">
                     <div>
-                        <label for="message">Votre Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <label for="subject">Votre Message</label>
+                        <textarea id="subject" name="subject" required></textarea>
                     </div>
                 </div>
                 <button type="submit">Envoyer</button>
