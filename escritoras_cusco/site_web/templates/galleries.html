@@ -20,8 +20,8 @@
             <ul>
                 <li><a href="{% url 'Index' %}">Inicio</a></li>
                 <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Contact' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'About' %}">Contacto</a></li>
+                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'Contact' %}">Contacto</a></li>
             </ul>
         </nav>
         <button id="menuToggle" class="hamburger">&nbsp;</button>
@@ -56,23 +56,23 @@
                     </div>
                     <div class="product-item" category="Escritoras">
                         <img src="{% static 'images/Escritora_04.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
                     </div>
                     <div class="product-item" category="Antropologa">
                         <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
                     </div>
                     <div class="product-item" category="Ilustradoras">
                         <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
                     </div>
                     <div class="product-item" category="Escritoras">
                         <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
                     </div>
                     <div class="product-item" category="Poetas">
                         <img src="{% static 'images/Escritora_01.jpg' %}" alt="">
-                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                        <a href="{% url 'Gallerie' id_escritor=1 %}">escritora01</a>
                     </div>
                 </section>
             </div>

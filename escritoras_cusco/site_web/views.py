@@ -16,7 +16,6 @@ def gallerie(request, id_escritor):
     return HttpResponse(template.render(request=request))
 
 def contact(request):
-    template = loader.get_template('contact.html')
     if request.method=="POST":
         contact=Contact()
         name=request.POST.get('name')
@@ -26,8 +25,8 @@ def contact(request):
         contact.email=email
         contact.subject=subject
         contact.save()
-        return HttpResponse(template.render(request=request))
-    return HttpResponse(template.render(request=request))
+        return HttpResponse("<h1>thanks for contact</h1>")
+    return render(request,'contact.html')
 
 def about(request):
     template = loader.get_template('about.html')
