@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-
+from django.template import RequestContext
 # Create your views here.
 def index(request):
     template = loader.get_template('index.html')
@@ -16,18 +16,9 @@ def gallerie(request, id_escritor):
     return HttpResponse(template.render(request=request))
 
 def contact(request):
-    if request.method=="POST":
-        contact=Contact()
-        name=request.POST.get('name')
-        email=request.POST.get('email')
-        subject=request.POST.get('subject')
-        contact.name=name
-        contact.email=email
-        contact.subject=subject
-        contact.save()
-        return HttpResponse("<h1>thanks for contact</h1>")
-    return render(request,'contact.html')
-
+    template = loader.get_template('contact.html')
+    return HttpResponse(template.render(request=request))
+    
 def about(request):
     template = loader.get_template('about.html')
     return HttpResponse(template.render(request=request))
