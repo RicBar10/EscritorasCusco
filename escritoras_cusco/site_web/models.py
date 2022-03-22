@@ -17,7 +17,6 @@ class Escritora(models.Model):
     fecha_defuncion = models.DateField()
     trayector = models.CharField(max_length=200)
 
-
 class Publicacion(models.Model):
     escritora = models.ForeignKey(Escritora, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=200)
