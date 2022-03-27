@@ -1,0 +1,15 @@
+python manage.py makemigrations   o   python manage.py makemigrations site_web
+
+1)Para actualizar y crear las tablas:
+python manage.py makemigrations site_web
+python manage.py migrate
+
+2)Para verificar que se crearon las tablas:
+sqlite3 db.sqlite3   ---> para entrar a la base de datos
+.tables   --->para ver tus tablas
+.exit	  --->para salir
+
+3)python manage.py createsuperuser  ---> para crear admin
+
+4) Run pagina web:
+python manage.py runserver
