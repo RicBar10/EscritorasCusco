@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from site_web.models import Escritora, Categoria
+from site_web.models import Mujer, Profesion
 from django.db.models import Q
 
 # Create your views here.
@@ -14,18 +14,18 @@ def index(request):
 
 def galleries(request):
     template = loader.get_template('galleries.html')
-    escritoras = [{'id': c.escritora_id, 'link_imagen': c.escritora.link_imagen,
-                   'categorizacion': c.get_categorizacion_display(),
-                   'nombre': c.escritora.nombre} for c in Categoria.objects.all()]
+    mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
+                'categoria': c.get_categoria_display(),
+                'nombre': c.mujer.nombre} for c in Profesion.objects.all()]
 
-    context = {"escritoras": escritoras}
+    context = {"mujeres": mujeres}
     return HttpResponse(template.render(context, request=request))
 
 
-def gallerie(request, id_escritora):
+def gallerie(request, mujer_id):
     template = loader.get_template('singleGallery.html')
-    escritora = Escritora.objects.get(id=id_escritora)
-    context = {"escritora": escritora}
+    mujer = Mujer.objects.get(id=mujer_id)
+    context = {"mujer": mujer}
     return HttpResponse(template.render(context, request=request))
 
 

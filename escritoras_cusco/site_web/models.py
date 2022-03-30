@@ -12,23 +12,29 @@ TIPO_CATEGORIA = [
 # Create your models here.
 
 
-class Escritora(models.Model):
+class Lugar(models.Model):
+    distrito = models.CharField(max_length=200)
+    provincia = models.CharField(max_length=200)
+    departamento = models.CharField(max_length=200)
+
+
+class Mujer(models.Model):
     nombre = models.CharField(max_length=200)
-    lugar_nacimiento = models.CharField(max_length=200)
-    fecha_nacimiento = models.DateField()
-    fecha_defuncion = models.DateField(null=True)
-    trayector = models.CharField(max_length=200)
+    apellido = models.CharField(max_length=200)
+    fecha_nacimiento = models.CharField(max_length=10)
+    fecha_defuncion = models.CharField(max_length=10)
+    trayectoria = models.CharField(max_length=200)
     link_imagen = models.CharField(max_length=200)
-    is_shown = models.BooleanField()
+    lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
 
 
 class Publicacion(models.Model):
-    escritora = models.ForeignKey(Escritora, on_delete=models.CASCADE)
-    nombre = models.CharField(max_length=200)
+    titulo = models.CharField(max_length=200)
+    fecha = models.CharField(max_length=10)
     descripcion = models.CharField(max_length=200)
-    fecha = models.DateField()
+    mujer = models.ForeignKey(Mujer, on_delete=models.CASCADE)
 
 
-class Categoria(models.Model):
-    escritora = models.ForeignKey(Escritora, on_delete=models.CASCADE)
-    categorizacion = models.CharField(choices=TIPO_CATEGORIA, max_length=2)
+class Profesion(models.Model):
+    categoria = models.CharField(choices=TIPO_CATEGORIA, max_length=2)
+    mujer = models.ForeignKey(Mujer, on_delete=models.CASCADE)

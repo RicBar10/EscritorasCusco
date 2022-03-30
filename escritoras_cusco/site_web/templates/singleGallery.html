@@ -32,13 +32,10 @@
         <!-- <h1>Autoras</h1> -->
         <div class="hijo1">
             <h1>Informacion</h1>
-            <p>{{escritora.lugar_nacimiento}}</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
+            <p>{{mujer.lugar.distrito}}, {{mujer.lugar.provincia}}</p>
+            <p>Departamento : {{mujer.lugar.departamento}}</p>
+            <p>Fecha de nacimiento : {{mujer.fecha_nacimiento}} </p>
+            <p>Fecha de defuncion : {{mujer.fecha_defuncion}} </p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
                 officia provident, </p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
@@ -62,7 +59,7 @@
         </div>
 
         <div class="hijo2">
-            <h1>{{escritora.nombre}}</h1>
+            <h1>{{mujer.nombre}} {{mujer.apellido}}</h1>
             <img src="/static/{{escritora.link_imagen}}" alt="">
         </div>
         <!-- </main> -->
