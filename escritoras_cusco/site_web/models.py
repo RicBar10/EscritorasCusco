@@ -22,7 +22,7 @@ class Mujer(models.Model):
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
     fecha_nacimiento = models.CharField(max_length=10)
-    fecha_defuncion = models.CharField(max_length=10)
+    fecha_defuncion = models.CharField(max_length=10, null=True)
     trayectoria = models.CharField(max_length=200)
     link_imagen = models.CharField(max_length=200)
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
