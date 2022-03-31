@@ -2,7 +2,7 @@ from django.db import models
 
 TIPO_CATEGORIA = [
     ('Es', 'Escritora'),
-    ('Pt', 'Poeta'),
+    ('Po', 'Poeta'),
     ('Ed', 'Editora'),
     ('Pr', 'Profesora'),
     ('An', 'Antropologa'),
