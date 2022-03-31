@@ -38,15 +38,15 @@
             <ul>
                 <li><a href="{% url 'Index' %}">Inicio</a></li>
                 <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Contact' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'About' %}">Contacto</a></li>
+                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'Contact' %}">Contacto</a></li>
             </ul>
         </nav>
         <button id="menuToggle" class="hamburger">&nbsp;</button>
     </header>
 
     <section id="pageContent" class="home">
-        <!-- <div id="pictInfo">
+         <div id="pictInfo">
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
                 officia provident, </p>
@@ -54,12 +54,6 @@
                 officia provident, </p>
         </div>
 
-        <div id="pictInfo2">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
-        </div> -->
         <div id="leafletMap"></div>
     </section>
 

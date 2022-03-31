@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.template import RequestContext
+from .models import Contact
 from site_web.models import Mujer, Profesion
 from django.db.models import Q
 
@@ -31,11 +33,29 @@ def gallerie(request, mujer_id):
 
 def contact(request):
     template = loader.get_template('contact.html')
+    if request.method == "POST":
+        contact = Contact()
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        contact.name = name
+        contact.email = email
+        contact.subject = subject
+        contact.save()
+        # return render_to_response('contact.html', {'form': c['UploadFileForm']},  RequestContext(request))
+        # return HttpResponse("<h1>thanks for contact</h1>")
+        return render(request, 'merci.html')
+        # return HttpResponse(template.render(request=request))
     return HttpResponse(template.render(request=request))
 
 
 def about(request):
     template = loader.get_template('about.html')
+    return HttpResponse(template.render(request=request))
+
+
+def eventos(request):
+    template = loader.get_template('eventos.html')
     return HttpResponse(template.render(request=request))
 
 
