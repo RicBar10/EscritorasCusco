@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var popup = L.popup();
 
-    var photoImg = '<a href=singleGallery.html?id=gal1><img src="images/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
+    var photoImg = '<a href="https://www.google.com"><img src="../img/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
 
     function onMarkerMouseOver(e) {
         popup
