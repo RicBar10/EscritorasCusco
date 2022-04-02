@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
 	var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
 
@@ -12,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var marker = L.marker([-13.5498695,-71.953328,12]).addTo(map);
 
-    var marker2 = L.marker([-12,-68]).addTo(map);
+    var marker2 = L.marker([-13.5252062,-71.9686264,17]).addTo(map);
 
     var popup = L.popup();
 
-    var photoImg = '<a href="https://www.google.com"><img src="../img/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
+    var photoImg = '<a href=singleGallery.html?id=gal1><img src="images/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
 
     function onMarkerMouseOver(e) {
         popup
