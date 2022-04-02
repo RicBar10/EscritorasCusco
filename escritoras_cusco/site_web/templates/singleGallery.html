@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>N&B photographies - Galeries</title>
+    <title>Mujeres del libro peruano - Escritora</title>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/nb.css' %}">
     <script src="{% static 'js/randomImage.js' %}" defer></script>
@@ -31,11 +31,15 @@
         <!-- <main id="singleGallery"> -->
         <!-- <h1>Autoras</h1> -->
         <div class="hijo1">
-            <h1>Información</h1>
-            <p>Ubicación : {{mujer.lugar.distrito|capfirst }}, {{mujer.lugar.provincia|capfirst }}</p>
-            <p>Departamento : {{mujer.lugar.departamento|capfirst }}</p>
-            <p>Fecha de nacimiento : {{mujer.fecha_nacimiento}} </p>
+            <h1>Informacion</h1>
+            <p>Ubicacion : {{mujer.lugar.distrito}} {{mujer.lugar.provincia}}</p>
+            <p>Departamento : {{mujer.lugar.departamento}}</p>
+            <p>Fecha de nacimiento : {{mujer.fecha_nacimiento}}</p>
             <p>Fecha de defuncion : {{mujer.fecha_defuncion}} </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+                officia provident, </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+                officia provident, </p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
                 officia provident, </p>
 
@@ -50,7 +54,7 @@
         <!-- </main> -->
     </section>
     <footer id="mainFooter">
-        <p>&copy; copyright Damien Bruyndonckx - 2019</p>
+        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
     </footer>
     <figure id="galleryContainer"><img src=""></figure>
 </body>
