@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var marker = L.marker([-13.5498695,-71.953328,12]).addTo(map);
 
-    var marker2 = L.marker([-12,-68]).addTo(map);
+    var marker2 = L.marker([-14.26944,-71.22611]).addTo(map);
 
     var popup = L.popup();
 

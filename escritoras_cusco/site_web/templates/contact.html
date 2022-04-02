@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>N&B photographies - Contact</title>
+    <title>Mujeres del libro peruano - Contacto</title>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/nb.css' %}">
     <script src="{% static 'js/randomImage.js' %}" defer></script>
@@ -29,33 +29,32 @@
 
     <section id="pageContent">
         <main>
-            <h1>Contactez-nous</h1>
-            <p>Merci de compléter le formulaire suivant pour nous contacter. Tous les champs de ce formulaire sont
-                requis.</p>
+            <h1>Contacto</h1>
+            <p>Se le agradece llenar el formulario de abajo con algún pedido, comentario, sugerencia, para poder contactarnos</p>
             <form id="frmContact" method="POST" action="#">
                 {% csrf_token %}
                 <div id="leftCol">
                     <div>
-                        <label for="name">Prénom</label>
+                        <label for="name">Nombre</label>
                         <input type="text" name="name" id="name" required />
                     </div>
                     <div>
-                        <label for="email">Adresse e-mail</label>
+                        <label for="email">Correo electrónico</label>
                         <input type="email" name="email" id="email" required>
                     </div>
                 </div>
                 <div id="rightCol">
                     <div>
-                        <label for="subject">Votre Message</label>
+                        <label for="subject">Mensaje</label>
                         <textarea id="subject" name="subject" required></textarea>
                     </div>
                 </div>
-                <button type="submit">Envoyer</button>
+                <button type="submit">Enviar</button>
             </form>
         </main>
     </section>
     <footer id="mainFooter">
-        <p>&copy; copyright Damien Bruyndonckx - 2019</p>
+        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
     </footer>
 </body>
 
