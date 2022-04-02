@@ -108,16 +108,17 @@ img {
     position: fixed;
     right: 60px;
     /*width: 50%;*/
-    width: 400px;
-    height: 400px;
+    width:35%;
+    
     border: 3px solid #000000;
     background-color: rgba(155,155,155,0.8);
-    padding: 10px;
+    padding: 5px;
     color: var(--white);
     /*height: 50%;*/
- 
+    justify-content:left;
     display: flex;
     flex-flow: column nowrap;
+    
 
 }
 #pictInfo h1{
@@ -126,8 +127,9 @@ img {
     margin: 15px 0;
 }
 #pictInfo p{
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: .9em;
+
 }
 
 main{
@@ -455,11 +457,16 @@ main ul li a{
 
   /*Eventos************/
   .eventos {
-    padding: 5px;
+    padding: 15px;
     margin: 5px;
-    background-color: rgb(248, 174, 174);
+    background-color: rgb(76, 140, 236);
     display:table-column;
   }
+  #pageContent.home h1{
+    font-family: Cantarell, Arial, sans-serif;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
 
   .wrap h1{
     color: rgb(255, 164, 79);
