@@ -6,12 +6,18 @@ from .models import Contact
 from site_web.models import Mujer, Profesion
 from django.db.models import Q
 
+# views.py
+from django.core import serializers
+
 # Create your views here.
-
-
 def index(request):
     template = loader.get_template('index.html')
-    return HttpResponse(template.render(request=request))
+    mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
+                'categoria': c.get_categoria_display(),
+                'nombre': c.mujer.nombre} for c in Profesion.objects.all()]
+
+    context = {"mujeres": mujeres}
+    return HttpResponse(template.render(context, request=request))
 
 
 def galleries(request):

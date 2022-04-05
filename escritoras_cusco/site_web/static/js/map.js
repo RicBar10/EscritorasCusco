@@ -1,3 +1,14 @@
+$(document).ready(function(){
+	
+	//agregando clase active al primer boton
+	let mujeres = $('.hidden').val();
+    console.log(mujeres);
+    console.log( JSON.parse(mujeres));
+
+		
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
 	var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
 
@@ -16,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var popup = L.popup();
 
-    var photoImg = '<a href="https://www.google.com"><img src="../img/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
-
+    var photoImg = '<a href="galleries/1"><img src="static/img/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
+    //var photoImg =  '<a href="https://www.google.com"><img src="static/' + '{{mujer.link_imagen}}'+ '" alt=""></img></a>';
     function onMarkerMouseOver(e) {
         popup
             .setLatLng(e.latlng)

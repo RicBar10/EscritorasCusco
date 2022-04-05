@@ -33,7 +33,7 @@
         <a href="https://www.instagram.com/mujeresdellibroperuano/" class="icon icon-instagram" target="" _blank></a>
     </div>
     <header id="mainHeader">
-        <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
+        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
         <nav id="mainNav">
             <ul>
                 <li><a href="{% url 'Index' %}">Inicio</a></li>
@@ -64,6 +64,8 @@
         </div>
 
         <div id="leafletMap"></div>
+        <input value="{{mujeres}}" class="hidden" />
+
     </section>
 
 
