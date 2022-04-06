@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mujeres del libro peruano - Gracias</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
+    <script src="{% static 'js/randomImage.js' %}" defer></script>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
+        <nav id="mainNav">
+            <ul>
+                <li><a href="{% url 'Index' %}">Inicio</a></li>
+                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
+                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'Contact' %}">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle" class="hamburger">&nbsp;</button>
+    </header>
+
+    <section id="pageContent">
+        <main>
+            <h1>Gracias!</h1>
+            <p>Gracias por completar el formulario y por contactarnos!</p>
+            <p>Recibirá un mail de respuesta en los próximos días</p>
+        </main>
+    </section>
+    <footer id="mainFooter">
+        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
+    </footer>
+</body>
+
+</html>

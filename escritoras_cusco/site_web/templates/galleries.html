@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mujeres del libro peruano - Galerías</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
+    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
+        <nav id="mainNav">
+            <ul>
+                <li><a href="{% url 'Index' %}">Inicio</a></li>
+                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
+                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'Contact' %}">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle" class="hamburger">&nbsp;</button>
+    </header>
+
+    <section id="pageContent">
+        <div class="wrap">
+            <h1>Filtrar por categoría</h1>
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <a href="#" class="category_item" category="all">Todo</a>
+                    <!-- <a href="{% url 'Galleries' %}" class="category_item" category="Escritoras">Escritoras</a> -->
+                    <a href="#" class="category_item" category="Escritora">Escritoras</a>
+                    <a href="#" class="category_item" category="Poeta">Poetas</a>
+                    <a href="#" class="category_item" category="Editora">Editoras</a>
+                    <a href="#" class="category_item" category="Ilustradora">Ilustradoras</a>
+                    <a href="#" class="category_item" category="Antropologa">Antropóloga</a>
+                </div>
+                <section class="products-list">
+                    {% for mujer in mujeres %}
+                    <div class="product-item" category={{mujer.categoria}}>
+                        <img src="static/{{mujer.link_imagen}}" alt="">
+                        <a href="{% url 'Gallerie' mujer_id=mujer.id %}">{{mujer.nombre}}</a>
+                    </div>
+                    {% empty %}
+                    <p class="text">Ninguna mujer por el momento.</p>
+                    {% endfor %}
+
+                </section>
+            </div>
+        </div>
+    </section>
+    <footer id="mainFooter">
+        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
+    </footer>
+</body>
+
+</html>

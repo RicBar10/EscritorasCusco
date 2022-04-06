@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mujeres del libro peruano - Contacto</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
+    <script src="{% static 'js/randomImage.js' %}" defer></script>
+    <!-- <script src="{% static 'js/contactForm.js' %}" defer></script> -->
+</head>
+
+<body>
+    <header id="mainHeader">
+        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
+        <nav id="mainNav">
+            <ul>
+                <li><a href="{% url 'Index' %}">Inicio</a></li>
+                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
+                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
+                <li><a href="{% url 'Contact' %}">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="menuToggle" class="hamburger">&nbsp;</button>
+    </header>
+
+    <section id="pageContent">
+        <main>
+            <h1>Contacto</h1>
+            <p>Se le agradece llenar el formulario de abajo con algún pedido, comentario, sugerencia, para poder contactarnos</p>
+            <form id="frmContact" method="POST" action="#">
+                {% csrf_token %}
+                <div id="leftCol">
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" required />
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                </div>
+                <div id="rightCol">
+                    <div>
+                        <label for="subject">Mensaje</label>
+                        <textarea id="subject" name="subject" required></textarea>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </section>
+    <footer id="mainFooter">
+        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
+    </footer>
+</body>
+
+</html>

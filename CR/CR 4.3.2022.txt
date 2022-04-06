@@ -1,0 +1,16 @@
+CR 4.3.2022
+
+- Fecha de nacimiento: 
+  . Proposiciones: Solo años, o los que tengan fecha se les pone fecha, y los que no, entonces solo el año
+
+- Tabla categoria para gestionar los filtros por tipo de escritora
+
+- En el Excel, agregar hoja categoría y bibliografía.
+
+- Trayectoria
+
+- Dominio
+
+- Agregar el link hacia la imagen de la escritora(o la imagen misma)
+
+- Detallar la página personal de cada escritora, lo que irá en dicha página.

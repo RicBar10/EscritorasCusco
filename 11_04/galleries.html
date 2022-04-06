@@ -7,42 +7,71 @@
     <title>N&B photographies - Galeries</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/nb.css">
-    <script src="js/randomImage.js" defer></script>
+    <script src="js/jquery-3.2.1.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
     <header id="mainHeader">
             <img src="images/layout/nb_logo.svg" alt="Logo NB" id="logoImg" />
             <nav id="mainNav">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="galleries.html">Galeries</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="galleries.html">Mujeres del mapa</a></li>
+                    <li><a href="contact.html">Eventos y descuentos</a></li>
+                    <li><a href="about.html">Contacto</a></li>
                 </ul>
             </nav>
             <button id="menuToggle" class="hamburger">&nbsp;</button>
     </header>
     
     <section id="pageContent">
-        <main>
-            <h1>Galeries</h1>
-            <ul id="galeries">
-                <li>
-                    <a href="singleGallery.html?id=gal1">
-                        <h2>Bretagne 2019</h2>
-                        <img src="images/image-1.jpg" alt="Galerie Bretagne 2019">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, est saepe? Pariatur consequuntur maxime architecto cupiditate, rem quisquam facere. Optio quo fuga iste. Laborum, voluptates sequi deserunt quisquam temporibus harum.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="singleGallery.html?id=gal2">
-                        <h2>Sacramento 2017</h2>
-                        <img src="images/image-8.jpg" alt="Galerie Bretagne 2019">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, est saepe? Pariatur consequuntur maxime architecto cupiditate, rem quisquam facere. Optio quo fuga iste. Laborum, voluptates sequi deserunt quisquam temporibus harum.</p>
-                    </a>
-                </li>
-            </ul>
-        </main>
+        <div class="wrap">
+            <h1>escoge una escritora</h1>
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <a href="#" class="category_item" category="all">Todo</a>
+                    <a href="#" class="category_item" category="Escritoras">Escritoras</a>
+                    <a href="#" class="category_item" category="Poetas">Poetas</a>
+                    <a href="#" class="category_item" category="Editoras">Editoras</a>
+                    <a href="#" class="category_item" category="Ilustradoras">Ilustradoras</a>
+                    <a href="#" class="category_item" category="Antropologa">Antropóloga</a>
+                </div>
+                <section class="products-list">
+                    <div class="product-item" category="Antropologa"  >
+                        <img src="images/Escritora_01.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Editoras">
+                        <img src="images/Escritora_02.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Escritoras">
+                        <img src="images/Escritora_03.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Escritoras">
+                        <img src="images/Escritora_04.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Antropologa">
+                        <img src="images/Escritora_02.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Ilustradoras">
+                        <img src="images/Escritora_03.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Escritoras">
+                        <img src="images/Escritora_04.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                    <div class="product-item" category="Poetas">
+                        <img src="images/Escritora_01.jpg" alt="">
+                        <a href="singleGallery.html?id=gal1">escritora01</a>
+                    </div>
+                </section>
+            </div>
+        </div>
     </section>
     <footer id="mainFooter">
         <p>&copy; copyright Damien Bruyndonckx - 2019</p>
