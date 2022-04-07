@@ -1,11 +1,19 @@
 $(document).ready(function(){
-	
-	//agregando clase active al primer boton
-	let mujeres = $('.hidden').val();
-    console.log(mujeres);
-    console.log( JSON.parse(mujeres));
 
-		
+    let datosmujeres = $('.mujer')
+    //console.log(datosmujeres);
+    //console.log(datosmujeres.children());
+    $('.mujer').each(function (index, mujer ) { 
+        //console.log(mujer);
+       // console.log(mujer);
+       
+    });
+
+    //for(var i in datosmujeres.children()){
+      
+      //  console.log(datosmujeres.children[i]);
+    //}
+    
 });
 
 
@@ -21,25 +29,60 @@ document.addEventListener('DOMContentLoaded', function() {
         accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA'
     }).addTo(map);
 
-    var marker = L.marker([-13.5498695,-71.953328,12]).addTo(map);
+    // Datos mujer
 
-    var marker2 = L.marker([-14.26944,-71.22611]).addTo(map);
+
+    $('.mujer').each(function (index, mujer ) { 
+        //JSON.parse(JSON.stringify(mujer.value))
+
+        //var variable = mujer.value; 
+        //console.log("'"+mujer.value+"'");
+        //var variable = "'"+mujer.value+"'";
+        //console.log(variable);
+        // la g indica de forma global
+        var regex = new RegExp("'", "g");
+        var res = mujer.value.replace(regex, "\"");
+
+        var variable =JSON.stringify( "'"+res+"'");
+        console.log("stringify");
+        console.log(variable);
+        const obj = JSON.parse(variable);
+        console.log("obj");
+        console.log(JSON.parse(obj));
+        //console.log(JSON.parse(JSON.stringify((variable))));
+       // const obj = JSON.parse('{"id": 1, "link_imagen": "img/Escritora_01.jpg", "categoria": "Escritora", "nombre": "toto", "lugar": {"distrito": "distrito centro", "departamento": "cusco", "coordx": "-13.5498695", "coordy": "-71.953328,12"}}');
+       // console.log(obj);
+        //console.log(obj.id);
+        //console.log(mujer.value);
+        // console.log(mujer);
+       
+    var mujercoordenadasx = $('.mujercoordx').val();
+    var mujercoordenadasy = $('.mujercoordy').val();
+    let mujernombre = $('.mujernombre').val();
+    let mujerlugardistrito = $('.mujerlugardistrito').val();
+    let mujerlugardep = $('.mujerlugardep').val();
+    let mujerID = $('.mujerID').val();
+    var marker = L.marker([parseFloat(mujercoordenadasx),parseFloat(mujercoordenadasy)]).addTo(map);
+    //var marker2 = L.marker([-14.26944,-71.22611]).addTo(map);
 
     var popup = L.popup();
+    let mujerimagen = $('.mujerimagen').val();
 
-    var photoImg = '<a href="galleries/1"><img src="static/img/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
-    //var photoImg =  '<a href="https://www.google.com"><img src="static/' + '{{mujer.link_imagen}}'+ '" alt=""></img></a>';
+    var photoImg = '<a href="galleries/'+ mujerID+ '"><img src="static/' + mujerimagen + '" height="1200px" width="1200px" alt="imagen de "'+ mujernombre + '"/></a>';
+    
     function onMarkerMouseOver(e) {
         popup
             .setLatLng(e.latlng)
-            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>")
+            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>" + "</br>"+ mujernombre + "</br>"+ "</br>"+
+                         mujerlugardistrito + "</br>"+ "</br>"+ mujerlugardep + "</br>")
             .openOn(map);
     }
 
     function onMarkerMouseClick(e) {
         popup
             .setLatLng(e.latlng)
-            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>")
+            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>" + "</br>"+ mujernombre + "</br>"+ "</br>"+
+            mujerlugardistrito + "</br>"+ "</br>"+ mujerlugardep + "</br>")
             .openOn(map);
     }
 
@@ -47,8 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
         map.closePopup();
     }
 
-    marker.on('click', onMarkerMouseClick);
-
-    marker2.on('click', onMarkerMouseClick);
+    marker.on('mouseover', onMarkerMouseOver);
+    //Fin datos mujer
+    });
+    //marker2.on('mouseover', onMarkerMouseOver);
 
 });

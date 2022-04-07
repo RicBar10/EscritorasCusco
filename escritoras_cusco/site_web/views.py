@@ -14,7 +14,15 @@ def index(request):
     template = loader.get_template('index.html')
     mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
                 'categoria': c.get_categoria_display(),
-                'nombre': c.mujer.nombre} for c in Profesion.objects.all()]
+                'nombre': c.mujer.nombre,
+                'lugar':{ 
+                 "distrito":c.mujer.lugar.distrito,
+                 "departamento":c.mujer.lugar.departamento,
+                 "coordx":c.mujer.lugar.coordx,
+                 "coordy":c.mujer.lugar.coordy
+                } 
+                } for c in Profesion.objects.all()    
+                ]
 
     context = {"mujeres": mujeres}
     return HttpResponse(template.render(context, request=request))

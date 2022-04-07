@@ -16,7 +16,8 @@ class Lugar(models.Model):
     distrito = models.CharField(max_length=200)
     provincia = models.CharField(max_length=200)
     departamento = models.CharField(max_length=200)
-
+    coordx = models.CharField(max_length=200)
+    coordy = models.CharField(max_length=200)
 
 class Mujer(models.Model):
     nombre = models.CharField(max_length=200)
@@ -26,7 +27,6 @@ class Mujer(models.Model):
     trayectoria = models.CharField(max_length=200)
     link_imagen = models.CharField(max_length=200)
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
-
 
 class Publicacion(models.Model):
     titulo = models.CharField(max_length=200)
