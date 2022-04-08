@@ -68,13 +68,13 @@
         <div class="buclemujeres"> 
         {% for mujer in mujeres %}
             <div class="datosmujer hidden"  mujer_id={{mujer.id}} > 
-                <input value="{{mujer.nombre}}" class="mujernombre" />
-                <input value="{{mujer.id}}" class="mujerID" />
-                <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" />
-                <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" />
-                <input value="{{mujer.link_imagen}}" class="mujerimagen" />
-                <input value="{{mujer.lugar.coordx}}" class="mujercoordx" />
-                <input value="{{mujer.lugar.coordy}}" class="mujercoordy" />
+                <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
+                <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
+                <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
+                <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" mujer_id={{mujer.id}} />
+                <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
+                <input value="{{mujer.lugar.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
+                <input value="{{mujer.lugar.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
 
                 <p mujer_id={{mujer.nombre}}></p>
             </div>   

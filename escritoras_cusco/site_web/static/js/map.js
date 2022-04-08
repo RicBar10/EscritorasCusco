@@ -40,41 +40,28 @@ document.addEventListener('DOMContentLoaded', function() {
         //var variable = "'"+mujer.value+"'";
         //console.log(variable);
         // la g indica de forma global
-        var regex = new RegExp("'", "g");
-        var res = mujer.value.replace(regex, "\"");
+        index++;
+        //$('.mujernombre[mujer_id="'+ index +'"]')
+        //console.log( $('.mujernombre[mujer_id="'+ index +'"]')[0].value);
+        let mujernombre = $('.mujernombre[mujer_id="'+ index +'"]')[0].value;
+        var mujerlugarcoordx = $('.mujerlugarcoordx[mujer_id="'+ index +'"]')[0].value;
+        var mujerlugarcoordy = $('.mujerlugarcoordy[mujer_id="'+ index +'"]')[0].value;
+        let mujerlugardistrito = $('.mujerlugardistrito[mujer_id="'+ index +'"]')[0].value;
+        let mujerlugardep = $('.mujerlugardep[mujer_id="'+ index +'"]')[0].value;
+        let mujerID =$('.mujerID[mujer_id="'+ index +'"]')[0].value;
+        var marker = L.marker([parseFloat(mujerlugarcoordx),parseFloat(mujerlugarcoordy)]).addTo(map);
+        let mujerimagen = $('.mujerimagen[mujer_id="'+ index +'"]')[0].value;
+        var popup = L.popup();
 
-        var variable =JSON.stringify( "'"+res+"'");
-        console.log("stringify");
-        console.log(variable);
-        const obj = JSON.parse(variable);
-        console.log("obj");
-        console.log(JSON.parse(obj));
-        //console.log(JSON.parse(JSON.stringify((variable))));
-       // const obj = JSON.parse('{"id": 1, "link_imagen": "img/Escritora_01.jpg", "categoria": "Escritora", "nombre": "toto", "lugar": {"distrito": "distrito centro", "departamento": "cusco", "coordx": "-13.5498695", "coordy": "-71.953328,12"}}');
-       // console.log(obj);
-        //console.log(obj.id);
-        //console.log(mujer.value);
-        // console.log(mujer);
-       
-    var mujercoordenadasx = $('.mujercoordx').val();
-    var mujercoordenadasy = $('.mujercoordy').val();
-    let mujernombre = $('.mujernombre').val();
-    let mujerlugardistrito = $('.mujerlugardistrito').val();
-    let mujerlugardep = $('.mujerlugardep').val();
-    let mujerID = $('.mujerID').val();
-    var marker = L.marker([parseFloat(mujercoordenadasx),parseFloat(mujercoordenadasy)]).addTo(map);
-    //var marker2 = L.marker([-14.26944,-71.22611]).addTo(map);
+        //let mujerimagen = $('.mujerimagen').val();
 
-    var popup = L.popup();
-    let mujerimagen = $('.mujerimagen').val();
-
-    var photoImg = '<a href="galleries/'+ mujerID+ '"><img src="static/' + mujerimagen + '" height="1200px" width="1200px" alt="imagen de "'+ mujernombre + '"/></a>';
+        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="1200px" width="1200px" alt="imagen de "'+ mujernombre + '"/></a>';
     
     function onMarkerMouseOver(e) {
         popup
             .setLatLng(e.latlng)
             .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>" + "</br>"+ mujernombre + "</br>"+ "</br>"+
-                         mujerlugardistrito + "</br>"+ "</br>"+ mujerlugardep + "</br>")
+                            mujerlugardistrito + "</br>"+ "</br>"+ mujerlugardep + "</br>")
             .openOn(map);
     }
 
