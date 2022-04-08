@@ -24,7 +24,7 @@ $(document).ready(function(){
 
         //let mujerimagen = $('.mujerimagen').val();
 
-        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="1200px" width="1200px" alt="imagen de "'+ mujernombre + '"/></a>';
+        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="1200px" width="1200px" id="imgmapa" alt="imagen de "'+ mujernombre + '"/></a>';
     
     function onMarkerMouseOver(e) {
         popup
