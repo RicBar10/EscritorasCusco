@@ -10,11 +10,13 @@ from django.db.models import Q
 from django.core import serializers
 
 # Create your views here.
+
+
 def index(request):
     template = loader.get_template('index.html')
     mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
                 'categoria': c.get_categoria_display(),
-                'nombre': c.mujer.nombre} for c in Profesion.objects.all()]
+                'nombre': c.mujer.nombre} for c in Ejerce.objects.all()]
 
     context = {"mujeres": mujeres}
     return HttpResponse(template.render(context, request=request))
