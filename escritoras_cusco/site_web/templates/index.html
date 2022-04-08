@@ -27,10 +27,9 @@
 
 <body>
     <div class="social-bar">
-        <a href="https://www.facebook.com/mujeresdellibroperuano" class="icon icon-facebook" target="" _blank></a>
-        <a href="https://www.youtube.com/channel/UCGuPDPSEgF-xaTerf3puUaQ" class="icon icon-youtube" target=""
-            _blank></a>
-        <a href="https://www.instagram.com/mujeresdellibroperuano/" class="icon icon-instagram" target="" _blank></a>
+        <a href="https://www.facebook.com/mujeresdellibroperuano" class="icon icon-facebook" target="_blank" ></a>
+        <a href="https://www.youtube.com/channel/UCGuPDPSEgF-xaTerf3puUaQ" class="icon icon-youtube" target="_blank" ></a>
+        <a href="https://www.instagram.com/mujeresdellibroperuano/" class="icon icon-instagram" target="_blank" ></a>
     </div>
     <header id="mainHeader">
         <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
@@ -75,10 +74,8 @@
                 <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
                 <input value="{{mujer.lugar.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
                 <input value="{{mujer.lugar.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
-
-                <p mujer_id={{mujer.nombre}}></p>
             </div>   
-            <input value="{{mujer}}" class="mujer" />
+            <input value="{{mujer}}" class="mujer hidden" />
         {% endfor %}
         </div>
 

@@ -1,23 +1,4 @@
 $(document).ready(function(){
-
-    let datosmujeres = $('.mujer')
-    //console.log(datosmujeres);
-    //console.log(datosmujeres.children());
-    $('.mujer').each(function (index, mujer ) { 
-        //console.log(mujer);
-       // console.log(mujer);
-       
-    });
-
-    //for(var i in datosmujeres.children()){
-      
-      //  console.log(datosmujeres.children[i]);
-    //}
-    
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
 	var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -29,20 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
         accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA'
     }).addTo(map);
 
-    // Datos mujer
-
-
     $('.mujer').each(function (index, mujer ) { 
-        //JSON.parse(JSON.stringify(mujer.value))
-
-        //var variable = mujer.value; 
-        //console.log("'"+mujer.value+"'");
-        //var variable = "'"+mujer.value+"'";
-        //console.log(variable);
-        // la g indica de forma global
         index++;
-        //$('.mujernombre[mujer_id="'+ index +'"]')
-        //console.log( $('.mujernombre[mujer_id="'+ index +'"]')[0].value);
         let mujernombre = $('.mujernombre[mujer_id="'+ index +'"]')[0].value;
         var mujerlugarcoordx = $('.mujerlugarcoordx[mujer_id="'+ index +'"]')[0].value;
         var mujerlugarcoordy = $('.mujerlugarcoordy[mujer_id="'+ index +'"]')[0].value;
@@ -83,3 +52,5 @@ document.addEventListener('DOMContentLoaded', function() {
     //marker2.on('mouseover', onMarkerMouseOver);
 
 });
+
+
