@@ -3,18 +3,20 @@ from django.http import HttpResponse
 from django.template import loader
 from django.template import RequestContext
 from .models import Contact
-from site_web.models import Mujer, Profesion
+from site_web.models import Mujer, Ejerce
 from django.db.models import Q
 
 # views.py
 from django.core import serializers
 
 # Create your views here.
+
+
 def index(request):
     template = loader.get_template('index.html')
     mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
                 'categoria': c.get_categoria_display(),
-                'nombre': c.mujer.nombre} for c in Profesion.objects.all()]
+                'nombre': c.mujer.nombre} for c in Ejerce.objects.all()]
 
     context = {"mujeres": mujeres}
     return HttpResponse(template.render(context, request=request))
@@ -24,7 +26,7 @@ def galleries(request):
     template = loader.get_template('galleries.html')
     mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
                 'categoria': c.get_categoria_display(),
-                'nombre': c.mujer.nombre} for c in Profesion.objects.all()]
+                'nombre': c.mujer.nombre} for c in Ejerce.objects.all()]
 
     context = {"mujeres": mujeres}
     return HttpResponse(template.render(context, request=request))

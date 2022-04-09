@@ -2,7 +2,7 @@ DELETE FROM site_web_mujer;
 DELETE FROM site_web_publicacion;
 DELETE FROM site_web_lugar;
 DELETE FROM site_web_ejerce;
-
+    
 INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen) VALUES
 	(1,"Iñakapalla","Chávez Bermúdez",1,"20/06/1986",NULL,NULL,"img/not_found.jpg"),
 	(2,"Rosa Augusta","Rivero Ricalde",1,"14/04/1907","01/10/1966",NULL,"img/not_found.jpg"),
