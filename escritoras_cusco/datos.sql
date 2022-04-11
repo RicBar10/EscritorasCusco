@@ -2,12 +2,6 @@ DELETE FROM site_web_mujer;
 DELETE FROM site_web_publicacion;
 DELETE FROM site_web_lugar;
 DELETE FROM site_web_ejerce;
-
-INSERT INTO site_web_lugar(id,distrito,provincia,departamento,coordx,coordy) VALUES
-	(1,NULL,NULL,"Cusco",NULL,NULL),
-	(2,NULL,"Acomayo","Cusco",NULL,NULL),
-	(3,NULL,"Espinar","Cusco",NULL,NULL),
-	(4,"Limatambo","Anta","Cusco",NULL,NULL);
     
 INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen) VALUES
 	(1,"Iñakapalla","Chávez Bermúdez",1,"20/06/1986",NULL,NULL,"img/not_found.jpg"),
@@ -46,6 +40,12 @@ INSERT INTO site_web_publicacion(id,titulo,fecha,descripcion,mujer_id) VALUES
 	(8,"Sueño Indigo","2018",NULL,15),
 	(9,"Juego y silencio","2009",NULL,21),
 	(10,"Semillitas","2015",NULL,24);
+
+INSERT INTO site_web_lugar(id,distrito,provincia,departamento,coordx,coordy) VALUES
+	(1,NULL,NULL,"Cusco",NULL,NULL),
+	(2,NULL,"Acomayo","Cusco",NULL,NULL),
+	(3,NULL,"Espinar","Cusco",NULL,NULL),
+	(4,"Limatambo","Anta","Cusco",NULL,NULL);
 
 INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(1,7,"Es"),
