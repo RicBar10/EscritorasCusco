@@ -24,9 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'n(_vedl%2%dmt8dih^uypc_phi(t6dd@1=4he$tl@1d+5&%26^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['194.195.86.114', 'mujeresdellibroperuano.com',
+                 'www.mujeresdellibroperuano.com']
 
 
 # Application definition

@@ -2,13 +2,20 @@ DELETE FROM site_web_mujer;
 DELETE FROM site_web_publicacion;
 DELETE FROM site_web_lugar;
 DELETE FROM site_web_ejerce;
+
+INSERT INTO site_web_lugar(id,distrito,provincia,departamento,coordx,coordy) VALUES
+	(1,NULL,NULL,"Cusco","-13.5498695","-71.953328,12"),
+	(2,NULL,"Acomayo","Cusco","-14.26944","-71.22611"),
+	(3,NULL,"Espinar","Cusco","-13.5269522","-71.9751357,14.72"),
+	(4,"Limatambo","Anta","Cusco","-13.5267773","-71.9714999,16"),
+	(5,NULL,NULL,"Cusco","-13.527820432248365","-71.96757312285558");
     
 INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen) VALUES
 	(1,"Iñakapalla","Chávez Bermúdez",1,"20/06/1986",NULL,NULL,"img/not_found.jpg"),
-	(2,"Rosa Augusta","Rivero Ricalde",1,"14/04/1907","01/10/1966",NULL,"img/not_found.jpg"),
+	(2,"Rosa Augusta","Rivero Ricalde",5,"14/04/1907","01/10/1966",NULL,"img/not_found.jpg"),
 	(3,"Inés Qorich'aska","Quispe Puma",2,"1990",NULL,NULL,"img/not_found.jpg"),
-	(4,"Aleyda","Cárdenas",1,"1987",NULL,NULL,"img/not_found.jpg"),
-	(5,"Silvia Rosa","Huamaní Quispe",3,"1982",NULL,NULL,"img/not_found.jpg"),
+	(4,"Aleyda","Cárdenas",3,"1987",NULL,NULL,"img/not_found.jpg"),
+	(5,"Silvia Rosa","Huamaní Quispe",4,"1982",NULL,NULL,"img/not_found.jpg"),
 	(6,"Gladys","Conde Camargo",1,"1982",NULL,NULL,"img/not_found.jpg"),
 	(7,"Ana María","Milla Hurtado",1,"1977",NULL,NULL,"img/not_found.jpg"),
 	(8,"Ch'aska Eugenia","Anka Ninawaman",3,"1973",NULL,NULL,"img/not_found.jpg"),
@@ -41,25 +48,9 @@ INSERT INTO site_web_publicacion(id,titulo,fecha,descripcion,mujer_id) VALUES
 	(9,"Juego y silencio","2009",NULL,21),
 	(10,"Semillitas","2015",NULL,24);
 
-INSERT INTO site_web_lugar(id,distrito,provincia,departamento,coordx,coordy) VALUES
-	(1,NULL,NULL,"Cusco",NULL,NULL),
-	(2,NULL,"Acomayo","Cusco",NULL,NULL),
-	(3,NULL,"Espinar","Cusco",NULL,NULL),
-	(4,"Limatambo","Anta","Cusco",NULL,NULL);
-
 INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
-	(1,7,"Es"),
-	(2,8,"Po"),
-	(3,8,"Tr"),
-	(4,8,"Pr"),
-	(5,10,"Es"),
-	(6,10,"Ed"),
-	(7,10,"An"),
-	(8,14,"Es"),
-	(9,14,"Ed"),
-	(10,15,"Es"),
-	(11,15,"Il"),
-	(12,17,"Ed"),
-	(13,19,"An"),
-	(14,20,"Po"),
-	(15,23,"Es");
+	(1,1,"Es"),
+	(2,2,"Po"),
+	(3,3,"Tr"),
+	(4,4,"Pr"),
+	(5,5,"Es");
