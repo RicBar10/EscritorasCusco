@@ -16,8 +16,8 @@ class Lugar(models.Model):
     distrito = models.CharField(max_length=200, null=True)
     provincia = models.CharField(max_length=200, null=True)
     departamento = models.CharField(max_length=200)
-    coordx = models.BigIntegerField(null=True)
-    coordy = models.BigIntegerField(null=True)
+    coordx = models.CharField(max_length=200)
+    coordy = models.CharField(max_length=200)
 
 
 class Mujer(models.Model):

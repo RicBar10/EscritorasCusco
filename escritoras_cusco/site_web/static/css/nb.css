@@ -4,7 +4,7 @@
 :root {
     --black: #333;
     --blue: #7186FF;
-    --red: #dd1111;
+    --red: #ab3ac2;
     --shaded-red: rgb(223, 149, 149);
     --green: #00751F;
     --white: #FFF;
@@ -22,30 +22,39 @@ body {
     min-height: 100%;
 }
 img {
-    max-width: 100%;
+    /*width: 100%;
+    height: 100%;*/
+    width: auto;
     height: auto;
+    /*height: auto;*/
+}
+#imgmapa{
+    width: 100%;
+    height: 100%;
 }
 #mainHeader{
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 120px 1fr;
     align-items: start;
     background-color: var(--red);
-    height: 50px;
+    height: 70px;
     width: 100%;
     position: fixed;
 
 }
 #logoImg{
-    padding: 0px;
+    /*padding: 0px;
     position: relative;
-    z-index: 500;
+    z-index: 500;*/
+    height: 100%;
+    width: 100%;
 }
 #mainNav{
     position: absolute;
     background-color: var(--red);
     width: 100%;
     top: 40px;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     display: none;
 }
 #mainNav ul{
