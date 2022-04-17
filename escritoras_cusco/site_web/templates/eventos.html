@@ -1,75 +1,57 @@
+{% extends 'layouts/base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mujeres del libro peruano - Eventos</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <script src="{% static 'js/randomImage.js' %}" defer></script>
-    <script src="{% static 'js/singleGallery.js' %}" defer></script>
-</head>
+{% block title %} Eventos {% endblock title %}
 
-<body>
-    <header id="mainHeader">
-        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
-        <nav id="mainNav">
-            <ul>
-                <li><a href="{% url 'Index' %}">Inicio</a></li>
-                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'Contact' %}">Contacto</a></li>
-            </ul>
-        </nav>
-        <button id="menuToggle" class="hamburger">&nbsp;</button>
-    </header>
+{% block body_class %}  bg-gray-100 {% endblock body_class %}
 
-    <section id="pageContent" class="home">
-        <!-- <main id="singleGallery"> -->
-        <!-- <h1>Autoras</h1> -->
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-        </div>
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-        </div>
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-        </div>
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
+{% block content %}
+  {% include "navigation.html" %}
+  <section id="pageContent" class="home">
+      <!-- <main id="singleGallery"> -->
+      <!-- <h1>Autoras</h1> -->
+      <div class="eventos">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+      </div>
+      <div class="eventos">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+      </div>
+      <div class="eventos">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+      </div>
+      <div class="eventos">
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-        </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
+              officia provident, </p>
+      </div>
 
-        <!-- </main> -->
-    </section>
-    <footer id="mainFooter">
-        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
-    </footer>
-    <figure id="galleryContainer"><img src=""></figure>
-</body>
-
-</html>
+      <!-- </main> -->
+  </section>
+{% endblock content %}
+      <!-- Specific JS goes HERE -->
+{% block javascripts %}
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'css/nb.css' %}">
+<script src="{% static 'js/randomImage.js' %}" defer></script>
+<script src="{% static 'js/singleGallery.js' %}" defer></script>
+{% endblock javascripts %}
