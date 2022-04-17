@@ -13,6 +13,7 @@ TIPO_CATEGORIA = [
 
 
 class Lugar(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True)
     distrito = models.CharField(max_length=200, null=True)
     provincia = models.CharField(max_length=200, null=True)
     departamento = models.CharField(max_length=200)
@@ -21,6 +22,7 @@ class Lugar(models.Model):
 
 
 class Mujer(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True)
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
     fecha_nacimiento = models.CharField(max_length=10, null=True)
@@ -31,6 +33,7 @@ class Mujer(models.Model):
 
 
 class Publicacion(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True)
     titulo = models.CharField(max_length=200)
     fecha = models.CharField(max_length=10)
     descripcion = models.CharField(max_length=200, null=True)
@@ -38,11 +41,13 @@ class Publicacion(models.Model):
 
 
 class Ejerce(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True)
     categoria = models.CharField(choices=TIPO_CATEGORIA, max_length=2)
     mujer = models.ForeignKey(Mujer, on_delete=models.CASCADE)
 
 
 class Contact(models.Model):
+    id = models.AutoField(auto_created=True, primary_key=True)
     name = models.CharField(max_length=200)
     email = models.EmailField()
     subject = models.TextField()
