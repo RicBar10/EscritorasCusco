@@ -10,7 +10,7 @@ $(document).ready(function(){
         accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA'
     }).addTo(map);
 
-    $('.mujer').each(function (index, mujer ) { 
+    $('.mujer').each(function (index, mujer ) {
         index++;
         let mujernombre = $('.mujernombre[mujer_id="'+ index +'"]')[0].value;
         var mujerlugarcoordx = $('.mujerlugarcoordx[mujer_id="'+ index +'"]')[0].value;
@@ -22,10 +22,8 @@ $(document).ready(function(){
         let mujerimagen = $('.mujerimagen[mujer_id="'+ index +'"]')[0].value;
         var popup = L.popup();
 
-        //let mujerimagen = $('.mujerimagen').val();
+        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="10px" id="imgmapa" alt="imagen de "'+ mujernombre + '" class="img-fluid" /></a>';
 
-        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="1200px" width="1200px" id="imgmapa" alt="imagen de "'+ mujernombre + '"/></a>';
-    
     function onMarkerMouseOver(e) {
         popup
             .setLatLng(e.latlng)
@@ -52,5 +50,3 @@ $(document).ready(function(){
     //marker2.on('mouseover', onMarkerMouseOver);
 
 });
-
-

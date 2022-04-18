@@ -9,8 +9,10 @@
 {% block content %}
   {% include "navigation.html" %}
 
-  <header>
-    <div id="leafletMap"></div>
+  <section class="my-5 py-5">
+    <div class="container mx-auto text-center">
+      <div id="leafletMap"></div>
+    </div>
     <div class="buclemujeres">
     {% for mujer in mujeres %}
         <div class="datosmujer d-none"  mujer_id={{mujer.id}} >
@@ -53,7 +55,7 @@
           </div>
         </div>
     </div>
-  </header>
+  </section>
 {% endblock content %}
 <!-- Specific JS goes HERE -->
 {% block javascripts %}
