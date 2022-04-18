@@ -13,3 +13,9 @@ sqlite3 db.sqlite3   ---> para entrar a la base de datos
 
 4) Run pagina web:
 python manage.py runserver
+
+Update branch from master:
+git merge origin/master
+
+.read datos.sql 
+select * from site_web_lugar;

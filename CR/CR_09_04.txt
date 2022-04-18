@@ -1,0 +1,33 @@
+
+
+poner logo ministerio de cultura de l Peru
+
+Servidor:
+- Dominio: 1,20 € / año
+- Hosting: 71,28 € / año   
+			o
+		   227,52 €/ 4 año (55 €/ año)
+		   
+ https://ww1.sunat.gob.pe/a/html/contribuyente2/registro/adminforuc/registroruc/informativo.html
+ https://www.gob.pe/1101-emitir-recibo-por-honorarios-electronico
+ 
+Por hacer:
+ 
+ 1)Agregar datos que faltan( provincia, departamento)(Buho Azul)
+ 2)Agregar profesion a las que falten(Buho Azul)
+ 3)Agregar informacion de publicacion (Lucia)
+	 agregar :
+	- ISBN
+	- Nombre del libro
+	- Categoria
+	- Ubicacion del libro
+	- Abstract
+	- Otros
+ 4)Agregar biografia(trayectoria)(Buho Azul)
+ 5)Hacer Eventos y descuentos(Diego Seminario/Buho Azul)
+ 6)Diseño(Panepo/Sara)
+ 7)Certificado plantilla(Ricardo)
+ 8)Cambiar logo y link de youtube(Ricardo)
+ 9)Contacto: Enviar email a mapadeescritorasperuanas@gmail.com(Sara)
+ 
+ 
