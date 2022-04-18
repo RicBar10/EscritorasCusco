@@ -7,11 +7,11 @@
 
 
   #leafletMap {
-    position:fixed;
+    /* position:fixed; */
     left: 5%;
     /*width: 50%;*/
-    width: 50%;
-    height: 65%;
+    width: 80%;
+    height: 500px !important;
     border: 3px solid #847a85;
     background-color: rgba(155,155,155,0.8);
     /*padding: 10px;*/

@@ -1,92 +1,66 @@
+{% extends 'layouts/base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mujeres del libro peruano</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <link rel="stylesheet" href="{% static 'css/map.css' %}">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
-    <link rel="stylesheet" href="{% static 'css/font.css' %}">
-    <script src="{% static 'js/randomImage.js' %}" defer></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="{% static 'js/menu.js' %}"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
-    <script src="{% static 'js/map.js' %}"></script>
+{% block title %} Mapa {% endblock title %}
 
-</head>
+{% block body_class %}  bg-gray-100 {% endblock body_class %}
 
-<body>
-    <div class="social-bar">
-        <a href="https://www.facebook.com/mujeresdellibroperuano" class="icon icon-facebook" target="_blank" ></a>
-        <a href="https://www.youtube.com/channel/UCGuPDPSEgF-xaTerf3puUaQ" class="icon icon-youtube" target="_blank" ></a>
-        <a href="https://www.instagram.com/mujeresdellibroperuano/" class="icon icon-instagram" target="_blank" ></a>
+{% block content %}
+  {% include "navigation.html" %}
+
+  <header>
+    <div id="leafletMap"></div>
+    <div class="buclemujeres">
+    {% for mujer in mujeres %}
+        <div class="datosmujer hidden"  mujer_id={{mujer.id}} >
+            <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
+            <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
+            <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
+            <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" mujer_id={{mujer.id}} />
+            <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
+            <input value="{{mujer.lugar.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
+            <input value="{{mujer.lugar.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
+        </div>
+        <input value="{{mujer}}" class="mujer hidden" />
+    {% endfor %}
     </div>
-    <header id="mainHeader">
-        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
-        <nav id="mainNav">
-            <ul>
-                <li><a href="{% url 'Index' %}">Inicio</a></li>
-                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'Contact' %}">Contacto</a></li>
-            </ul>
-        </nav>
-        <button id="menuToggle" class="hamburger">&nbsp;</button>
-    </header>
 
-    <section id="pageContent" class="home">
-         <div id="pictInfo">
-            <h1>BIENVENIDOS AL MAPA DE ESCRITORAS PERUANAS:</h1>
-            <p>Mapa de Escritoras Peruanas es un proyecto digital que busca 
-                la difusión y visibilización de escritoras, poetas, historiadoras,
-                historietistas, editoras, ilustradoras peruanas de todas las regiones del Perú
-                a través de nuestra página web donde usted encontrará la ubicación de las estas
-                mujeres en un mapa basados en su lugar de nacimiento, este mapa será de carácter
-                interactivo que brindará información del trabajo de las escritoras peruanas y sus libros. </p>
-            <p>Buscamos sembrar el interés de nuestro país por contenido literario dinámico, 
-                que sea de fácil acceso, creando un legado para las nuevas generaciones de escritores
-                 y lectores que tienen amor por su historia y dan el reconocimiento a todas las mujeres 
-                 que se abrieron paso dentro del ecosistema del libro.</p>
-            <p> Este proyecto es ganador del Concurso Nacional De Promoción De Libros Y Promoción De Libros
-                 Y Autores Peruanos En Publicaciones Digitales y/o Publicaciones Periódicas Impresas de los 
-                 Estímulos Económicos de Cultura 2021. </p>
+
+    <div class="page-header section-height-85">
+      <div class="container mx-auto mp">
+        <div class="row">
+          <div class="col-lg-7 d-flex justify-content-center flex-column">
+            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+              <div class="text-center">
+                <h3 class="text-gradient text-primary">
+                  BIENVENIDOS AL MAPA DE ESCRITORAS PERUANAS
+                </h3>
+                <p>Mapa de Escritoras Peruanas es un proyecto digital que busca
+                  la difusión y visibilización de escritoras, poetas, historiadoras,
+                  historietistas, editoras, ilustradoras peruanas de todas las regiones del Perú
+                  a través de nuestra página web donde usted encontrará la ubicación de las estas
+                  mujeres en un mapa basados en su lugar de nacimiento, este mapa será de carácter
+                  interactivo que brindará información del trabajo de las escritoras peruanas y sus libros. </p>
+                <p>Buscamos sembrar el interés de nuestro país por contenido literario dinámico,
+                  que sea de fácil acceso, creando un legado para las nuevas generaciones de escritores
+                  y lectores que tienen amor por su historia y dan el reconocimiento a todas las mujeres
+                  Y Autores Peruanos En Publicaciones Digitales y/o Publicaciones Periódicas Impresas de los
+                  Estímulos Económicos de Cultura 2021. </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+    </div>
+  </header>
+{% endblock content %}
+<!-- Specific JS goes HERE -->
+{% block javascripts %}
+<!-- MAP Files -->
+  <script src="{% static 'js/map.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/map.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-        <div id="leafletMap"></div>
-  
-        <div class="buclemujeres"> 
-        {% for mujer in mujeres %}
-            <div class="datosmujer hidden"  mujer_id={{mujer.id}} > 
-                <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
-                <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
-                <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
-                <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" mujer_id={{mujer.id}} />
-                <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
-                <input value="{{mujer.lugar.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
-                <input value="{{mujer.lugar.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
-            </div>   
-            <input value="{{mujer}}" class="mujer hidden" />
-        {% endfor %}
-        </div>
-
-
-    </section>
-
-
-
-    <footer id="mainFooter">
-        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
-    </footer>
-</body>
-
-</html>
+{% endblock javascripts %}

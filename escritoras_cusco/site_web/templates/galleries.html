@@ -1,62 +1,70 @@
+{% extends 'layouts/base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mujeres del libro peruano - Galerías</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <script src="{% static 'js/jquery-3.2.1.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
-</head>
+{% block title %} Mujeres {% endblock title %}
 
-<body>
-    <header id="mainHeader">
-        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
-        <nav id="mainNav">
-            <ul>
-                <li><a href="{% url 'Index' %}">Inicio</a></li>
-                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'Contact' %}">Contacto</a></li>
-            </ul>
-        </nav>
-        <button id="menuToggle" class="hamburger">&nbsp;</button>
-    </header>
+{% block body_class %}  bg-gray-100 {% endblock body_class %}
 
-    <section id="pageContent">
-        <div class="wrap">
-            <h1>Filtrar por categoría</h1>
-            <div class="store-wrapper">
-                <div class="category_list">
-                    <a href="#" class="category_item" category="all">Todo</a>
-                    <!-- <a href="{% url 'Galleries' %}" class="category_item" category="Escritoras">Escritoras</a> -->
-                    <a href="#" class="category_item" category="Escritora">Escritoras</a>
-                    <a href="#" class="category_item" category="Poeta">Poetas</a>
-                    <a href="#" class="category_item" category="Editora">Editoras</a>
-                    <a href="#" class="category_item" category="Ilustradora">Ilustradoras</a>
-                    <a href="#" class="category_item" category="Antropologa">Antropóloga</a>
-                </div>
-                <section class="products-list">
-                    {% for mujer in mujeres %}
-                    <div class="product-item" category={{mujer.categoria}}>
-                        <img src="static/{{mujer.link_imagen}}" alt="">
-                        <a href="{% url 'Gallerie' mujer_id=mujer.id %}">{{mujer.nombre}}</a>
-                    </div>
-                    {% empty %}
-                    <p class="text">Ninguna mujer por el momento.</p>
-                    {% endfor %}
-
-                </section>
+{% block content %}
+  {% include "navigation.html" %}
+  <section class="my-5 py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2">
+            <h3>Filtrar por categoría</h3>
+            <div class="d-flex flex-column">
+                <a href="#" class="mt-3 category_item" category="all">
+                  <button type="button" class="btn btn-lg btn-primary w-auto me-1 mb-0">Todo</button>
+                </a>
+                <a href="#" class="mt-3 category_item" category="Escritora">
+                  <button type="button" class="btn btn-lg bg-gradient-light w-auto me-1 mb-0">Escritoras</button>
+                </a>
+                <a href="#" class="mt-3 category_item" category="Poeta">
+                  <button type="button" class="btn btn-lg bg-gradient-light w-auto me-1 mb-0">Poetas</button>
+                </a>
+                <a href="#" class="mt-3 category_item" category="Editora">
+                  <button type="button" class="btn btn-lg bg-gradient-light w-auto me-1 mb-0">Editoras</button>
+                </a>
+                <a href="#" class="mt-3 category_item" category="Ilustradora">
+                  <button type="button" class="btn btn-lg bg-gradient-light w-auto me-1 mb-0">Ilustradoras</button>
+                </a>
+                <a href="#" class="mt-3 category_item" category="Antropologa">
+                  <button type="button" class="btn btn-lg bg-gradient-light w-auto me-1 mb-0">Antropóloga</button>
+                </a>
             </div>
+          </div>
         </div>
-    </section>
-    <footer id="mainFooter">
-        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
-    </footer>
-</body>
+        <div class="col-lg-9">
+          <div class="row">
+              {% for mujer in mujeres %}
+            <div class="product-item col" category={{mujer.categoria}}>
+              <div class="card card-profile card-plain">
+                <div class="card-body text-center bg-white shadow border-radius-lg p-3">
+                  <a href="{% url 'Gallerie' mujer_id=mujer.id %}" >
+                    <img class="w-100 border-radius-md" src="static/{{mujer.link_imagen}}"  alt="profil-escritora">
+                    <h5 class="mt-3 mb-1 d-md-block d-none">{{mujer.nombre}}</h5>
+                    <p class="mb-1 d-md-none d-block text-sm font-weight-bold text-darker">{{mujer.nombre}}</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+              {% empty %}
+              <p class="text">Ninguna mujer por el momento.</p>
+              {% endfor %}
 
-</html>
+          </div>
+          <section class="products-list">
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content %}
+  <!-- Specific JS goes HERE -->
+{% block javascripts %}
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/nb.css' %}"> -->
+{% endblock javascripts %}
