@@ -1,13 +1,26 @@
 $(document).ready(function(){
-	var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
+		var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
+		var LeafIcon = L.Icon.extend({
+		    options: {
+		       iconSize:     [38, 55],
+		       shadowSize:   [50, 64],
+		       // iconAnchor:   [22, 94],
+		       shadowAnchor: [4, 62],
+		       // popupAnchor:  [-3, -76]
+		    }
+		});
 
+		var greenIcon = new LeafIcon({
+		    iconUrl: 'static/images/layout/pin-claro.png',
+		    shadowUrl: 'static/images/layout/pin-sombra.png'
+		})
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA'
+        accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA',
     }).addTo(map);
 
     $('.mujer').each(function (index, mujer ) {
@@ -18,7 +31,7 @@ $(document).ready(function(){
         let mujerlugardistrito = $('.mujerlugardistrito[mujer_id="'+ index +'"]')[0].value;
         let mujerlugardep = $('.mujerlugardep[mujer_id="'+ index +'"]')[0].value;
         let mujerID =$('.mujerID[mujer_id="'+ index +'"]')[0].value;
-        var marker = L.marker([parseFloat(mujerlugarcoordx),parseFloat(mujerlugarcoordy)]).addTo(map);
+        var marker = L.marker([parseFloat(mujerlugarcoordx),parseFloat(mujerlugarcoordy)],{icon: greenIcon}).addTo(map);
         let mujerimagen = $('.mujerimagen[mujer_id="'+ index +'"]')[0].value;
         var popup = L.popup();
 
