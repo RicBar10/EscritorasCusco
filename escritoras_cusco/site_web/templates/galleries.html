@@ -39,11 +39,11 @@
         <div class="col-lg-9">
           <div class="row">
               {% for mujer in mujeres %}
-            <div class="product-item col" category={{mujer.categoria}}>
+            <div class="product-item col-lg-3 mb-4" category={{mujer.categoria}}>
               <div class="card card-profile card-plain">
                 <div class="card-body text-center bg-white shadow border-radius-lg p-3">
                   <a href="{% url 'Gallerie' mujer_id=mujer.id %}" >
-                    <img class="w-100 border-radius-md" src="static/{{mujer.link_imagen}}"  alt="profil-escritora">
+                    <img class="img-fluid border-radius-md" src="static/{{mujer.link_imagen}}"  alt="profil-escritora">
                     <h5 class="mt-3 mb-1 d-md-block d-none">{{mujer.nombre}}</h5>
                     <p class="mb-1 d-md-none d-block text-sm font-weight-bold text-darker">{{mujer.nombre}}</p>
                   </a>

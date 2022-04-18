@@ -9,9 +9,9 @@ INSERT INTO site_web_lugar(id,distrito,provincia,departamento,coordx,coordy) VAL
 	(3,NULL,"Espinar","Cusco","-13.5269522","-71.9751357,14.72"),
 	(4,"Limatambo","Anta","Cusco","-13.5267773","-71.9714999,16"),
 	(5,NULL,NULL,"Cusco","-13.527820432248365","-71.96757312285558");
-    
+
 INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen) VALUES
-	(1,"Iñakapalla","Chávez Bermúdez",1,"20/06/1986",NULL,NULL,"img/not_found.jpg"),
+	(1,"Iñakapalla","Chávez Bermúdez",1,"20/06/1986",NULL,NULL,"img/not_found.svg"),
 	(2,"Rosa Augusta","Rivero Ricalde",5,"14/04/1907","01/10/1966",NULL,"img/not_found.jpg"),
 	(3,"Inés Qorich'aska","Quispe Puma",2,"1990",NULL,NULL,"img/not_found.jpg"),
 	(4,"Aleyda","Cárdenas",3,"1987",NULL,NULL,"img/not_found.jpg"),

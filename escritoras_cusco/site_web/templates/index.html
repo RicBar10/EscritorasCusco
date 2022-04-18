@@ -13,7 +13,7 @@
     <div id="leafletMap"></div>
     <div class="buclemujeres">
     {% for mujer in mujeres %}
-        <div class="datosmujer hidden"  mujer_id={{mujer.id}} >
+        <div class="datosmujer d-none"  mujer_id={{mujer.id}} >
             <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
             <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
             <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
@@ -22,7 +22,7 @@
             <input value="{{mujer.lugar.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
             <input value="{{mujer.lugar.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
         </div>
-        <input value="{{mujer}}" class="mujer hidden" />
+        <input value="{{mujer}}" class="mujer d-none" />
     {% endfor %}
     </div>
 
