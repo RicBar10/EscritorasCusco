@@ -26,6 +26,7 @@ $(document).ready(function(){
     $('.mujer').each(function (index, mujer ) {
         index++;
         let mujernombre = $('.mujernombre[mujer_id="'+ index +'"]')[0].value;
+				let mujercategoria = $('.mujercategoria[mujer_id="'+ index +'"]')[0].value;
         var mujerlugarcoordx = $('.mujerlugarcoordx[mujer_id="'+ index +'"]')[0].value;
         var mujerlugarcoordy = $('.mujerlugarcoordy[mujer_id="'+ index +'"]')[0].value;
         let mujerlugardistrito = $('.mujerlugardistrito[mujer_id="'+ index +'"]')[0].value;
@@ -35,20 +36,35 @@ $(document).ready(function(){
         let mujerimagen = $('.mujerimagen[mujer_id="'+ index +'"]')[0].value;
         var popup = L.popup();
 
-        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="10px" id="imgmapa" alt="imagen de "'+ mujernombre + '" class="img-fluid" /></a>';
+        var photoImg = '<a href="galleries/'+ mujerID + '"><img src="static/' + mujerimagen + '" height="10px" id="imgmapa" alt="imagen de "'+ mujernombre + '" class="img-fluid border-radius-md" /></a>';
 
     function onMarkerMouseOver(e) {
         popup
             .setLatLng(e.latlng)
-            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>" + "</br>"+ mujernombre + "</br>"+ "</br>"+
-                            mujerlugardistrito + "</br>"+ "</br>"+ mujerlugardep + "</br>")
-            .openOn(map);
+						.setContent("<div class='card-plain card-blog card-image text-center border-radius-lg'>"+
+													"<div class='card-image border-radius-lg position-relative'>"+
+														photoImg +
+													"</div>"+
+													"<div class='card-body px-0 pb-0'>"+
+													" <h6 class='mb-0 d-md-block'>Natalie Paisley</h6>"+
+														"<p class='mb-0 mt-0 text-xs font-weight-bolder text-warning text-gradient text-uppercase'>"+
+															mujercategoria+'<br/>'+
+														"</p>" +
+														"<small>"+	mujerlugardistrito +"-"+ mujerlugardep +"</small>"+
+														"</div>" +
+												"</div>"
+        								)
+						.openOn(map);
     }
 
     function onMarkerMouseClick(e) {
         popup
             .setLatLng(e.latlng)
-            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>" + "</br>"+ mujernombre + "</br>"+ "</br>"+
+            .setContent("<center>Escritora </center>" +
+												"<div class='card-body text-center bg-white shadow border-radius-lg p-3'>"+ photoImg +
+													"<h5 class='mt-3 mb-1 d-md-block d-none'>"+ mujernombre + "</h5>"+
+												"</div>"+
+												"</br>"+
             mujerlugardistrito + "</br>"+ "</br>"+ mujerlugardep + "</br>")
             .openOn(map);
     }
