@@ -14,14 +14,15 @@ from django.core import serializers
 
 def index(request):
     template = loader.get_template('index.html')
-    mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
+    mujeres = [{'id': c.mujer_id,
+                'link_imagen': c.mujer.link_imagen,
                 'categoria': c.get_categoria_display(),
                 'nombre': c.mujer.nombre,
+                "coordx": c.mujer.coordx,
+                "coordy": c.mujer.coordy,
                 'lugar': {
                     "distrito": c.mujer.lugar.distrito,
-                    "departamento": c.mujer.lugar.departamento,
-                    "coordx": c.mujer.lugar.coordx,
-                    "coordy": c.mujer.lugar.coordy
+                    "region": c.mujer.lugar.region
                 }
                 } for c in Ejerce.objects.all()
                ]
