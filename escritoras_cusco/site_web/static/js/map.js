@@ -46,8 +46,8 @@ $(document).ready(function(){
 														photoImg +
 													"</div>"+
 													"<div class='card-body px-0 pb-0'>"+
-													" <h6 class='mb-0 d-md-block'>Natalie Paisley</h6>"+
-														"<p class='mb-0 mt-0 text-xs font-weight-bolder text-warning text-gradient text-uppercase'>"+
+													" <h6 class='mb-0 d-md-block text-warning text-gradient'>"+mujernombre+"</h6>"+
+														"<p class='mb-0 mt-0 text-xs font-weight-bolder text-uppercase'>"+
 															mujercategoria+'<br/>'+
 														"</p>" +
 														"<small>"+	mujerlugardistrito +"-"+ mujerlugardep +"</small>"+
