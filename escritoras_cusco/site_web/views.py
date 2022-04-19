@@ -16,6 +16,7 @@ def index(request):
     template = loader.get_template('index.html')
     mujeres = [{'id': c.id,
                 'link_imagen': c.link_imagen,
+                #TODO
                 'categoria': list(Ejerce.objects.all().filter(mujer=c.id).values_list('categoria', flat=True)),
                 'nombre': c.nombre,
                 "coordx": c.coordx,
