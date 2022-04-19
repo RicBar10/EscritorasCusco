@@ -14,23 +14,23 @@
     <div class="container mx-auto text-center">
       <div id="leafletMap"></div>
     </div>
-    <div class="buclemujeres">
+    <input value="{{mujeres}}" class="d-none" />
+
+    <div class="buclemujeres d-none">
     {% for mujer in mujeres %}
-        <div class="datosmujer d-none"  mujer_id={{mujer.id}} >
+        <div class="datosmujer "  mujer_id={{mujer.id}} >
             <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
             <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
             <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
             <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" mujer_id={{mujer.id}} />
             <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
-            <input value="{{mujer.lugar.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
-            <input value="{{mujer.lugar.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
+            <input value="{{mujer.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
+            <input value="{{mujer.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
             <input value="{{mujer.categoria}}" class="mujercategoria" mujer_id={{mujer.id}} />
         </div>
-        <input value="{{mujer}}" class="mujer" />
+        <input value="{{mujer}}" class="mujer d-none" />
     {% endfor %}
     </div>
-
-
     <div class="page-header section-height-85">
       <div class="container mx-auto mp">
         <div class="row">
