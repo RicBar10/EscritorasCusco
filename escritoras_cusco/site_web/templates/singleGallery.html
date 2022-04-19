@@ -6,27 +6,35 @@
 
 {% block body_class %}  bg-gray-100 {% endblock body_class %}
 
-{% block content %}
-  {% include "navigation.html" %}
-  <section id="pageContent" class="home">
-      <!-- <main id="singleGallery"> -->
-      <!-- <h1>Autoras</h1> -->
-      <div class="hijo1">
-          <h1>Informacion</h1>
-          <p>Ubicacion : {{mujer.lugar.distrito}} {{mujer.lugar.provincia}}</p>
-          <p>Departamento : {{mujer.lugar.departamento}}</p>
-          <p>Fecha de nacimiento : {{mujer.fecha_nacimiento}}</p>
-          <p>Fecha de defuncion : {{mujer.fecha_defuncion}} </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-              officia provident, </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-              officia provident, </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-              officia provident, </p>
-
-          <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" width="560" height="315" frameborder="0"
-              allowfullscreen></iframe>
-      </div>
+    <section id="pageContent" class="home">
+        <!-- <main id="singleGallery"> -->
+        <!-- <h1>Autoras</h1> -->
+        <div class="hijo1">
+            <h1>Informacion</h1>
+            <p>Ubicacion : {{mujer.lugar.distrito}} {{mujer.lugar.provincia}}</p>
+            <p>Departamento : {{mujer.lugar.departamento}}</p>
+            <p>Fecha de nacimiento : {{mujer.fecha_nacimiento}}</p>
+            <p>Fecha de defuncion : {{mujer.fecha_defuncion}} </p>
+            <p>{{mujer.trayectoria}} </p>
+            <p>Contacto : {{mujer.contacto}}</p>
+            <p>Entrevista :</p>
+            {% if mujer.entrevista == None %}
+            <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" width="560" height="315" frameborder="0"
+                allowfullscreen></iframe>
+            {% else %}
+            <iframe src="{{mujer.entrevista}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+            <h1>Publicaciones :</h1>
+            {% for publicacion in publicaciones %}
+            <h3>Titulo del libro :{{publicacion.titulo}}</h3>
+            <p>isbn : {{publicacion.isbn}}</p>
+            <p>{{publicacion.categorizacion}}-{{publicacion.fecha}}</p>
+            <p>{{publicacion.descripcion}}</p>
+            <img src="/static/{{publicacion.link_imagen}}" alt="">
+            {% empty %}
+            <p>Ninguna publicacion disponible por el momento.</p>
+            {% endfor %}
+        </div>
 
       <div class="hijo2">
           <h1>{{mujer.nombre}} {{mujer.apellido}}</h1>
