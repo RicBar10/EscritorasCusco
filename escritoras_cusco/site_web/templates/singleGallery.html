@@ -13,13 +13,15 @@
         <div class="row">
             <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
                 <div class="">
-                    <h2>{{mujer.nombre}} {{mujer.apellido}}</h2>
-                    <small class="stats"> Ubicacion : {{mujer.lugar.distrito}} , {{mujer.lugar.provincia}} ,
-                        {{mujer.lugar.departamento}}, ( {{mujer.fecha_nacimiento}} - {{mujer.fecha_defuncion}} )
+                    <h2>{{result.mujer.nombre}} {{result.mujer.apellido}}</h2>
+                    <small class="stats"> Ubicación : {{result.mujer.lugar.distrito}} , {{result.mujer.lugar.provincia}}
+                        ,
+                        {{result.mujer.lugar.region}}, ( {{result.mujer.fecha_nacimiento}} -
+                        {{result.mujer.fecha_defuncion}} )
                     </small>
                     <br>
-                    <small> category {{mujer.categoria}} </small>
-                    <p>Contacto : {{mujer.contacto}}</p>
+                    <small> Profesión : {{result.categorias}} </small>
+                    <p>Contacto : {{result.mujer.contacto}}</p>
 
                     <div class="icon">
                         <svg class="text-primary" width="25px" height="25px" viewBox="0 0 40 44" version="1.1"
@@ -42,13 +44,13 @@
                             </g>
                         </svg>
                     </div>
-                    <p class="ps-5">{{mujer.trayectoria}} </p>
+                    <p class="ps-5">{{result.mujer.trayectoria}} </p>
 
                 </div>
             </div>
             <div class="col-lg-3 col-md-5 position-relative mx-auto my-auto">
-                <img src="/static/{{mujer.link_imagen}}" class="img border-radius-lg w-100 position-relative z-index-2"
-                    alt="writter profile">
+                <img src="/static/{{result.mujer.link_imagen}}"
+                    class="img border-radius-lg w-100 position-relative z-index-2" alt="writter profile">
             </div>
         </div>
     </div>
@@ -100,11 +102,12 @@
             </div>
         </div>
         <div class="mt-4">
-            {% if mujer.entrevista == None %}
-            <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" width="560" height="315" frameborder="0"
-                allowfullscreen></iframe>
+            {% if result.mujer.entrevista == None %}
+            <p style="text-align:center"><iframe src=" http://www.youtube.com/embed/W7qWa52k-nE" width="560"
+                    height="315" frameborder="0" allowfullscreen></iframe></p>
             {% else %}
-            <iframe src="{{mujer.entrevista}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <p style="text-align:center"><iframe src="{{result.mujer.entrevista}}" width="560" height="315"
+                    frameborder="0" allowfullscreen></iframe></p>
             {% endif %}
         </div>
     </div>

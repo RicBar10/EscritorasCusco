@@ -48,8 +48,14 @@ def galleries(request):
 def gallerie(request, mujer_id):
     template = loader.get_template('singleGallery.html')
     mujer = Mujer.objects.get(id=mujer_id)
+    categorias = [e.get_categoria_display()
+                  for e in Ejerce.objects.filter(mujer=mujer.id)]
+    result = {
+        "mujer": mujer,
+        'categorias': str(categorias).lstrip('[').rstrip(']')
+    }
     publicaciones = Publicacion.objects.filter(mujer=mujer_id)
-    context = {"mujer": mujer, "publicaciones": publicaciones}
+    context = {"result": result, "publicaciones": publicaciones}
     return HttpResponse(template.render(context, request=request))
 
 
