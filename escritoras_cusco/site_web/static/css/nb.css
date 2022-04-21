@@ -102,7 +102,6 @@ img {
     /*padding: 200px 40px;*/
     /*height: 600px;*/
     min-height: 100vh;
-    /*background-image: url(../images/image-1.jpg);*/
     background-image: url(../images/arte-con-libros-1.jpg);
     background-repeat:repeat-x;
     background-size:cover;
@@ -118,7 +117,7 @@ img {
     right: 60px;
     /*width: 50%;*/
     width:35%;
-    
+
     border: 3px solid #000000;
     background-color: rgba(155,155,155,0.8);
     padding: 5px;
@@ -127,7 +126,7 @@ img {
     justify-content:left;
     display: flex;
     flex-flow: column nowrap;
-    
+
 
 }
 #pictInfo h1{
@@ -280,7 +279,7 @@ main ul li a{
     }
     #mainNav a{
         font-size: 1.2em;
-    }   
+    }
     #pageContent.home{
         justify-content: flex-end;
         /*display: flex;*/
@@ -333,7 +332,7 @@ main ul li a{
     padding: 15px 0;
     margin-bottom: 20px;
     background: #50a5d6;
-    
+
     text-align: center;
     text-decoration: none;
     color: aliceblue;
@@ -374,7 +373,7 @@ main ul li a{
     width: 100%;
     padding: 8px 0;
     background: rosybrown;
-        
+
     text-align: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -411,7 +410,7 @@ main ul li a{
     margin-right: auto;
     width: 80%;
   }
-  
+
 /*social bar**************/
   .social-bar{
     position: fixed;
@@ -445,19 +444,19 @@ main ul li a{
   .icon-facebook{
     background: #759af8;
   }
-  
+
   .icon-youtube {
     background: #E83028;
   }
-  
+
   .icon-instagram{
     background: #ba58ce;
   }
-  
+
   .icon:last-child{
     border-radius:   0 1rem 0 0;
   }
-  
+
   /*.icon:first-child{
     border-radius: 0 1rem 0 0  ;
   }*/

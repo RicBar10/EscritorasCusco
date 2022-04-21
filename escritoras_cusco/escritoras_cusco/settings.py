@@ -101,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

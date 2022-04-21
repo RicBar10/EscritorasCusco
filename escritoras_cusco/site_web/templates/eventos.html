@@ -1,75 +1,196 @@
+{% extends 'layouts/base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mujeres del libro peruano - Eventos</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <script src="{% static 'js/randomImage.js' %}" defer></script>
-    <script src="{% static 'js/singleGallery.js' %}" defer></script>
-</head>
+{% block title %} Eventos {% endblock title %}
 
-<body>
-    <header id="mainHeader">
-        <img src="{% static 'images/layout/logo_mapa.svg' %}" alt="Logo NB" id="logoImg" />
-        <nav id="mainNav">
-            <ul>
-                <li><a href="{% url 'Index' %}">Inicio</a></li>
-                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'Contact' %}">Contacto</a></li>
-            </ul>
-        </nav>
-        <button id="menuToggle" class="hamburger">&nbsp;</button>
-    </header>
+{% block body_class %}  bg-gray-100 {% endblock body_class %}
 
-    <section id="pageContent" class="home">
-        <!-- <main id="singleGallery"> -->
-        <!-- <h1>Autoras</h1> -->
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
+{% block content %}
+  {% include "navigation.html" %}
+  <section class="my-5 py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="card">
+            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <a href="https://www.facebook.com/100702965055588/posts/512187743907106/ " target="_blank" class="d-block">
+              <img src="{% static 'img/eventosAndDescuentos/evento-1.jpg' %}" alt="..." class="img-fluid border-radius-lg">
+              </a>
+            </div>
+
+            <div class="card-body pt-2">
+              <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold my-2">EVENTO</span>
+              <a href="https://www.facebook.com/100702965055588/posts/512187743907106/" target="_blank" class="card-title h5 d-block text-darker">
+                ADOPTA UN LIBRO
+              </a>
+              <p class="card-description mb-4">
+                La Biblioteca Municipal del Cusco - Gustavo Pérez Ocampo 
+                obsequiara alrededor de 500 libros de diferentes categorías y géneros como son 
+                las novelas, de consulta, enciclopedias, etc…
+              </p>
+              <div class="author align-items-center">
+                <a href="https://www.cusco.gob.pe/bmc/ " target="_blank">
+                  <img src="{% static 'img/eventosAndDescuentos/bmc.jpg' %}" alt="..." class="avatar shadow">
+                </a>
+                <div class="name ps-3">
+                  <a href="https://www.cusco.gob.pe/bmc/ " target="_blank">
+                    <span>Biblioteca Municipal del Cusco</span>
+                  </a>
+                  <div class="stats">
+                    <small>Publicado el 8 de abril de 2022</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-        </div>
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
-        </div>
-        <div class="eventos">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
+        <div class="col">
+          <div class="card">
+            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <a href="https://www.facebook.com/177184868233/posts/10160073988868234/" target="_blank" class="d-block">
+              <img src="{% static 'img/eventosAndDescuentos/evento-2.jpg' %}" alt="..." class="img-fluid border-radius-lg">
+              </a>
+            </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dignissimos, enim aut impedit
-                officia provident, </p>
+            <div class="card-body pt-2">
+              <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold my-2">EVENTO</span>
+              <a href="https://www.facebook.com/177184868233/posts/10160073988868234/" class="card-title h5 d-block text-darker">
+                PROGRAMA DE LITERATURA PERUANA
+              </a>
+              <p class="card-description mb-4">
+                III Edición: A través de 12 conferencias magistrales reconocidos(as) especialistas 
+                compartirán sus investigaciones sobre diversos periodos de la literatura nacional...
+              </p>
+              <div class="author align-items-center">
+                <a href="https://www.bnp.gob.pe/ " target="_blank">
+                  <img src="{% static 'img/eventosAndDescuentos/bnp.jpg' %}" alt="..." class="avatar shadow">
+                </a>
+                <div class="name ps-3">
+                  <a href="https://www.bnp.gob.pe/ " target="_blank">
+                    <span>Biblioteca Nacional del Perú</span>
+                  </a>
+                  <div class="stats">
+                    <small>Publicado el 13 de abril de 2022</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <a href="https://www.facebook.com/177184868233/posts/10160074923843234/?sfnsn=mo" class="d-block">
+              <img src="{% static 'img/eventosAndDescuentos/evento-3.jpg' %}" alt="..." class="img-fluid border-radius-lg">
+              </a>
+            </div>
 
-        <!-- </main> -->
-    </section>
-    <footer id="mainFooter">
-        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
-    </footer>
-    <figure id="galleryContainer"><img src=""></figure>
-</body>
+            <div class="card-body pt-2">
+              <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold my-2">EVENTO</span>
+              <a href="https://www.facebook.com/177184868233/posts/10160074923843234/?sfnsn=mo" class="card-title h5 d-block text-darker">
+                ¿SABES CÓMO SE GUARDABAN LAS CARTAS EN EL SIGLO XIX?
+              </a>
+              <p class="card-description mb-4">
+                A través de las cartas se comunicaba las novedades, se hacían invitaciones, se realizaban negocios, entre otros. 
+                En suma, la correspondencia era un importante medio de comunicación... 
+              </p>
+              <div class="author align-items-center">
+                <a href="https://www.bnp.gob.pe/ " target="_blank">
+                  <img src="{% static 'img/eventosAndDescuentos/bnp.jpg' %}" alt="..." class="avatar shadow">
+                </a>
+                <div class="name ps-3">
+                  <a href="https://www.bnp.gob.pe/ " target="_blank">
+                    <span>Biblioteca Nacional del Perú</span>
+                    </a>
+                  <div class="stats">
+                    <small>Publicado el 14 de abril de 2022</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
 
-</html>
+  <section class="my-3 py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <a href="https://www.facebook.com/2162215394064192/posts/3335406756745044/ " target="_blank" class="d-block">
+              <img src="{% static 'img/eventosAndDescuentos/evento-4.jpg' %}" alt="..." class="img-fluid border-radius-lg">
+              </a>
+            </div>
+
+            <div class="card-body pt-2">
+              <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold my-2">EVENTO</span>
+              <a href="https://www.facebook.com/2162215394064192/posts/3335406756745044/" target="_blank" class="card-title h5 d-block text-darker">
+                LA 5ta FERIA DE EDITORIALES PERUANAS
+              </a>
+              <p class="card-description mb-4">
+                ¿Estás listo? La quinta edición de La Independiente. 
+                Feria de Editoriales Peruanas se llevará a cabo en modalidad presencial
+                del miércoles 20 al domingo 24 de abril de 2022, en las instalaciones 
+                del Ministerio de Cultura del Perú. ¡No te lo pierdas!
+              </p>
+              <div class="author align-items-center">
+                <a href="https://www.gob.pe/cultura " target="_blank">
+                  <img src="{% static 'img/eventosAndDescuentos/mdc.jpg' %}" alt="..." class="avatar shadow">
+                </a>
+                <div class="name ps-3">
+                  <a href="https://www.gob.pe/cultura " target="_blank">
+                    <span>Ministerio de Cultura del Perú</span>
+                  </a>
+                  <div class="stats">
+                    <small>Publicado el 15 de abril de 2022</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+              <a href="https://www.facebook.com/100063892095036/posts/375080311298369/?sfnsn=mo" target="_blank" class="d-block">
+              <img src="{% static 'img/eventosAndDescuentos/evento-5.jpg' %}" alt="..." class="img-fluid border-radius-lg">
+              </a>
+            </div>
+
+            <div class="card-body pt-2">
+              <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold my-2">EVENTO</span>
+              <a href="https://www.facebook.com/100063892095036/posts/375080311298369/?sfnsn=mo" class="card-title h5 d-block text-darker">
+                SÉ PARTE DEL LIBRO
+              </a>
+              <p class="card-description mb-4">
+                ¡Vive una semana diferente!  
+                Participa en las actividades que hemos preparado para ti por el Día Internacional del Libro. 
+                Te invitamos a descargar el programa de actividades descentralizadas...
+              </p>
+              <div class="author align-items-center">
+                <a href="https://www.gob.pe/cultura " target="_blank">
+                  <img src="{% static 'img/eventosAndDescuentos/mdc.jpg' %}" alt="..." class="avatar shadow">
+                </a>
+                <div class="name ps-3">
+                  <a href="https://www.gob.pe/cultura " target="_blank">
+                    <span>Ministerio de Cultura del Perú</span>
+                  </a>
+                  <div class="stats">
+                    <small>Publicado el 18 de abril de 2022</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </section>
+{% endblock content %}
+      <!-- Specific JS goes HERE -->
+{% block javascripts %}
+{% endblock javascripts %}

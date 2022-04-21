@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.template import RequestContext
-from .models import Contact
-from site_web.models import Mujer, Ejerce
+from .models import Contact, Publicacion
+from site_web.models import Mujer, Ejerce, Publicacion
 from django.db.models import Q
 
 # views.py
@@ -14,19 +14,24 @@ from django.core import serializers
 
 def index(request):
     template = loader.get_template('index.html')
-    mujeres = [{'id': c.mujer_id, 'link_imagen': c.mujer.link_imagen,
-                'categoria': c.get_categoria_display(),
-                'nombre': c.mujer.nombre,
-                'lugar': {
-                    "distrito": c.mujer.lugar.distrito,
-                    "departamento": c.mujer.lugar.departamento,
-                    "coordx": c.mujer.lugar.coordx,
-                    "coordy": c.mujer.lugar.coordy
-                }
-                } for c in Ejerce.objects.all()
-               ]
+    mujeres = Mujer.objects.all()
+    result = []
+    for m in list(mujeres):
+        categorias = [c.get_categoria_display()
+                      for c in Ejerce.objects.filter(mujer=m.id)]
+        result.append({
+            'id': m.id,
+            'categoria': categorias,
+            'nombre': m.nombre,
+            "coordx": m.coordx,
+            "coordy": m.coordy,
+            'lugar': {
+                "distrito": m.lugar.distrito,
+                "region": m.lugar.region
+            }
+        })
 
-    context = {"mujeres": mujeres}
+    context = {"mujeres": result}
     return HttpResponse(template.render(context, request=request))
 
 
@@ -43,7 +48,14 @@ def galleries(request):
 def gallerie(request, mujer_id):
     template = loader.get_template('singleGallery.html')
     mujer = Mujer.objects.get(id=mujer_id)
-    context = {"mujer": mujer}
+    categorias = [e.get_categoria_display()
+                  for e in Ejerce.objects.filter(mujer=mujer.id)]
+    result = {
+        "mujer": mujer,
+        'categorias': str(categorias).lstrip('[').rstrip(']')
+    }
+    publicaciones = Publicacion.objects.filter(mujer=mujer_id)
+    context = {"result": result, "publicaciones": publicaciones}
     return HttpResponse(template.render(context, request=request))
 
 
