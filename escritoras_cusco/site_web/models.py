@@ -16,9 +16,9 @@ TIPO_CATEGORIA = [
 
 
 class Lugar(models.Model):
-    distrito = models.CharField(max_length=200)
-    provincia = models.CharField(max_length=200)
-    region = models.CharField(max_length=200)
+    distrito = models.CharField(max_length=200, null=True)
+    provincia = models.CharField(max_length=200, null=True)
+    region = models.CharField(max_length=200, null=True)
 
 
 class Mujer(models.Model):
@@ -26,11 +26,11 @@ class Mujer(models.Model):
     apellido = models.CharField(max_length=200)
     fecha_nacimiento = models.CharField(max_length=10, null=True)
     fecha_defuncion = models.CharField(max_length=10, null=True)
-    coordx = models.CharField(max_length=200)
-    coordy = models.CharField(max_length=200)
+    coordx = models.CharField(max_length=200, null=True)
+    coordy = models.CharField(max_length=200, null=True)
     trayectoria = models.CharField(max_length=200, null=True)
-    link_imagen = models.CharField(max_length=200)
-    contacto = models.CharField(max_length=200)
+    link_imagen = models.CharField(max_length=200, null=True)
+    contacto = models.CharField(max_length=200, null=True)
     entrevista = models.CharField(max_length=200, null=True)
     lugar = models.ForeignKey(Lugar, on_delete=models.CASCADE)
 
@@ -42,7 +42,7 @@ class Publicacion(models.Model):
     fecha = models.CharField(max_length=10)
     descripcion = models.CharField(max_length=200, null=True)
     mujer = models.ForeignKey(Mujer, on_delete=models.CASCADE)
-    link_imagen = models.CharField(max_length=200)
+    link_imagen = models.CharField(max_length=200, null=True)
     titulo_disponible = models.CharField(max_length=200, null=True)
     link_disponible = models.CharField(max_length=200, null=True)
 
