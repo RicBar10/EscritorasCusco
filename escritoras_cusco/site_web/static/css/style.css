@@ -9035,7 +9035,12 @@ label,
   display: flex;
   align-items: center;
   background-size: cover;
-  background-position: 50%; }
+  background-position: 50%;
+  background-color: #f1eee2;
+  min-height: 100vh !important;
+/* 
+  min-height: calc(100vh - 128px) !important; */
+}
   .page-header .container {
     z-index: 1; }
 
@@ -14136,5 +14141,3 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
-
-/*# sourceMappingURL=soft-design-system.css.map */

@@ -1,4 +1,13 @@
 $(document).ready(function(){
+		mapboxgl.accessToken = 'pk.eyJ1Ijoic2FyYXN0ZWYiLCJhIjoiY2wyOWd4dnAyMGozazNudDNya2p3ZDdiayJ9.BOeRIJvtRAIHGx1h5HMG4w';
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/sarastef/cl29kkk6g006q15jz43e0tzol/draft',
+			center: [-77.04, 38.907],
+			zoom: 11.15
+			// center: [-13.5363516,-72.526677,9],
+			// zoom: 8
+		});
 		var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
 		var LeafIcon = L.Icon.extend({
 		    options: {
