@@ -23,6 +23,7 @@ def index(request):
             'id': m.id,
             'categoria': categorias,
             'nombre': m.nombre,
+            'link_imagen': m.link_imagen,
             "coordx": m.coordx,
             "coordy": m.coordy,
             'lugar': {
