@@ -26,9 +26,9 @@ SECRET_KEY = 'n(_vedl%2%dmt8dih^uypc_phi(t6dd@1=4he$tl@1d+5&%26^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
 ALLOWED_HOSTS = ['194.195.86.114', 'mujeresdellibroperuano.com',
                  'www.mujeresdellibroperuano.com']
-
 
 # Application definition
 
@@ -80,7 +80,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
+    # 'default': {
+    #    'NAME': 'db_mysql',
+    #   'ENGINE': 'django.db.backends.mysql',
+    #  'USER': 'mujeresPeruanas',
+    # 'PASSWORD': 'NqN5c&uazKYmL4eNP',
+    # }
 }
 
 # Password validation
@@ -119,7 +125,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+STATIC_ROOT = '/mujeresP/public/static'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
