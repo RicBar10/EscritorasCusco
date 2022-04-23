@@ -8,7 +8,8 @@
 
   #leafletMap {
     /* position:fixed; */
-    left: 5%;
+    left: 1%;
+    right: 1%;
     width: 98%;
     height: 750px !important;
     border: 3px solid #847a85;
@@ -19,4 +20,9 @@
 
     display: flex;
     flex-flow: column nowrap;
+}
+
+#leafletMap #imgMap {
+  width: 300px;
+  height: 200px;
 }

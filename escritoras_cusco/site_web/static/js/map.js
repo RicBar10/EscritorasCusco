@@ -49,12 +49,12 @@ $(document).ready(function () {
 		console.log(index)
 		var popup = L.popup();
 
-		var photoImg = '<a href="galleries/' + mujerID + '"><img src="static/' + mujerimagen + '" height="10px" id="imgmapa" alt="imagen de "' + mujernombre + '" class="img-fluid border-radius-md" /></a>';
+		var photoImg = '<a href="galleries/' + mujerID + '"><img src="static/' + mujerimagen + '" id="imgmapa" alt="imagen de "' + mujernombre + '" class="img-fluid border-radius-md" /></a>';
 
 		function onMarkerMouseOver(e) {
 			popup
 				.setLatLng(e.latlng)
-				.setContent("<div class='card-plain card-blog card-image text-center border-radius-lg'>" +
+				.setContent("<div class='card-plain card-blog card-image text-center border-radius-lg' style='max-width:150px;'>" +
 					"<div class='card-image border-radius-lg position-relative'>" +
 					photoImg +
 					"</div>" +
@@ -63,28 +63,13 @@ $(document).ready(function () {
 					"<p class='mb-0 mt-0 text-xs font-weight-bolder text-uppercase'>" +
 					mujercategoria + '<br/>' +
 					"</p>" +
-					"<small>" + mujerlugardistrito + "-" + mujerlugardep + "</small>" +
+					"<small>" + mujerlugardistrito + "</small>" +
 					"</div>" +
 					"</div>"
 				)
 				.openOn(map);
 		}
 
-		function onMarkerMouseClick(e) {
-			popup
-				.setLatLng(e.latlng)
-				.setContent("<center>Escritora </center>" +
-					"<div class='card-body text-center bg-white shadow border-radius-lg p-3'>" + photoImg +
-					"<h5 class='mt-3 mb-1 d-md-block d-none'>" + mujernombre + "</h5>" +
-					"</div>" +
-					"</br>" +
-					mujerlugardistrito + "</br>" + "</br>" + mujerlugardep + "</br>")
-				.openOn(map);
-		}
-
-		function onMarkerMouseOut(e) {
-			map.closePopup();
-		}
 		marker.on('mouseover', onMarkerMouseOver);
 		//Fin datos mujer
 	});
