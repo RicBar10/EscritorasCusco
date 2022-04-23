@@ -17,7 +17,7 @@ $(document).ready(function () {
 		console.log(catProduct);
 
 		//agregando color diferente al boton clickeado
-		$('.category_item').removeClass('active');
+		$('.category_item .btn').removeClass('active');
 		$(".btn",this).addClass('active');
 		//ocultando personajes
 		$('.product-item').css('transform', 'scale(0)');
