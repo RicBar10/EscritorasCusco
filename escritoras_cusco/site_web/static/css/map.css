@@ -17,3 +17,8 @@
     display: flex;
     flex-flow: column nowrap;
 }
+
+#leafletMap #imgMap {
+  width: 300px;
+  height: 200px;
+}
