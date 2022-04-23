@@ -1,7 +1,7 @@
 $(document).ready(function(){
-	
+
 	//agregando clase active al primer boton
-	$('.category_list .category_item[category="all"]').addClass('ct_item-active');
+	$('.category_list .category_item[category="all"] .btn').addClass('active');
 
 	//FILTRANDO PRODUCTOS
 	$('.category_item').click(function(){
@@ -9,15 +9,15 @@ $(document).ready(function(){
 		console.log(catProduct);
 
 		//agregando color diferente al boton clickeado
-		$('.category_item').removeClass('ct_item-active');
-		$(this).addClass('ct_item-active');
+		$('.category_item .btn').removeClass('active');
+		$(".btn",this).addClass('active');
 
 		//ocultando personajes
 		$('.product-item').css('transform', 'scale(0)');
 		function hideProduct(){
 			$('.product-item').hide();
 		}setTimeout(hideProduct,400);
-		
+
 		//mostrando personajes
 		function showProduct(){
 			$('.product-item[category="'+catProduct+'"]').show();
@@ -33,7 +33,7 @@ $(document).ready(function(){
 			$('.product-item').show();
 			$('.product-item').css('transform', 'scale(1)');
 		}setTimeout(showAll,400);
-		
+
 	});
-		
+
 });
