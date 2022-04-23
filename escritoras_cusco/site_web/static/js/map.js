@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var map = L.map('leafletMap').setView([-13.5363516, -72.526677, 9], 8);
+	var map = L.map('leafletMap').setView([-13.5212607,-71.9672413], 15.4);
 	var LeafIcon = L.Icon.extend({
 		options: {
 			iconSize: [38, 55],
