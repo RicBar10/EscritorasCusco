@@ -21,7 +21,7 @@ def index(request):
                       for c in Ejerce.objects.filter(mujer=m.id)]
         result.append({
             'id': m.id,
-            'categoria': categorias,
+            'categoria': ', '.join(map(str, categorias)),
             'nombre': m.nombre,
             'link_imagen': m.link_imagen,
             "coordx": m.coordx,

@@ -14,13 +14,12 @@
             <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
                 <div class="">
                     <h2>{{result.mujer.nombre}} {{result.mujer.apellido}}</h2>
-                    <small class="stats"> Ubicación : {{result.mujer.lugar.distrito}} , {{result.mujer.lugar.provincia}}
-                        ,
-                        {{result.mujer.lugar.region}}, ( {{result.mujer.fecha_nacimiento}} -
-                        {{result.mujer.fecha_defuncion}} )
-                    </small>
-                    <br>
-                    <small> Profesión : {{result.categorias}} </small>
+                    <p class="stats"> Lugar de nacimiento : {{result.mujer.lugar.region}}</p>
+                    <p>{{result.mujer.fecha_nacimiento}}
+                        {% if result.mujer.fecha_defuncion != None %}
+                        -{{result.mujer.fecha_defuncion}}
+                        {% endif %}</p>
+                    <p> Profesión : {{result.categorias}} </p>
                     <p>Contacto : {{result.mujer.contacto}}</p>
 
                     <div class="icon">
@@ -78,7 +77,9 @@
                             <div class="card-body">
                                 <h5 class="mb-0">{{publicacion.titulo}}</h5>
                                 <h6 class="text-info">{{publicacion.categorizacion}}-{{publicacion.fecha}}</h6>
-                                <h6 class="text-info">ISBN : {{publicacion.isbn}}</h6>
+                                <h6 class="text-info">{% if publicacion.isbn != None %}
+                                    ISBN : {{publicacion.isbn}}
+                                    {% endif %}</h6>
                                 <p class="mb-0 ps-4">{{publicacion.descripcion}}</p>
                                 <!-- TODO: AGREGAR DISPONIBILIDAD  -->
                                 <p class="mt-2 ps-4">Disponible en : <a href="{{publicacion.link_disponible}}"
