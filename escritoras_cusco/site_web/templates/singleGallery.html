@@ -56,12 +56,12 @@
     </div>
 </section>
 <section class="pt-sm-5 pb-5 position-relative">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 text-left">
-                <h3 class="z-index-1 position-relative">Bibliografía</h3>
-            </div>
+    <div class="bg-gradient-warning shadow py-1 fst-italic">
+        <div class="container text-left">
+            <h3 class="z-index-1 position-relative text-white">Bibliografía</h3>
         </div>
+    </div>
+    <div class="container">
         {% for publicacion in publicaciones %}
         <div class="row  mt-4">
             <div class="col-lg-6 col-12 mx-auto">
@@ -97,12 +97,12 @@
     </div>
 </section>
 <section class="pt-sm-5 pb-5 position-relative">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 text-left">
-                <h3 class="z-index-1 position-relative">Entrevista</h3>
-            </div>
+    <div class="bg-gradient-warning shadow py-1 fst-italic">
+        <div class="container">
+            <h3 class="z-index-1 position-relative text-white">Entrevista</h3>
         </div>
+    </div>
+    <div class="container">
         <div class="mt-4">
             {% if result.mujer.entrevista == None %}
             <p style="text-align:center"><iframe src=" http://www.youtube.com/embed/W7qWa52k-nE" width="560"
