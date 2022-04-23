@@ -11,9 +11,12 @@ from django.core import serializers
 
 # Create your views here.
 
-
 def index(request):
     template = loader.get_template('index.html')
+    return HttpResponse(template.render(request=request))
+
+def mapa(request):
+    template = loader.get_template('map.html')
     mujeres = Mujer.objects.all()
     result = []
     for m in list(mujeres):
