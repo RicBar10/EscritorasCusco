@@ -19,10 +19,10 @@
               historietistas, editoras, ilustradoras peruanas de todas las regiones del Perú.
             </p>
             <div class="buttons">
-              <a href="#nav">
+              <a href="{% url 'Map' %}">
                 <button type="button" class="btn bg-gradient-warning shadow-none mt-4">Descubrir</button>
               </a>
-              <a href="#nav">
+              <a href="{% url 'About' %}">
                 <button type="button" class="btn text-warning shadow-none mt-4">Leer más</button>
               </a>
             </div>
@@ -49,58 +49,6 @@
         </div>
       </div>
   </div>
-  {% include "navigation.html" %}
-  <section class="my-5 py-5">
-    <div class="container mx-auto text-center">
-      <div id="map" style='width: 100%; height: calc(100vh - 136px);'></div>
-
-      <div id="leafletMap"></div>
-    </div>
-    <input value="{{mujeres}}" class="d-none" />
-
-    <div class="buclemujeres d-none">
-    {% for mujer in mujeres %}
-        <div class="datosmujer "  mujer_id={{mujer.id}} >
-            <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
-            <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
-            <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
-            <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" mujer_id={{mujer.id}} />
-            <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
-            <input value="{{mujer.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
-            <input value="{{mujer.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
-            <input value="{{mujer.categoria}}" class="mujercategoria" mujer_id={{mujer.id}} />
-        </div>
-        <input value="{{mujer}}" class="mujer d-none" />
-    {% endfor %}
-    </div>
-  </section>
-
-  <!-- <div class="page-header section-height-85">
-    <div class="container mx-auto mp">
-      <div class="row">
-        <div class="col-lg-7 d-flex justify-content-center flex-column">
-          <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
-            <div class="text-center">
-              <h3 class="text-gradient text-primary">
-                BIENVENIDOS AL MAPA DE ESCRITORAS PERUANAS
-              </h3>
-              <p>Mapa de Escritoras Peruanas es un proyecto digital que busca
-                la difusión y visibilización de escritoras, poetas, historiadoras,
-                historietistas, editoras, ilustradoras peruanas de todas las regiones del Perú
-                a través de nuestra página web donde usted encontrará la ubicación de las estas
-                mujeres en un mapa basados en su lugar de nacimiento, este mapa será de carácter
-                interactivo que brindará información del trabajo de las escritoras peruanas y sus libros. </p>
-              <p>Buscamos sembrar el interés de nuestro país por contenido literario dinámico,
-                que sea de fácil acceso, creando un legado para las nuevas generaciones de escritores
-                y lectores que tienen amor por su historia y dan el reconocimiento a todas las mujeres
-                Y Autores Peruanos En Publicaciones Digitales y/o Publicaciones Periódicas Impresas de los
-                Estímulos Económicos de Cultura 2021. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div> -->
 
 {% endblock content %}
 <!-- Specific JS goes HERE -->

@@ -1,5 +1,5 @@
 {% load static %}
-{% url 'Index' as map_url %}
+{% url 'Map' as map_url %}
 {% url 'Galleries' as mujeres_url %}
 {% url 'Eventos' as events_url %}
 {% url 'Contact' as contact_url %}
@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
         <ul class="navbar-nav navbar-nav-hover w-100">
           <li class="nav-item mx-4 ">
-            <a href="{% url 'Index' %}" class="nav-link text-center cursor-pointer border-radius-lg {% if request.path == map_url %}active{% endif %}">
+            <a href="{% url 'Map' %}" class="nav-link text-center cursor-pointer border-radius-lg {% if request.path == map_url %}active{% endif %}">
               <img src="{% static 'images/layout/menu-Inicio.svg' %}" height="50px" alt="menu-Inicio" class="ms-1">
               <h6 class="mt-2 mb-0 font-weight-bolder">Mapa</h6>
             </a>
