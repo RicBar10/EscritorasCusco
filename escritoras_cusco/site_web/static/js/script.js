@@ -30,14 +30,14 @@ $(document).ready(function () {
 		function showProduct() {
 			$('.product-item[category="' + catProduct + '"]').show();
 			$('.product-item[category="' + catProduct + '"]').css('transform', 'scale(1)');
-			console.log($('.product-item[style*="display: none"]').length);
-			console.log($('.product-item').length);
-			if ($('.product-item[style*="display: none"]').length === $('.product-item').length){
-				$('.products-list').text("Ningún elemento corresponde a su búsqueda.");
-			}
-			else {
-				$('.products-list').text("");
-			}
+			// console.log($('.product-item[style*="display: none"]').length);
+			// console.log($('.product-item').length);
+			// if ($('.product-item[style*="display: none"]').length === $('.product-item').length){
+			// 	$('.products-list').text("Ningún elemento corresponde a su búsqueda.");
+			// }
+			// else {
+			// 	$('.products-list').text("");
+			// }
 		} setTimeout(showProduct, 400);
 		//$('.product-item[category="'+catProduct+'"]').css('transform', 'scale(1)')
 		//$('.product-item[category="'+catProduct+'"]').show();
