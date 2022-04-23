@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %} Respuesta {% endblock title %}
+
+{% block body_class %}  bg-gray-100 {% endblock body_class %}
+
+{% block content %}
+  {% include "navigation.html" %}
+  <section class="my-5 py-5">
+    <div class="container">
+        <h3 class="text-gradient text-primary">
+          BIENVENIDOS AL MAPA DE ESCRITORAS PERUANAS
+        </h3>
+        <p>Mapa de Escritoras Peruanas es un proyecto digital que busca
+          la difusión y visibilización de escritoras, poetas, historiadoras,
+          historietistas, editoras, ilustradoras peruanas de todas las regiones del Perú
+          a través de nuestra página web donde usted encontrará la ubicación de las estas
+          mujeres en un mapa basados en su lugar de nacimiento, este mapa será de carácter
+          interactivo que brindará información del trabajo de las escritoras peruanas y sus libros. </p>
+        <p>Buscamos sembrar el interés de nuestro país por contenido literario dinámico,
+          que sea de fácil acceso, creando un legado para las nuevas generaciones de escritores
+          y lectores que tienen amor por su historia y dan el reconocimiento a todas las mujeres
+          Y Autores Peruanos En Publicaciones Digitales y/o Publicaciones Periódicas Impresas de los
+          Estímulos Económicos de Cultura 2021. </p>
+      </div>
+  </section>
+{% endblock content %}
+        <!-- Specific JS goes HERE -->
+{% block javascripts %}
+  <script src="{% static 'js/randomImage.js' %}" defer></script>
+{% endblock javascripts %}
