@@ -14,21 +14,24 @@ from django.core import serializers
 
 def index(request):
     template = loader.get_template('index.html')
-    mujeres = [{'id': c.id,
-                'link_imagen': c.link_imagen,
-                #TODO
-                'categoria': list(Ejerce.objects.all().filter(mujer=c.id).values_list('categoria', flat=True)),
-                'nombre': c.nombre,
-                "coordx": c.coordx,
-                "coordy": c.coordy,
-                'lugar': {
-                    "distrito": c.lugar.distrito,
-                    "region": c.lugar.region
-                }
-                } for c in Mujer.objects.all()
-               ]
+    mujeres = Mujer.objects.all()
+    result = []
+    for m in list(mujeres):
+        categorias = [c.get_categoria_display()
+                      for c in Ejerce.objects.filter(mujer=m.id)]
+        result.append({
+            'id': m.id,
+            'categoria': categorias,
+            'nombre': m.nombre,
+            "coordx": m.coordx,
+            "coordy": m.coordy,
+            'lugar': {
+                "distrito": m.lugar.distrito,
+                "region": m.lugar.region
+            }
+        })
 
-    context = {"mujeres": mujeres}
+    context = {"mujeres": result}
     return HttpResponse(template.render(context, request=request))
 
 
@@ -45,8 +48,14 @@ def galleries(request):
 def gallerie(request, mujer_id):
     template = loader.get_template('singleGallery.html')
     mujer = Mujer.objects.get(id=mujer_id)
+    categorias = [e.get_categoria_display()
+                  for e in Ejerce.objects.filter(mujer=mujer.id)]
+    result = {
+        "mujer": mujer,
+        'categorias': str(categorias).lstrip('[').rstrip(']')
+    }
     publicaciones = Publicacion.objects.filter(mujer=mujer_id)
-    context = {"mujer": mujer, "publicaciones": publicaciones}
+    context = {"result": result, "publicaciones": publicaciones}
     return HttpResponse(template.render(context, request=request))
 
 
