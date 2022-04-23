@@ -37,7 +37,6 @@ $(document).ready(function () {
 	//MOSTRANDO TODOS LOS PRODUCTOS
 	$('.category_item[category="all"]').click(function () {
 		function showAll() {
-			console.log('ricardo')
 			$('.product-item').show();
 			var prev;
 			$('.product-item').each(function () {

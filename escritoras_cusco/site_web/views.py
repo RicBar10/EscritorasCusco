@@ -24,8 +24,9 @@ def map(request):
                       for c in Ejerce.objects.filter(mujer=m.id)]
         result.append({
             'id': m.id,
-            'categoria': categorias,
+            'categoria': ', '.join(map(str, categorias)),
             'nombre': m.nombre,
+            'link_imagen': m.link_imagen,
             "coordx": m.coordx,
             "coordy": m.coordy,
             'lugar': {
@@ -55,7 +56,7 @@ def gallerie(request, mujer_id):
                   for e in Ejerce.objects.filter(mujer=mujer.id)]
     result = {
         "mujer": mujer,
-        'categorias': str(categorias).lstrip('[').rstrip(']')
+        'categorias': ', '.join(map(str, categorias))
     }
     publicaciones = Publicacion.objects.filter(mujer=mujer_id)
     context = {"result": result, "publicaciones": publicaciones}
