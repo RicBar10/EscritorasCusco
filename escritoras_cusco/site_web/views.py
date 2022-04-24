@@ -5,15 +5,20 @@ from django.template import RequestContext
 from .models import Contact, Publicacion
 from site_web.models import Mujer, Ejerce, Publicacion
 from django.db.models import Q
+# from django.core.mail import EmailMessage
+from django.core import mail
+from django.conf import settings
 
 # views.py
 from django.core import serializers
 
 # Create your views here.
 
+
 def index(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render(request=request))
+
 
 def mapa(request):
     template = loader.get_template('map.html')
@@ -66,16 +71,15 @@ def gallerie(request, mujer_id):
 def contact(request):
     template = loader.get_template('contact.html')
     if request.method == "POST":
-        contact = Contact()
         name = request.POST.get('name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject')
-        contact.name = name
-        contact.email = email
-        contact.subject = subject
-        contact.save()
-        # return render_to_response('contact.html', {'form': c['UploadFileForm']},  RequestContext(request))
-        # return HttpResponse("<h1>thanks for contact</h1>")
+        lastName = request.POST.get('lastName')
+        from_email = request.POST.get('email')
+        subject = 'Nuevo mensaje de '+name+' '+lastName
+        html_content = request.POST.get(
+            'message') + '\nCorreo electrónico : '+from_email + '\nNombre y apellido : '+name+' '+lastName
+        mail.send_mail(subject, html_content, settings.EMAIL_HOST_USER,
+                       recipient_list=[settings.EMAIL_HOST_USER])
+
         return render(request, 'merci.html')
         # return HttpResponse(template.render(request=request))
     return HttpResponse(template.render(request=request))
