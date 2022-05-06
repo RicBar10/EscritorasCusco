@@ -1,54 +1,76 @@
-$(document).ready(function(){
-	
-	//agregando clase active al primer boton
-	let mujeres = $('.hidden').val();
-    console.log(mujeres);
-    console.log( JSON.parse(mujeres));
+$(document).ready(function () {
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2FyYXN0ZWYiLCJhIjoiY2wyOWd4dnAyMGozazNudDNya2p3ZDdiayJ9.BOeRIJvtRAIHGx1h5HMG4w';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/sarastef/cl29kkk6g006q15jz43e0tzol/draft',
+		center: [-77.04, 38.907],
+		zoom: 11.15
+		// center: [-13.5363516,-72.526677,9],
+		// zoom: 8
+	});
+	var map = L.map('leafletMap').setView([-13.5212607,-71.9672413], 15.4);
+	var LeafIcon = L.Icon.extend({
+		options: {
+			iconSize: [38, 55],
+			shadowSize: [50, 64],
+			// iconAnchor:   [22, 94],
+			shadowAnchor: [4, 62],
+			// popupAnchor:  [-3, -76]
+		}
+	});
 
-		
-});
+	var greenIcon = new LeafIcon({
+		iconUrl: 'static/images/layout/pin-claro.png',
+		shadowUrl: 'static/images/layout/pin-sombra.png'
+	})
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1,
+		accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA',
+	}).addTo(map);
 
+	$('.mujer').each(function (index, mujer) {
+		index++;
+		let mujernombre = $('.mujernombre[mujer_id="' + index + '"]')[0].value;
+		let mujercategoria = $('.mujercategoria[mujer_id="' + index + '"]')[0].value;
+		var mujerlugarcoordx = $('.mujerlugarcoordx[mujer_id="' + index + '"]')[0].value;
+		var mujerlugarcoordy = $('.mujerlugarcoordy[mujer_id="' + index + '"]')[0].value;
+		let mujerlugardistrito = $('.mujerlugardistrito[mujer_id="' + index + '"]')[0].value;
+		let mujerlugardep = $('.mujerlugardep[mujer_id="' + index + '"]')[0].value;
+		let mujerID = $('.mujerID[mujer_id="' + index + '"]')[0].value;
+		console.log(mujernombre, mujerlugarcoordx, mujerlugarcoordy);
 
-document.addEventListener('DOMContentLoaded', function() {
-	var map = L.map('leafletMap').setView([-13.5363516,-72.526677,9], 8);
+		var marker = L.marker([parseFloat(mujerlugarcoordx), parseFloat(mujerlugarcoordy)], { icon: greenIcon }).addTo(map);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoiZGllZ29zZW1pbmFyaW8iLCJhIjoiY2t5aGxvYzkyMjRpeDJ4bzgxd3RqemF0ZiJ9.HxjXDv1JRipE8aYwCQfKPA'
-    }).addTo(map);
+		let mujerimagen = $('.mujerimagen[mujer_id="' + index + '"]')[0].value;
+		console.log(index)
+		var popup = L.popup();
 
-    var marker = L.marker([-13.5498695,-71.953328,12]).addTo(map);
+		var photoImg = '<a href="galleries/' + mujerID + '"><img src="static/' + mujerimagen + '" id="imgmapa" alt="imagen de "' + mujernombre + '" class="img-fluid border-radius-md" /></a>';
 
-    var marker2 = L.marker([-14.26944,-71.22611]).addTo(map);
+		function onMarkerMouseOver(e) {
+			popup
+				.setLatLng(e.latlng)
+				.setContent("<div class='card-plain card-blog card-image text-center border-radius-lg' style='max-width:150px;'>" +
+					"<div class='card-image border-radius-lg position-relative'>" +
+					photoImg +
+					"</div>" +
+					"<div class='card-body px-0 pb-0'>" +
+					" <h6 class='mb-0 d-md-block text-warning text-gradient'>" + mujernombre + "</h6>" +
+					"<p class='mb-0 mt-0 text-xs font-weight-bolder text-uppercase'>" +
+					mujercategoria + '<br/>' +
+					"</p>" +
+					"<small>" + mujerlugardistrito + "</small>" +
+					"</div>" +
+					"</div>"
+				)
+				.openOn(map);
+		}
 
-    var popup = L.popup();
-
-    var photoImg = '<a href="galleries/1"><img src="static/img/Escritora_01.jpg" height="1200px" width="1200px"/></a>';
-    //var photoImg =  '<a href="https://www.google.com"><img src="static/' + '{{mujer.link_imagen}}'+ '" alt=""></img></a>';
-    function onMarkerMouseOver(e) {
-        popup
-            .setLatLng(e.latlng)
-            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>")
-            .openOn(map);
-    }
-
-    function onMarkerMouseClick(e) {
-        popup
-            .setLatLng(e.latlng)
-            .setContent("<center>Escritora </center>" + "</br>"+ photoImg + "</br>")
-            .openOn(map);
-    }
-
-    function onMarkerMouseOut(e) {
-        map.closePopup();
-    }
-
-    marker.on('click', onMarkerMouseClick);
-
-    marker2.on('click', onMarkerMouseClick);
-
+		marker.on('mouseover', onMarkerMouseOver);
+		//Fin datos mujer
+	});
 });

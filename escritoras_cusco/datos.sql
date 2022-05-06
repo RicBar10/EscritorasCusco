@@ -1,65 +1,44 @@
 DELETE FROM site_web_mujer;
-DELETE FROM site_web_publicacion;
 DELETE FROM site_web_lugar;
+DELETE FROM site_web_publicacion;
 DELETE FROM site_web_ejerce;
-    
-INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen) VALUES
-	(1,"Iñakapalla","Chávez Bermúdez",1,"20/06/1986",NULL,NULL,"img/not_found.jpg"),
-	(2,"Rosa Augusta","Rivero Ricalde",1,"14/04/1907","01/10/1966",NULL,"img/not_found.jpg"),
-	(3,"Inés Qorich'aska","Quispe Puma",2,"1990",NULL,NULL,"img/not_found.jpg"),
-	(4,"Aleyda","Cárdenas",1,"1987",NULL,NULL,"img/not_found.jpg"),
-	(5,"Silvia Rosa","Huamaní Quispe",3,"1982",NULL,NULL,"img/not_found.jpg"),
-	(6,"Gladys","Conde Camargo",1,"1982",NULL,NULL,"img/not_found.jpg"),
-	(7,"Ana María","Milla Hurtado",1,"1977",NULL,NULL,"img/not_found.jpg"),
-	(8,"Ch'aska Eugenia","Anka Ninawaman",3,"1973",NULL,NULL,"img/not_found.jpg"),
-	(9,"Tania","Castro",1,"1973",NULL,NULL,"img/not_found.jpg"),
-	(10,"Karina","Pacheco Medrano",1,"1969",NULL,NULL,"img/not_found.jpg"),
-	(11,"Carmen","Escalante Gutiérrez",1,"1953",NULL,NULL,"img/not_found.jpg"),
-	(12,"Ana Bertha","Vizcarra",1,"1947",NULL,NULL,"img/not_found.jpg"),
-	(13,"Mercedes","Delgado",1,"1939",NULL,NULL,"img/not_found.jpg"),
-	(14,"Clorinda","Matto de Turner",1,"11/11/1852","25/10/1909",NULL,"img/not_found.jpg"),
-	(15,"Adriana","Hiromi Cule",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(16,"Alfonsina","Barrionuevo",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(17,"Anael Nuit","Pilares Valdivia",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(18,"Areli","Aráoz",4,NULL,NULL,NULL,"img/not_found.jpg"),
-	(19,"Emperatriz","Escalante Gutiérrez",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(20,"Frida","Ibáñez Ayerbe",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(21,"Gladys","Conde",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(22,"Nataly","Villena",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(23,"Nohemi","Estrada Pérez",1,NULL,NULL,NULL,"img/not_found.jpg"),
-	(24,"Tania Consuelo","Gutiérrez Samanez",1,NULL,NULL,NULL,"img/not_found.jpg");
 
-INSERT INTO site_web_publicacion(id,titulo,fecha,descripcion,mujer_id) VALUES
-	(1,"Teorías del reflejo","2018",NULL,4),
-	(2,"Ch'askaschay","2004",NULL,8),
-	(3,"T'ika chumpicha","2010",NULL,8),
-	(4,"1 al 20","1970",NULL,12),
-	(5,"Manual del guerillo","1971",NULL,12),
-	(6,"Machupicchu, orgasmo de piedra","2017",NULL,12),
-	(7,"Peces de betún","1969",NULL,13),
-	(8,"Sueño Indigo","2018",NULL,15),
-	(9,"Juego y silencio","2009",NULL,21),
-	(10,"Semillitas","2015",NULL,24);
+INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen,Contacto,coordx,coordy,Entrevista) VALUES
+	(1,"Adriana Hiromi ","Cule Vargas",1,"20/04/1996",NULL,"Adriana Cule es una artista visual y retratista profesional. Se desenvuelve en el terreno del diseño gráfico, el modelado análogo y digital, el desarrollo de personajes pintorescos y la creación de cuentos cortos. En susobras busca que las perspectivas y composición interactúen con el espectador exagerando las formas.
+Ha participado en diferentes proyectos, muestras artísticas, diferentes campañas y producciones entre ellas la inauguración de Saga Falabella en Cusco, la filmación de Transformers en Cusco y la iniciativa de “Hagamos un Perú que de gusto” de Inca Kola.
+Ilustro el cuento “El zorro y el cóndor” de Maximo Ccama, realizo el libro de cuentos “Sueño Índigo”  y los cómics “Pasado” y “Colores”.","img/Mujer_1.jpg","yozoh2004@gmail.com
+","-13.518936101916335 ","-71.98050471302038","https://www.youtube.com/embed/Nz-d6tKw4wA"),
+	(2,"Ana Maria","Milla Hurtado",1,"15/06/1977",NULL,"Cusqueña de nacimiento, administradora de formación. Desde el 2003 ha participado como gestora cultural como productora de eventos y posteriormente la primera agenda cultural virtual, Agenda Cusco. Tiene trayectoria de empresaria turística del 2002, como diseñadora y productora de eventos durante 9 años. Ha participado en numerosos recitales, como poeta y productora. Actualmente dirige el Planetarium Cusco, centro de interpretación cultural, planetario y observatorio, lugar donde se difunde la ciencia, el universo y la astronomía cultural de los inkas. Es también feliz de mamá de tres y artista floral","img/Mujer_2.jpg","anamaria@planetariumcusco.com","-13.5219062351864","-71.95797387209109","https://www.youtube.com/embed/KezcLgAdhTA"),
+	(3,"Angela María"," Concha Pacheco",1,"06/06/1980",NULL,"Angela M. Concha es licenciada en Historia por la Universidad Nacional de San Antonio Abad del Cusco. Magister en Historia de América Latina, Mundos Indígenas por la Universidad Pablo de Olavide en Sevilla-España, y candidata a Doctora en Historia y Estudios Humanísticos: Europa, América, Arte y Lenguas por la misma Universidad. Con experiencia en trabajos sobre patrimonio documental y monumental (templos, casonas coloniales, centros arqueológicos y archivos históricos), en labores de conservación, catalogación e investigación. Docente de la Universidad de Salamanca (España)/ International Studies Abroad (ISA-Cusco) y de la Universidad Nacional de San Antonio Abad del Cusco. 
+","img/Mujer_3.jpg","angelamaria11y6@gmail.com","-13.5215231640725","-71.95862120997890","https://www.youtube.com/embed/v7WSLHeSR44");
 
-INSERT INTO site_web_lugar(id,distrito,provincia,departamento,coordx,coordy) VALUES
-	(1,NULL,NULL,"Cusco",NULL,NULL),
-	(2,NULL,"Acomayo","Cusco",NULL,NULL),
-	(3,NULL,"Espinar","Cusco",NULL,NULL),
-	(4,"Limatambo","Anta","Cusco",NULL,NULL);
+INSERT INTO site_web_lugar(id,region,provincia,distrito) VALUES
+	(1,"Cusco","Cusco","Cusco");
+
+INSERT INTO site_web_publicacion(id,titulo,isbn,categorizacion,fecha,descripcion,mujer_id,link_imagen,titulo_disponible,link_disponible) VALUES
+	(1,"Sueño Indigo","9786124751028","Libro","2018","Libros que contiene dos historias tiernas, acompañadas de espectaculares ilustraciones que te transportarán junto a los protagonistas.",1,"img/Mujer_1_Libro1.jpg","Libreria Búho Azul","https://www.facebook.com/buhoazulcusco"),
+	(2,"Colores",NULL,"Cómic","2020","La autora nos cuenta una pequeña anécdota de su infancia en el jardín de su abuela.",1,"img/Mujer_1_Libro2.jpg","Plataforma Behance","https://www.behance.net/gallery/125265469/COLORS-COMIC-Colores-Comic"),
+	(3,"Pasado",NULL,"Cómic","2021","Cómic Ganador del Concurso Internacional de Historieta “La sociedad en tiempos de Pandemia” del Festival Virtual Internacional de las artes “Qosqo T’ikarinampaq 2020” Organizado por la Municipalidad del Cusco.",1,"img/Mujer_1_Libro3.jpg","Plataforma Behance","https://www.behance.net/gallery/124964849/PASADO-por-Adriana-Cule-AKA-Madivera"),
+	(4,"Antología Angeles y Demonios",NULL,"Cuentos","1998","Antologia organziada por la Asociación Centro Cultural Cusco.",2,"img/not_found.jpg","Esta publicación no esta disponible.",NULL),
+	(5,"Poemario Acidulce","200901791","Poemario","2009","Éste es su primero poemario, como el título, un cúmulo de dulces y ácidas experiencias",2,"img/Mujer_2_Libro2.jpg","Sitio Web Ana María Milla","https://anamaria.pro/acidulce/"),
+	(6,"Mil Poemas a Cesar Vallejo: Una gesta de amor universal",NULL,"Poemario","2012","Ana María Milla participa en esta antologia con su poema en la pagina 349, esta publicación es una recopilación hecha por Alfred Asís Antología-Recopilación-Escritoras, Escritores-Poetas del Mundo.",2,"img/not_found.jpg","Enlace Drive","https://drive.google.com/file/d/1k0S8eXwEdFe0iNi_0PyDisx1lE-LiT0c/view?usp=sharing"),
+	(7,"La hija del bosque",NULL,"Poemario","2019","La Hija del Bosque es su segundo poemario, y el primero la colección El Retorno de los paganos, colección de publicaciones sobre el retorno a la naturaleza y el viaje interior que toma de pretexto de los viajes físicos hacia otra comprensión del mundo y del universo.",2,"img/Mujer_2_Libro4.jpg","Libreria Búho Azul","https://www.facebook.com/buhoazulcusco"),
+	(8,"Poemic: El atardecer del fin del mundo",NULL,"Cómic","2019","Poemic, es una producción que busca fusionar un poema con el arte del cómic. Con el título El atardecer del Fin del Mundo, es un viaje épico en un mundo en guerra, hacia la esperanza de un mundo mejor. Magistralmente ilustrado por el equipo de Qosqomic, liderado por el artista Fabricio Rivas Mar.",2,"img/Mujer_2_Libro5.jpg","Sitio Web Ana María Milla","https://anamaria.pro/poemic/"),
+	(9,"Documentos para la historia eclesiástica de Apurímac. Análisis histórico al documento de la peregrinación de Sebastián Quimichi, siglo XVII","27098680","Articulo de revista","2020","El presente trabajo analiza la peregrinación de Sebastián “Quimichi”, a partir de la documentación que pertenece al archivo histórico del Santuario de Cocharcas, específicamente al documento denominado “Relación de la imagen de Nuestra Señora que esta en este pueblo de Cocharca hecha por el licenciado don Pedro Guillén de Mendoza en 20 de julio de 1625 años”.",3,"img/Mujer_3_Libro1.jpg","Revista Riqch’ariy Vol. 1, N° 01, 2020. pp. 147-178","https://www.academia.edu/44910438/REVISTA_RIQCH_ARIY_No_01"),
+	(10,"El archivo del Santuario de Cocharcas: historia, catalogación y transcripción paleográfica siglos XVI-XX.","287307","Articulo de revista","2017","El motivo del presente trabajo es la difusión de los fondos documentales del Archivo Histórico del Santuario de Cocharcas, cuya recuperación y organización se inició el 2009 a través del entonces Instituto Nacional de Cultura Cusco (INC), institución que se encontraba restaurando el citado santuario. Con el trabajo efectuado, que fue la Puesta en Valor del archivo, se logró poner al servicio libros de cofradías, fábrica, inventarios, empadronamientos, testamentos y libros sacramentales (entierros, bautizos, matrimonios y confirmaciones), además de libros de inicios del siglo xx como litigación de tierras, peticiones y solicitudes, entre otros, que dan cuenta de la vida social, religiosa y cultural del santuario y la doctrina de Cocharcas, desde finales del siglo XVI hasta inicios del XX.",3,"img/Mujer_3_Libro2.jpg","Revista del Archivo General de la Nación N°32, 2017, págs. 287-307","https://revista.agn.gob.pe/ojs/index.php/ragn/issue/view/1/4"),
+	(11,"Espacios de inclusión y exclusión: Etnias, ayllus y cofradías en la conformación de la doctrina eclesiástica de Cocharcas 1570-1614.","9786124544637","Articulo de revista","2013","El presente artículo se enmarca en el difícil proceso de reorganización social y religiosa que las poblaciones indígenas padecieron dentro de la región de Huamanga en la coyuntura finisecular del siglo XVI. Nuestra preocupación por comprender dichas reorganizaciones obedece a un doble interés, primero dar cuenta de la conformación del espacio social de la doctrina de Cocharcas, y segundo realizar un análisis de las relaciones interétnicas y las nociones de inclusión/exclusión a partir de la implantación de la institución de la cofradía, convirtiéndose en el medio de mayor eficacia para canalizar y viabilizar los intereses colonial étnicos locales de poder para así ganarse un espacio dentro de la nueva sociedad colonial que se conformaba.",3,"img/Mujer_3_Libro3.jpg","Cuadernos de Investigación Universitaria, 2013, núm. 01. 01 págs. 45-70","https://www.academia.edu/44912519/CUADERNOS_DE_INVESTIGACI%C3%93N_N_01"),
+	(12,"El Santuario de Cocharcas: Construcción, clero secular y participación indígena (1611-1680)",NULL,"Articulo de revista","2013","El presente artículo se enmarca en el difícil proceso de reorganización social y religiosa que las poblaciones indigenas padecieron dentro de la región de Huamanga en la coyuntura finissecular del siglo XVI. Nuestra preocupación por comprender dichas reorganizaciones obdece a un doble interes, primero dar cuenta de la conformacipn del espacio social de la doctrina de Chocharcas, y segundo realziar un analisis de las relaciones interétnicas y las nociones de inclusión/exclusión apartir de la implementación de la cofradía, convirtiéndose en el medio de mayor eficacia para canalizar y viabilizar los intereses colonial étnicos locales de poder para así ganarse un espacio dentro de la nueva sociedad colonial que se conformaba.",3,"img/Mujer_3_Libro4.jpg","Arquitextual N°02, Huancayo, Diciembre 2013, pp 82-102.","https://issuu.com/gusstockconchaflores/docs/arquitextual_2"),
+	(13,"Investigación histórica del Santuario de Cocharcas y el Archivo Arzobispal de Abancay.",NULL,"Articulo de revista","2014",NULL,3,"img/Mujer_3_Libro5.jpg","Red de Archivos y Bibliotecas Históricas del Perú","http://archivosybibliotecasdelperu.blogspot.com/2014/03/investigacion-historica-del-santuario_1784.html"),
+	(14,"RIQCH´ARIY",NULL,"Edición","2006, 2008, 2020, 2021","Revista de corte social con carácter multidisciplinario producido por el círculo de estudios del mismo nombre pertenecientes a la Facultad de Ciencias Sociales de la Universidad Nacional de San Antonio Abad del Cusco (UNSAAC).",3,"img/Mujer_3_Libro6.jpg","Revista Riqch’ariy ","https://revistariqchariy.com/"),
+	(15,"CUADERNOS DE INVESTIGACIÓN UNIVERSITARIA",NULL,"Edición","2012, 2013, 2014","Revista exclusivo para jóvenes y egresados de las diversas carreras profesionales, con el objetivo de dar a conocer los resultados de las investigaciones científicas y los procesos de transferencia tecnológica que se da en la Universidad de San Antonio Abad del Cusco (UNSAAC)",3,"img/Mujer_3_Libro7.jpg","Vicerrectorado de Investigación de la Universidad de San Antonio Abad del Cusco (UNSAAC)","http://vrin.unsaac.edu.pe/"),
+	(16,"II SEMANA DE INVESTIGACIÓN",NULL,"Edición","2014","Publicación que conjuga un conjunto de actividades de capacitación y promoción de la investigación científica con el objetivo de generar un espacio plural de debate en relación a la invención, innovación e investigación científica, tecnológica y humanista en la región Cusco con participación de expertos, profesores y estudiantes universitarios de la UNSAAC y el país.",3,"img/Mujer_3_Libro8.jpg","Vicerrectorado de Investigación de la Universidad de San Antonio Abad del Cusco (UNSAAC)","http://vrin.unsaac.edu.pe/"),
+	(17,"VADEMÉCUM",NULL,"Edición","2013-2014","El Vicerrectorado de Investigación de la Universidad Nacional de San Antonio Abad del Cusco presenta la publicación VADEMÉCUM DE INVESTIGACIÓN FEDU 2013-2014, que da continuidad a la difusión de las diferentes investigaciones realizadas por grupos de docentes activos y jubilados durante el bienio señalado, los mismos fueron financiados con el Fondo Especial de Desarrollo Universitario (FEDU)",3,"img/Mujer_3_Libro9.jpg","Vicerrectorado de Investigación UNSAAC-VADEMÉCUM - Recursos Digitales","http://vrin.unsaac.edu.pe/publicaciones/1/vademecum-fedu-20132014.html");
 
 INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
-	(1,7,"Es"),
-	(2,8,"Po"),
-	(3,8,"Tr"),
-	(4,8,"Pr"),
-	(5,10,"Es"),
-	(6,10,"Ed"),
-	(7,10,"An"),
-	(8,14,"Es"),
-	(9,14,"Ed"),
-	(10,15,"Es"),
-	(11,15,"Il"),
-	(12,17,"Ed"),
-	(13,19,"An"),
-	(14,20,"Po"),
-	(15,23,"Es");
+	(1,1,"Co"),
+	(2,1,"Es"),
+	(3,1,"Il"),
+	(4,2,"Po"),
+	(5,2,"Es"),
+	(6,3,"Hi"),
+	(7,3,"Ed");
