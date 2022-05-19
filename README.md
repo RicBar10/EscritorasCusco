@@ -2,8 +2,10 @@
 Página web para proyecto de localización y difusión de escritoras peruanas en Cusco
 [http://www.mujeresdellibroperuano.com]
 # Como actualizar el sitio web
-1. En tu branch, haces un pull del main, actualizar el datos.sql con el excel que tiene 4 escritoras, cuando funcione actualizar el main
-
+1. En tu branch, haces un pull del main, actualizar el datos.sql con el excel que tiene x escritoras, cuando funcione actualizar el main
+	- link del excel https://docs.google.com/spreadsheets/d/1KlCkJWFNr1gTMr5zBHXApoWU-pSU3DPq/edit#gid=322631104
+	- Copiar los datos del excel de docs.google.com en el excel que esta en CR
+	- Comando para usar el script excel2sql.py --> python excel2sql.py -t LMPE
 2. Luego de que funciona en el main te conectas en el cmd con la linea: ```ssh root@194.195.86.114```
 
 3. Justo despues de conectarse debes hacer: ```source /mujeresP/venv/bin/activate```
