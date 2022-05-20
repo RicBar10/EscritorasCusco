@@ -100,6 +100,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+# EMAIL_HOST = 'www.mujeresdellibroperuano.com'
+EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'mujeresdellibroperuano@gmail.com'
+EMAIL_HOST_PASSWORD = 'librocusco'
+EMAIL_PORT = 25
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

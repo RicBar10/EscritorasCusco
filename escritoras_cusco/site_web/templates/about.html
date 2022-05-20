@@ -1,65 +1,33 @@
+{% extends 'layouts/base.html' %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>N&B photographies - Contact</title>
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nb.css' %}">
-    <script src="{% static 'js/randomImage.js' %}" defer></script>
-    <!-- <script src="{% static 'js/contactForm.js' %}" defer></script> -->
-</head>
+{% block title %} Respuesta {% endblock title %}
 
-<body>
-    <header id="mainHeader">
-        <img src="{% static 'images/layout/nb_logo.svg' %}" alt="Logo NB" id="logoImg" />
-        <nav id="mainNav">
-            <ul>
-                <li><a href="{% url 'Index' %}">Inicio</a></li>
-                <li><a href="{% url 'Galleries' %}">Mujeres del mapa</a></li>
-                <li><a href="{% url 'Eventos' %}">Eventos y descuentos</a></li>
-                <li><a href="{% url 'Contact' %}">Contacto</a></li>
-            </ul>
-        </nav>
-        <button id="menuToggle" class="hamburger">&nbsp;</button>
-    </header>
+{% block body_class %} bg-gray-100 {% endblock body_class %}
 
-    <section id="pageContent">
-        <main>
-            <h1>Contactez-nous</h1>
-            <p>Merci de compléter le formulaire suivant pour nous contacter. Tous les champs de ce formulaire sont
-                requis.</p>
-            <form id="frmContact" action="{% url 'Merci' %}" novalidate>
-                <div id="leftCol">
-                    <div>
-                        <label for="fName">Prénom</label>
-                        <input type="text" name="fName" id="fName" required>
-                    </div>
-                    <div>
-                        <label for="lName">Nom de Famille</label>
-                        <input type="text" name="lName" id="lName" required>
-                    </div>
-                    <div>
-                        <label for="eMail">Adresse e-mail</label>
-                        <input type="email" name="eMail" id="eMail" required>
-                    </div>
-                </div>
-                <div id="rightCol">
-                    <div>
-                        <label for="message">Votre Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                </div>
-                <button type="submit">Envoyer</button>
-            </form>
-        </main>
-    </section>
-    <footer id="mainFooter">
-        <p>&copy; copyright Mujeres del libro peruano - 2022</p>
-    </footer>
-</body>
-
-</html>
+{% block content %}
+{% include "navigation.html" %}
+<section class="my-5 py-5">
+  <div class="container">
+    <h3 class="text-gradient text-primary">
+      BIENVENIDOS AL MAPA DE ESCRITORAS PERUANAS
+    </h3>
+    <p style="text-align:justify">Mapa de Escritoras Peruanas es un proyecto digital que busca
+      la difusión y visibilización de escritoras, poetas, historiadoras,
+      historietistas, editoras, ilustradoras peruanas de todas las regiones del Perú
+      a través de nuestra página web donde usted encontrará la ubicación de las estas
+      mujeres en un mapa basados en su lugar de nacimiento, este mapa será de carácter
+      interactivo que brindará información del trabajo de las escritoras peruanas y sus libros. </p>
+    <p style="text-align:justify">Buscamos sembrar el interés de nuestro país por contenido literario dinámico,
+      que sea de fácil acceso, creando un legado para las nuevas generaciones de escritores
+      y lectores que tienen amor por su historia y dan el reconocimiento a todas las mujeres
+      Y Autores Peruanos En Publicaciones Digitales y/o Publicaciones Periódicas Impresas de los
+      Estímulos Económicos de Cultura 2021. </p>
+  </div>
+</section>
+{% endblock content %}
+<!-- Specific JS goes HERE -->
+{% block javascripts %}
+<script src="{% static 'js/randomImage.js' %}" defer></script>
+{% endblock javascripts %}

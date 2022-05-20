@@ -1,0 +1,48 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %} Mapa {% endblock title %}
+
+{% block body_class %}  bg-gray-100 {% endblock body_class %}
+
+{% block content %}
+
+  {% include "navigation.html" %}
+  <section class="my-5 py-5">
+    <div class="container mx-auto text-center">
+      <!-- TODO custom Mapa -->
+      <div id="map" style=' display:none; width: 100%; height: calc(100vh - 136px);'></div>
+      <div id="leafletMap"></div>
+    </div>
+    <input value="{{mujeres}}" class="d-none" />
+
+    <div class="buclemujeres d-none">
+    {% for mujer in mujeres %}
+        <div class="datosmujer "  mujer_id={{mujer.id}} >
+            <input value="{{mujer.nombre}}" class="mujernombre" mujer_id={{mujer.id}} />
+            <input value="{{mujer.id}}" class="mujerID" mujer_id={{mujer.id}} />
+            <input value="{{mujer.lugar.distrito}}" class="mujerlugardistrito" mujer_id={{mujer.id}} />
+            <input value="{{mujer.lugar.departamento}}" class="mujerlugardep" mujer_id={{mujer.id}} />
+            <input value="{{mujer.link_imagen}}" class="mujerimagen" mujer_id={{mujer.id}} />
+            <input value="{{mujer.coordx}}" class="mujerlugarcoordx" mujer_id={{mujer.id}} />
+            <input value="{{mujer.coordy}}" class="mujerlugarcoordy" mujer_id={{mujer.id}} />
+            <input value="{{mujer.categoria}}" class="mujercategoria" mujer_id={{mujer.id}} />
+        </div>
+        <input value="{{mujer}}" class="mujer d-none" />
+    {% endfor %}
+    </div>
+  </section>
+
+{% endblock content %}
+<!-- Specific JS goes HERE -->
+{% block javascripts %}
+<!-- MAP Files -->
+  <script src="{% static 'js/map.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/map.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+
+{% endblock javascripts %}
