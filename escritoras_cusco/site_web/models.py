@@ -9,7 +9,8 @@ TIPO_CATEGORIA = [
     ('Il', 'Ilustradora'),
     ('Tr', 'Traductora'),
     ('Hi', 'Historiadora'),
-    ('Co', 'Historietista')  # Co de Comic
+    ('Co', 'Historietista'),  # Co de Comic
+    ('Cr', 'Correctora de estilo')
 ]
 
 # Create your models here.
