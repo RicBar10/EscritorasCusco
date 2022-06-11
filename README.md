@@ -27,9 +27,9 @@ Página web para proyecto de localización y difusión de escritoras peruanas en
 
 7. luego ir a root@mujeres:/mujeresP/EscritorasCusco/escritoras_cusco# y hacer estas lineas para generar el nuevo static:
 
-```python manage.py makemigrations site_web```
-```python manage.py migrate```
-```python manage.py collectstatic```
+- ```python manage.py makemigrations site_web```
+- ```python manage.py migrate```
+- ```python manage.py collectstatic```
 
 8. Finalmente hacer: ```systemctl restart apache2``` para actualizar el sitio web
 
