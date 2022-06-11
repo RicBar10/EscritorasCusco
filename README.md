@@ -15,21 +15,21 @@ Página web para proyecto de localización y difusión de escritoras peruanas en
 
 3. Justo despues de conectarse debes hacer: ```source /mujeresP/venv/bin/activate```
 
-4. Ir a mujeresP y haces un ```git pull main``` para actualizar la branch production con el main
+4. Ir a mujeresP/EscritorasCusco# y haces un ```git pull origin main``` para actualizar la branch production con el main. Si da error de datos.sql se tiene que eliminar el datos.sql que esta en mujeresP/EscritorasCusco/escritoras_cusco y hacer  git add . y git commit -m "algo", luego git pull origin main, luego traer el datos.sql que esta en CR a escritoras_cusco --ejemplo ---> root@mujeres:/mujeresP/EscritorasCusco# cp CR/datos.sql escritoras_cusco/
 
-5. Conectarse a la base de datos sql con 
+5. Ir a  root@mujeres:/mujeresP/EscritorasCusco/escritoras_cusco# y conectarse a la base de datos sql con 
 	- sqlite3 db.sqlite3   ---> para entrar a la base de datos
 	- .read datos.sql ---> para actualizar la base de datos
 	- .tables   ---> para ver tus tablas
 	- .exit	  ---> para salir
 
-6. Luego haces un remove de static con: ```rm -rf /mujeresP/public/static```
+6. Luego vas a root@mujeres:/# y haces un remove de static con: ```rm -rf /mujeresP/public/static``` ---ejemplo---> root@mujeres:/# rm -rf /mujeresP/public/static
 
-7. luego estas lineas para generar el nuevo static:
+7. luego ir a root@mujeres:/mujeresP/EscritorasCusco/escritoras_cusco# y hacer estas lineas para generar el nuevo static:
 
-```python manage.py makemigrations site_web```
-```python manage.py migrate```
-```python manage.py collectstatic```
+- ```python manage.py makemigrations site_web```
+- ```python manage.py migrate```
+- ```python manage.py collectstatic```
 
 8. Finalmente hacer: ```systemctl restart apache2``` para actualizar el sitio web
 
