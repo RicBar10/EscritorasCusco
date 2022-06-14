@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.template import RequestContext
 from .models import Contact, Publicacion
-from site_web.models import Mujer, Ejerce, Publicacion
+from site_web.models import Mujer, Ejerce, Publicacion, Evento
 from django.db.models import Q
 # from django.core.mail import EmailMessage
 from django.core import mail
@@ -92,7 +92,13 @@ def about(request):
 
 def eventos(request):
     template = loader.get_template('eventos.html')
-    return HttpResponse(template.render(request=request))
+    new = []
+    list = Evento.objects.all()
+    for i in range(0, len(list), 3):
+        new.append((i, list[i: i+3]))
+    print(new)
+    context = {"eventos": Evento.objects.all(), "eList": new}
+    return HttpResponse(template.render(context, request=request))
 
 
 def merci(request):

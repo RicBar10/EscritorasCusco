@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 TIPO_CATEGORIA = [
     ('Es', 'Escritora'),
@@ -59,3 +60,14 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Evento(models.Model):
+    titulo = models.CharField(max_length=200)
+    descripcion = models.CharField(max_length=400)
+    link_imagen = models.CharField(max_length=200)
+    nombre_organizador = models.CharField(max_length=200)
+    logo_organizador = models.CharField(max_length=200)
+    link_organizador = models.CharField(max_length=200, null=True)
+    fecha_evento = models.CharField(max_length=150, null=True)
+    fecha_publicacion = models.DateField(default=datetime.date.today)
