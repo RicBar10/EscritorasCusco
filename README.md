@@ -6,7 +6,7 @@ Página web para proyecto de localización y difusión de escritoras peruanas en
 	- link del excel https://docs.google.com/spreadsheets/d/1KlCkJWFNr1gTMr5zBHXApoWU-pSU3DPq/edit#gid=322631104
 	- Copiar los datos del excel de docs.google.com en el excel que esta en CR
 	- Comando para usar el script excel2sql.py --> python excel2sql.py -t LMPE
-	- Ir a escritoras_cusco y hacer sqlite3 db.sqlite3   ---> para entrar a la base de datos
+	- Copiar el datos.sql a escritoras_cusco y hacer sqlite3 db.sqlite3   ---> para entrar a la base de datos
 	- .read datos.sql
 	- python manage.py runserver
 	- Descargar las imagenes del link --> https://drive.google.com/drive/folders/1-DR5JZ2cibAx0xRie4clQp5RX8y4QNLK  en la carpeta static/img 
