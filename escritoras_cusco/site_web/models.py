@@ -10,7 +10,8 @@ TIPO_CATEGORIA = [
     ('Il', 'Ilustradora'),
     ('Tr', 'Traductora'),
     ('Hi', 'Historiadora'),
-    ('Co', 'Historietista')  # Co de Comic
+    ('Co', 'Historietista'),  # Co de Comic
+    ('Cr', 'Correctora de estilo')
 ]
 
 # Create your models here.
@@ -71,3 +72,4 @@ class Evento(models.Model):
     link_organizador = models.CharField(max_length=200, null=True)
     fecha_evento = models.CharField(max_length=150, null=True)
     fecha_publicacion = models.DateField(default=datetime.date.today)
+    link_facebook = models.CharField(max_length=200)

@@ -8,23 +8,22 @@
 
 {% block content %}
 {% include "navigation.html" %}
-{% for eventos in eList %}
-<section class="my-{% if eventos.0 > 2 %}3{% else %}5{% endif %} py-5">
+
+{% for set_eventos in allEventos %}
+<section class="my-5 py-5">
   <div class="container">
     <div class="row align-items-start">
-      {% for evento in eventos.1 %}
-      <div class="col{% if eventos.0 > 2 %}-4{% endif %}">
+      {% for evento in set_eventos.1 %}
+      <div class="col-4">
         <div class="card">
           <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-            <a href="https://www.facebook.com/100702965055588/posts/512187743907106/ " target="_blank" class="d-block">
+            <a href="{{evento.link_facebook}}" target="_blank" class="d-block">
               <img src="static/{{evento.link_imagen}}" alt="..." class="img-fluid border-radius-lg">
             </a>
           </div>
-
           <div class="card-body pt-2">
             <span class="text-gradient text-primary text-uppercase text-xs font-weight-bold my-2">EVENTO</span>
-            <a href="https://www.facebook.com/100702965055588/posts/512187743907106/" target="_blank"
-              class="card-title h5 d-block text-darker">
+            <a href="{{evento.link_facebook}}" target="_blank" class="card-title h5 d-block text-darker">
               {{evento.titulo}}
             </a>
             <p class="card-description mb-4">
@@ -46,15 +45,14 @@
           </div>
         </div>
       </div>
-      {% empty %}
-      <p class="text">Ningun evento por el momento.</p>
       {% endfor %}
     </div>
   </div>
 </section>
 {% empty %}
-<p class="text">Ningun eveeeeeento por el momento.</p>
+<p class="text">Ningun evento por el momento.</p>
 {% endfor %}
+
 {% endblock content %}
 <!-- Specific JS goes HERE -->
 {% block javascripts %}

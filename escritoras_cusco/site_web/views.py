@@ -97,7 +97,7 @@ def eventos(request):
     for i in range(0, len(list), 3):
         new.append((i, list[i: i+3]))
     print(new)
-    context = {"eventos": Evento.objects.all(), "eList": new}
+    context = {"eventos": Evento.objects.all(), "allEventos": new}
     return HttpResponse(template.render(context, request=request))
 
 
