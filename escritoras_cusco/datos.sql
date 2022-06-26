@@ -2,6 +2,7 @@ DELETE FROM site_web_lugar;
 DELETE FROM site_web_mujer;
 DELETE FROM site_web_publicacion;
 DELETE FROM site_web_ejerce;
+DELETE FROM site_web_evento;
 
 INSERT INTO site_web_lugar(id,region,provincia,distrito) VALUES
 	(1,"Cusco","Cusco","Cusco"),
@@ -122,3 +123,16 @@ INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(15,8,"Po"),
 	(16,9,"Es"),
 	(17,9,"Il");
+
+
+INSERT INTO site_web_evento(id,titulo,descripcion,link_imagen,nombre_organizador,logo_organizador,fecha_publicacion,link_organizador,fecha_evento,link_facebook) VALUES
+	(1,"26° FERIA INTERNACIONAL DEL LIBRO DE LIMA","Prepárate para disfrutar de esta gran fiesta de los libros. ¡Comparte con los tuyos la Experiencia FIL!","img/eventosAndDescuentos/evento-6.jpg","Cámara Peruana del Libro","img/eventosAndDescuentos/cpl.jpg","2022-05-09","https://cpl.org.pe/",null,"https://www.facebook.com/FilLimaPeru/posts/2512333538904033/"),
+	(2,"FERIA INTERNACIONAL DEL LIBRO DE IQUITOS",'Esta primera edición de la "FILI" (Feria Internacional del Libro de Iquitos) tiene el placer de dar a conocer a algunos de los escritores y críticos literarios que nos acompañarán del 15 al 22 de mayo.',"img/eventosAndDescuentos/evento-7.jpg","Filiquitos","img/eventosAndDescuentos/fili.jpg","2022-05-09","https://www.filiquitos.pe/",null,"https://www.facebook.com/Filiquitos/photos/101298799255271/"),
+	(3,"VII FESTILIBRO 2022 AREQUIPA","Te invitamos a participar del VII FESTILIBRO en Arequipa una feria donde encontrarás muchas sorpresas: recitales, conservatorios, cuenta cuentos, actividades culturales, libros escolares, entre otros.","img/eventosAndDescuentos/evento-8.jpg","Municipalidad Provincial de Arequipa","img/eventosAndDescuentos/mun_are.jpg","2022-05-13","https://www.muniarequipa.gob.pe/",null,"https://www.facebook.com/entrelineascultu/posts/1573327529734544/"),
+	(4,'REVISTA "LIBROS Y MÁS"','Ya está disponible la 3era edición de la revista "Libros y más". En ella encontrarás muchas noticias sobre nuestras tiendas y de las campañas que tenemos para ustedes. Además, conoce más sobre la escritora, editora y antropóloga peruana Karina Pacheco Medrano',"img/eventosAndDescuentos/evento-9.jpg","Librerías Crisol","img/eventosAndDescuentos/crisol.jpg","2022-05-14","https://www.crisol.com.pe/",null,"https://www.facebook.com/libreriascrisol.paginaoficial/photos/a.120619034635612/5446204215410374/"),
+	(5,"SEMANA DE LA EDUCACIÓN ARTÍSTICA","Súmate a esta jornada de arte y educación para abordar temas del contexto actual de la educación artística en la escuela y participa de los talleres presenciales y virtuales para afianzar tus capacidades y habilidades pedagógicas.","img/eventosAndDescuentos/evento-10.jpg","Ministerio de Cultura del Perú","img/eventosAndDescuentos/mdc.jpg","2022-05-17","https://www.gob.pe/cultura/",null,"https://www.facebook.com/mincu.pe/posts/337686675117055/"),
+	(6,"30% DE DESCUENTO EN CRECIMIENTO PERSONAL","Hasta el 28 de mayo tendremos hasta 30% de descuento en miles de libros.","img/eventosAndDescuentos/evento-11.jpg","Librería Buen Salvaje","img/eventosAndDescuentos/buensalvaje.jpg","2022-05-18","https://www.buensalvaje.com/",null,"https://www.facebook.com/buensalvajecom/posts/5235544399861015/"),
+	(7,"VOCES EN LENGUAS ORIGINARIAS: TRES POETAS PERUANAS CONTEMPORÁNEAS","Conozcamos a tres poetas contemporáneas en la jornada Voces en lenguas originarias. Participa este jueves 26, a las 6 p.m.","img/eventosAndDescuentos/evento-12.jpg","Casa de la Literatura Peruana","img/eventosAndDescuentos/clp.jpg","2022-05-19","https://www.casadelaliteratura.gob.pe/",null,"https://www.facebook.com/CasaLiteratura/posts/5227050394021150/"),
+	(8,"BOLETÍN MENSUAL DE OPORTUNIDADES FORMATIVAS PARA ARTISTAS Y TRABAJADORES DEL ARTE","El Ministerio de Cultura lanza el primer Boletín de Oportunidades de Formativas - edición mayo 2022, el cual contiene información sobre las actividades mensuales que su servicio Conecta viene organizando.","img/eventosAndDescuentos/evento-13.jpg","Ministerio de Cultura del Perú","img/eventosAndDescuentos/mdc.jpg","2022-05-20","https://www.gob.pe/cultura/",null,"https://www.facebook.com/mincu.pe/posts/337686675117055/"),
+	(9,"REPENSAR LAS POLÍTICAS PARA LA CREATIVIDAD","¿Cómo reconstruir mejor el sector cultural? No te pierdas la presentación nacional del nuevo informe de la UNESCO Perú.","img/eventosAndDescuentos/evento-14.jpg","Ministerio de Cultura del Perú","img/eventosAndDescuentos/mdc.jpg","2022-05-20","https://www.cusco.gob.pe/bmc/",null,"https://www.facebook.com/buensalvajecom/posts/5235544399861015/"),
+	(10,"DESCUBRE LAS NOVEDADES DE LIBRERÍA SBS","¿Ya viste todas las novedades que tenemos para ti? ¡Encuentra ya tu próxima lectura!","img/eventosAndDescuentos/evento-15.jpg","Librería SBS Perú","img/eventosAndDescuentos/sbs.jpg","2022-05-21","https://www.sbs.com.pe/",null,"https://www.facebook.com/libreriasbs/posts/5234550009924258/");
