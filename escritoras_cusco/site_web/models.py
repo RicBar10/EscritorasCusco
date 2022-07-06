@@ -11,7 +11,8 @@ TIPO_CATEGORIA = [
     ('Tr', 'Traductora'),
     ('Hi', 'Historiadora'),
     ('Co', 'Historietista'),  # Co de Comic
-    ('Cr', 'Correctora de estilo')
+    ('Cr', 'Correctora de estilo'),
+    ('Cl', 'Columnista')
 ]
 
 # Create your models here.

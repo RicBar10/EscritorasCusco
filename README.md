@@ -9,7 +9,7 @@ Página web para proyecto de localización y difusión de escritoras peruanas en
 	- Copiar el datos.sql a escritoras_cusco y hacer sqlite3 db.sqlite3   ---> para entrar a la base de datos
 	- .read datos.sql
 	- python manage.py runserver
-	- Descargar las imagenes del link --> https://drive.google.com/drive/folders/1-DR5JZ2cibAx0xRie4clQp5RX8y4QNLK  en la carpeta static/img 
+	- Descargar las imagenes del link --> https://drive.google.com/drive/folders/17naKuLxqrHXwq6oHhhKYE-Q3zSsB_uZZ  en la carpeta static/img 
 	- Agregar en el index.html a la mano la imagen de la mujer
 
 # 	Verificar que funciona en Local y actualizar el main del github
