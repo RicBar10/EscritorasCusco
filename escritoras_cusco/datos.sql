@@ -6,7 +6,8 @@ DELETE FROM site_web_evento;
 
 INSERT INTO site_web_lugar(id,region,provincia,distrito) VALUES
 	(1,"Cusco","Cusco","Cusco"),
-	(2,"Cusco","Canas","Layo");
+	(2,"Cusco","Canas","Layo"),
+	(3,"Cusco","Quispicanchi","Huaro");
 
 INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen,Contacto,coordx,coordy,Entrevista) VALUES
 	(1,"Adriana Hiromi ","Cule Vargas",1,"20/04/1996",NULL,"Adriana Cule es una artista visual y retratista profesional. Se desenvuelve en el terreno del diseño gráfico, el modelado análogo y digital, el desarrollo de personajes pintorescos y la creación de cuentos cortos. En sus obras busca que las perspectivas y composición interactúen con el espectador exagerando las formas.
@@ -31,10 +32,14 @@ Ha participado y sido antologada dentro y fuera de Perú, exponente en muestras 
 Esa combinación de trabajo literario y pedagógico le llevó a ganar varios premios: Obtuvo el segundo lugar en el concurso de letras para el Himno del colegio Garcilaso (1977), el tercer lugar en el Premio Fomento a la Cultura, categoría cuento, organizado por la Municipalidad del Cusco (1982), el segundo lugar en los II Juegos Florales Magisteriales de la Región Inka con el cuento “Los pastorcitos” (1990), mención honrosa en el género ensayo en los III Juegos Florales Magisteriales de la Región Inka (1991), con su propuesta “Talleres de lectura y redacción: ensayo pedagógico de experiencia didáctica en la enseñanza”. Fue finalista en el concurso de cuentos en quechua organizado por la Asociación Pukllasunchis (2000), y obtuvo mención honrosa en el Premio Regional de Cultura del INC, categoría cuento en quechua (2006). 
 Casi la totalidad de su obra está dedicada al público infantil, a los estudiantes. Por eso también, su trabajo teatral y en artes plásticas los plasmó en talleres vacacionales, especialmente en la década del 2000, en la Asociación Roberto Ojeda Campana. Esos años también, junto a sus hermanas María Olinda Escalante (filósofa) y Carmen Escalante (antropóloga), integró la Asociación de Escritoras del Cusco.
 ","img/Mujer_9.jpg","cocherocusco@gmail.com","-13.519038430970400","-71.9801665424645","https://www.youtube.com/embed/4BGYioBebuo"),
-	(10,"Mabel Iñakapalla","Chavez Bermudez",1,"20/06/1985",NULL,"Licenciada en Administración de la Universidad Andina del Cusco en el año 2014, con maestría en Antropología Social de la Universidad Nacional de San Antonio Abad de Cusco (2019). Es una gestora cultural independiente de proyectos de fotografía/ audiovisuales/ artes escénicas/ poesía/ pintura y música. Enlazando los temas de cultura y educación. Escribe poesía desde el año 2000 y mis poemas han sido incluidos en varias antologías a nivel nacional e internacional. Así mismo,es autora de diversos artículos y ensayos académicos de investigación, relacionados a los temas de gestión cultural, economía, educación y emprendimiento social.
+	(10,"Iñakapalla","Chavez Bermudez",1,"20/06/1985",NULL,"Licenciada en Administración de la Universidad Andina del Cusco en el año 2014, con maestría en Antropología Social de la Universidad Nacional de San Antonio Abad de Cusco (2019). Es una gestora cultural independiente de proyectos de fotografía/ audiovisuales/ artes escénicas/ poesía/ pintura y música. Enlazando los temas de cultura y educación. Escribe poesía desde el año 2000 y sus poemas han sido incluidos en varias antologías a nivel nacional e internacional. Así mismo,es autora de diversos artículos y ensayos académicos de investigación, relacionados a los temas de gestión cultural, economía, educación y emprendimiento social.
 Durante los años 2018- 2019, ha participado del proyecto de producción de audiovisuales del EMPODERARTE, dirigido por Karoline Pelikan, directora creativa de la casa PELIKAN PICTURES. 
-Tambien ha asesorando y organizando diversos eventos entre ellos, exposiciones de arte, fotografía, recitales de música con la Escuela de Violín Cusco, presentaciones de teatro dirigida a mujeres en el tema del cuidado del medio ambiente, violencia de género, brechas sociales, sororidad, entre otros. Ha sido ganadora de DAFO 2019- Estímulos económicos de fomento a la cultura y segundo lugar del “Concurso de poesía Taiwan 2010” Organizado por: Oficina Económica y Cultural Taiwan 2010 
-","img/Mujer_10.jpg","iakachavezb@gmail.com","-13.537326","-71.903965","https://www.youtube.com/embed/-kjIlLVyXc4");
+También ha asesorando y organizando diversos eventos entre ellos, exposiciones de arte, fotografía, recitales de música con la Escuela de Violín Cusco, presentaciones de teatro dirigida a mujeres en el tema del cuidado del medio ambiente, violencia de género, brechas sociales, sororidad, entre otros. Ha sido ganadora de DAFO 2019- Estímulos económicos de fomento a la cultura y segundo lugar del “Concurso de poesía Taiwan 2010” Organizado por: Oficina Económica y Cultural Taiwan 2010 
+","img/Mujer_10.jpg","iakachavezb@gmail.com","-13.537326","-71.903965","https://www.youtube.com/embed/-kjIlLVyXc4"),
+	(11,"Liliana","Davila Ochoa",3,"02/01/1982",NULL,"Liliana Davila Jurado nació en Huaro el año 1982, estudio la primaria y la secundaria en el colegio particular “Luz Casanova” - Lima, ingreso a la Universidad Nacional de San Antonio Abad del Cusco a la Facultad de Antropología, estudio 2 años y luego se traslado a la Universidad Federico Villareal, donde se graduó como antropóloga el 2006.
+Trabajó en la Municipalidad de Lima, realizo realizó varios cursos en Antropología y fotografía. Además realizó una maestría en Gestión Cultural, Patrimonio y Turismo.
+Fue fundadora del museo “Piedras Sagradas” de Huaro, Quispicanchi, Cusco. Recibió la medalla junto a su padre en reconocimiento del museo por la Municipalidad Provincial de Quispicanchi. Participo de otros estudios e investigaciones en Lima. Actualmente viene trabajando en la primera publicación de su Poemario. 
+","img/Mujer_11.jpg","lidaju@gmail.com","-13.690468","-71.640091","https://www.youtube.com/embed/Kbecwp_WeyE");
 
 INSERT INTO site_web_publicacion(id,titulo,isbn,categorizacion,fecha,descripcion,mujer_id,link_imagen,titulo_disponible,link_disponible) VALUES
 	(1,"Sueño Índigo","9786124751028","Cuentos","2018","Libros que contiene dos historias tiernas, acompañadas de espectaculares ilustraciones que te transportarán junto a los protagonistas.",1,"img/Mujer_1_Libro1.jpg","Libreria Búho Azul","https://www.facebook.com/buhoazulcusco"),
@@ -129,7 +134,10 @@ para luchar frente a las violencias de género.",10,"img/Mujer_10_Libro2.jpg","D
 	(78,"La Makina de coser poemas",NULL,"Blog Personal","2007","Revista Online donde Iñakapalla realiza sus analisis de poesia y tambien comprate su creación Poetica, junto con algunos afiches de su autoria.",10,"img/Mujer_10_Libro12.jpg","BlogsPot","http://lamakinadecoserpoemas.blogspot.com/"),
 	(79,"Lunas de Añil",NULL,"Poemario","2005","Los temas de su poesía son de manera muy marcada la luna y los sueños, está presente también el tema del amor. Otro tema muy fuerte es la necesidad imperiosa de escribir, necesidad que se presenta con deseo y pasión adictiva. Entre otros temas de su poesía son la soledad, la ciudad silente, en la que el yo poético siempre se dirige hacia el sur, el paso tan apresurado del tiempo y de los días, otro tópico clásico de la poesía.",10,"img/Mujer_10_Libro13.jpg","Esta publicación no está disponible.",NULL),
 	(80,"Inti Raymi- Fiesta del Sol- Fundamentación documental del cuadro de Alfredo Rocha Segarra por el Dr. Manuel Chávez Ballón",NULL,"Libro de investigación","2016","En esta publicación es responsable de la investigación Iñakapalla Chávez Bermúdez y Ricardo Ráez Reátegui, en una reedición del trabajo de su abuelo Manuel Jorge Chávez Ballón.
-",10,"img/Mujer_10_Libro14.jpg","Drive","https://drive.google.com/file/d/1Lhj2jDNUhCyViwhSuaTnafnE1AVzOueG/view?usp=sharing");
+",10,"img/Mujer_10_Libro14.jpg","Drive","https://drive.google.com/file/d/1Lhj2jDNUhCyViwhSuaTnafnE1AVzOueG/view?usp=sharing"),
+	(81,"Liliana Davila Jurado",NULL,"Blog Personal","2022","El blog personal de Liliana Davila Jurado, esta constituido por distintos articulos sobre antropologia y algunos versos de la autora.",11,"img/Mujer_11_Libro1.jpg","BlogsPot","http://lidaju.blogspot.com/"),
+	(82,"El Wayqui",NULL,"Libro de investigación","2015","El libro relata aspectos del hallazgo de la momia denominada El Wayqui, donde se pretende despertar el interés de los lectores en torno a temas de vida extraterrestre y posibles influencias en algunos aspectos culturales en la tierra. Este libro lo trabaja con su padre Renato Davila Riquelme en coautoria.",11,"img/Mujer_11_Libro2.jpg","Directamente con la autora","https://www.facebook.com/liliana.davilajurado.3"),
+	(83,"Piedras Sagradas","DL 11723-2011-05804","Libro de investigación","2011","Publicación realizada por los antropólogos Renato Davila Riquelme y Liliana Davila Jurado, dicho libro muestra el trabajo previo que se realizó para la apertura del actual Museo Piedras Sagradas de Huaro; ubicación, aspectos museográficos, sociales, etc. Así como una interpretación de la iconografía hallada en cada petroglifo que hoy forman parte de Museo de sitio.",11,"img/Mujer_11_Libro3.jpg","Directamente con la autora","https://www.facebook.com/liliana.davilajurado.4");
 
 INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(1,1,"Il"),
@@ -151,7 +159,9 @@ INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(17,9,"Il"),
 	(18,10,"Po"),
 	(19,10,"Es"),
-	(20,10,"Cl");
+	(20,10,"Cl"),
+	(21,11,"Es"),
+	(22,11,"An");
 
 INSERT INTO site_web_evento(id,titulo,descripcion,link_imagen,nombre_organizador,logo_organizador,fecha_publicacion,link_organizador,fecha_evento,link_facebook) VALUES
 	(1,"26° FERIA INTERNACIONAL DEL LIBRO DE LIMA","Prepárate para disfrutar de esta gran fiesta de los libros. ¡Comparte con los tuyos la Experiencia FIL!","img/eventosAndDescuentos/evento-6.jpg","Cámara Peruana del Libro","img/eventosAndDescuentos/cpl.jpg","2022-05-09","https://cpl.org.pe/",null,"https://www.facebook.com/FilLimaPeru/posts/2512333538904033/"),
