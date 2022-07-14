@@ -36,8 +36,8 @@ Casi la totalidad de su obra está dedicada al público infantil, a los estudian
 Durante los años 2018- 2019, ha participado del proyecto de producción de audiovisuales del EMPODERARTE, dirigido por Karoline Pelikan, directora creativa de la casa PELIKAN PICTURES. 
 También ha asesorando y organizando diversos eventos entre ellos, exposiciones de arte, fotografía, recitales de música con la Escuela de Violín Cusco, presentaciones de teatro dirigida a mujeres en el tema del cuidado del medio ambiente, violencia de género, brechas sociales, sororidad, entre otros. Ha sido ganadora de DAFO 2019- Estímulos económicos de fomento a la cultura y segundo lugar del “Concurso de poesía Taiwan 2010” Organizado por: Oficina Económica y Cultural Taiwan 2010 
 ","img/Mujer_10.jpg","iakachavezb@gmail.com","-13.537326","-71.903965","https://www.youtube.com/embed/-kjIlLVyXc4"),
-	(11,"Liliana","Davila Ochoa",3,"02/01/1982",NULL,"Liliana Davila Jurado nació en Huaro el año 1982, estudio la primaria y la secundaria en el colegio particular “Luz Casanova” - Lima, ingreso a la Universidad Nacional de San Antonio Abad del Cusco a la Facultad de Antropología, estudio 2 años y luego se traslado a la Universidad Federico Villareal, donde se graduó como antropóloga el 2006.
-Trabajó en la Municipalidad de Lima, realizo realizó varios cursos en Antropología y fotografía. Además realizó una maestría en Gestión Cultural, Patrimonio y Turismo.
+	(11,"Liliana","Davila Jurado",3,"02/01/1982",NULL,"Liliana Davila Jurado nació en Huaro el año 1982, estudio la primaria y la secundaria en el colegio particular “Luz Casanova” - Lima, ingreso a la Universidad Nacional de San Antonio Abad del Cusco a la Facultad de Antropología, estudio 2 años y luego se traslado a la Universidad Federico Villareal, donde se graduó como antropóloga el 2006.
+Realizo realizó varios cursos en Antropología y fotografía. Además realizó una maestría en Gestión Cultural, Patrimonio y Turismo.
 Fue fundadora del museo “Piedras Sagradas” de Huaro, Quispicanchi, Cusco. Recibió la medalla junto a su padre en reconocimiento del museo por la Municipalidad Provincial de Quispicanchi. Participo de otros estudios e investigaciones en Lima. Actualmente viene trabajando en la primera publicación de su Poemario. 
 ","img/Mujer_11.jpg","lidaju@gmail.com","-13.690468","-71.640091","https://www.youtube.com/embed/Kbecwp_WeyE");
 
@@ -161,7 +161,8 @@ INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(19,10,"Es"),
 	(20,10,"Cl"),
 	(21,11,"Es"),
-	(22,11,"An");
+	(22,11,"An"),
+	(23,11,"Po");
 
 INSERT INTO site_web_evento(id,titulo,descripcion,link_imagen,nombre_organizador,logo_organizador,fecha_publicacion,link_organizador,fecha_evento,link_facebook) VALUES
 	(1,"26° FERIA INTERNACIONAL DEL LIBRO DE LIMA","Prepárate para disfrutar de esta gran fiesta de los libros. ¡Comparte con los tuyos la Experiencia FIL!","img/eventosAndDescuentos/evento-6.jpg","Cámara Peruana del Libro","img/eventosAndDescuentos/cpl.jpg","2022-05-09","https://cpl.org.pe/",null,"https://www.facebook.com/FilLimaPeru/posts/2512333538904033/"),
