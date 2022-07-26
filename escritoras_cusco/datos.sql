@@ -7,7 +7,8 @@ DELETE FROM site_web_evento;
 INSERT INTO site_web_lugar(id,region,provincia,distrito) VALUES
 	(1,"Cusco","Cusco","Cusco"),
 	(2,"Cusco","Canas","Layo"),
-	(3,"Cusco","Quispicanchi","Huaro");
+	(3,"Cusco","Quispicanchi","Huaro"),
+	(4,"Cusco","Acomayo","Acomayo");
 
 INSERT INTO site_web_mujer(id,nombre,apellido,lugar_id,fecha_nacimiento,fecha_defuncion,trayectoria,link_imagen,Contacto,coordx,coordy,Entrevista) VALUES
 	(1,"Adriana Hiromi ","Cule Vargas",1,"20/04/1996",NULL,"Adriana Cule es una artista visual y retratista profesional. Se desenvuelve en el terreno del diseño gráfico, el modelado análogo y digital, el desarrollo de personajes pintorescos y la creación de cuentos cortos. En sus obras busca que las perspectivas y composición interactúen con el espectador exagerando las formas.
@@ -42,7 +43,12 @@ Fue fundadora del museo “Piedras Sagradas” de Huaro, Quispicanchi, Cusco. Re
 ","img/Mujer_11.jpg","lidaju@gmail.com","-13.690468","-71.640091","https://www.youtube.com/embed/Kbecwp_WeyE"),
 	(12,"Cricia","Ochoa Huamanatica",1,"02/09/1994",NULL,"Cricia Ochoa estudió la carrera de Derecho y Ciencia Política en la Universidad Andina del Cusco. Se encuentra cursando la Maestría en Derecho Civil y Procesal Civil en la Universidad Nacional San Antonio Abad del Cusco. Es Conciliadora Extrajudicial. Especialista en Justicia Indígena y Derechos Humanos. Gestora de la segunda Comicteca del país para niños y jóvenes de la ciudad del Cusco. Columnista de Diario el Cusco, los semanarios Ideario, Qosqo Times, Cusco Noticias. Fue conductora y directora de la revista y programa cultural “Open Cusco”, Best Cable te Defiende, Inpecable, El Rincón de los Incomprendidos y Boquita de Caramelo.
 Fue Parlamentaria joven por la Región Cusco en el Congreso de la República de Perú, Vocera regional de la Red Nacional de Mujeres Políticas Jóvenes y reconocida como Líder Internacional por la Organización Democrática Mundial. Actualmente es asesora jurídica y abogada en el Establecimiento de Medio Libre del Instituto Nacional Penitenciario, representante del Voluntariado Corporativo Renacer, Vocera de la Red de Mujeres sin Fronteras – Cusco, es asesora legal de la Gloriosa Federación Departamental de Campesinos del Cusco y se encuentra realizando investigaciones en el marco del Derecho Energético relacionado al cambio climático y Derecho Constitucional y Derechos Humanos. 
-","img/Mujer_12.jpg","criciaochoahuamantica@gmail.com","-13.53738563780172","-71.9048227578276","https://www.youtube.com/embed/kjYjqZMe5UY");
+","img/Mujer_12.jpg","criciaochoahuamantica@gmail.com","-13.53738563780172","-71.9048227578276","https://www.youtube.com/embed/kjYjqZMe5UY"),
+	(13,"Maggie","Velarde",1,"16/01/1993",NULL,"Margarita Estefani Oré Velarde es autora del libro de poemas El apu descalzo (Alastor Editores, 2021) con presentaciones en Cusco, Lima, Arequipa, Ica y Chimbote. Este fue escogido para el stand de Perú en la FIL Guadalajara 2021 y para la FIL Buenos Aires 2022. También publicó el libro de cuentos Breves historias de los efímeros (2020).
+Además es co-autora del cortometraje poético TRENZAR, junto a las artistas Almendra Vivanco y Margarita León (2021).
+Ha colaborado con el programa Lima Lee de la Municipalidad de Lima; con el programa Visita al Autor del Ministerio de Cultura; y, con el programa Mi Biblioteca mi prioridad de la Biblioteca Nacional del Perú.
+Ha publicado poemas en diversas revistas literarias y ha participado en festivales nacionales e internacionales.
+","img/Mujer_13.jpg","maggieov33@gmail.com","-13.517288","-71.962605","https://www.youtube.com/embed/GSaqeTjEoGU");
 
 INSERT INTO site_web_publicacion(id,titulo,isbn,categorizacion,fecha,descripcion,mujer_id,link_imagen,titulo_disponible,link_disponible) VALUES
 	(1,"Sueño Índigo","9786124751028","Cuentos","2018","Libros que contiene dos historias tiernas, acompañadas de espectaculares ilustraciones que te transportarán junto a los protagonistas.",1,"img/Mujer_1_Libro1.jpg","Libreria Búho Azul","https://www.facebook.com/buhoazulcusco"),
@@ -155,7 +161,14 @@ el sol rojo del Cusco","9786124864070","Biografia","2022","Cricia Ochoa Huamanti
 	(94,"Ideario 3. Revista semanal 8-14 abril del 2019",NULL,"Columna","2019","Columna de opinión “Boquita de Caramelo”: Mineroducto Las Bambas: Más falso que el floro de tu ex.",12,"img/Mujer_12_Libro11.jpg","Ideario","https://es.calameo.com/read/005869145e11202c0faed"),
 	(95,"Ideario 1. Revista semanal 25-31 marzo 2019",NULL,"Columna","2019","Columna de opinión “Boquita de Caramelo”: Crónica de un hospital anunciado",12,"img/Mujer_12_Libro12.jpg","Ideario","https://es.calameo.com/read/00586914545d65848464b?fbclid=IwAR3vMYYG-rdAguU0Rg9zlRQJHmtgSDFdjSTcfybemQOjQiP0q5XfQGJQOD0"),
 	(96,"Ideario 0. Revista semanal 18 marzo 2019",NULL,"Columna","2019","Columna de opinión “Boquita de Caramelo” : ¿Por qué no existe un peruvian dream?",12,"img/Mujer_12_Libro13.jpg","Ideario","https://es.calameo.com/read/00586914592a32e73aa34?fbclid=IwAR2cfn9D6xazjI-1elkR1HaEvGcWUquJX8fg_5Va6k_xmrqlcoo730Xz7OQ"),
-	(97,"Qosqo times",NULL,"Columna","2019","Columna de opinión politica de Cricia Ochoa",12,"img/Mujer_12_Libro14.jpg","Qosqo Times","https://qosqotimes.pe/category/columnas/cricia-ochoa/");
+	(97,"Qosqo times",NULL,"Columna","2019","Columna de opinión politica de Cricia Ochoa",12,"img/Mujer_12_Libro14.jpg","Qosqo Times","https://qosqotimes.pe/category/columnas/cricia-ochoa/"),
+	(98,"Tres poemas de Maggie Velarde",NULL,"Artículo de revista","2019","Aparicion en la Revista LUCERNA N°13, POESÍA",13,"img/Mujer_13_Libro1.jpg","Revista Lucerna","https://revistalucerna.com/2019/11/30/tres-poemas-de-maggie-ore/"),
+	(99,"Breves Historias de los Efímeros",NULL,"Cuentos","2020","Libro de cuentos para niños acompañado de las ilustraciones de la autora.",13,"img/Mujer_13_Libro2.jpg","Esta publicación no está disponible.",NULL),
+	(100,"Nueva poesía contemporánea: Maggie Velarde","2955-8131","Artículo de revista","2021","Aparicion en la Revista Kametsa",13,"img/Mujer_13_Libro3.jpg","Revista Kametsa","https://revistakametsa.wordpress.com/2021/04/27/nueva-poesia-contemporanea-maggie-velarde-peru/"),
+	(101,"Poesía peruana: Maggie Velarde",NULL,"Artículo de revista","2021","Aparicion en Círculo de Poesía. Revista electrónica de literatura, año 12, No. 20, mayo 2020",13,"img/Mujer_13_Libro4.jpg","Círculo de Poesía","https://circulodepoesia.com/2021/10/poesia-peruana-maggie-velarde/"),
+	(102,"El apu descalzo","9786124294310","Poemario","2021","En El apu descalzo, el apu, una de las principales deidades del mundo andino, se descalza y se hace carne, invocado por una voz sensible a los elementos de la naturaleza, pero también a lo incognoscible del destino y de la muerte, que se expresa con una poesía que rebasa el armazón estrófico convencional y se despliega sobre el infinito de la página en blanco, con una escritura caligramática de gran inventiva.",13,"img/Mujer_13_Libro5.jpg","La escencia","https://www.facebook.com/laesenciacusco"),
+	(103,"POEMA: Trenzar",NULL,"Poema visual","2022","Este proyecto de poesía + video inició en pandemia, en medio de la soledad y la nostalgia de la tierra. Concluyó años después, luego de la tormenta. 
+Se hizo para acompañarnos mediante el trenzado y la sororidad. Disfrute",13,"img/Mujer_13_Libro6.jpg","YouTube","https://www.youtube.com/watch?v=esOifLuUIVI");
 
 INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(1,1,"Il"),
@@ -182,8 +195,10 @@ INSERT INTO site_web_ejerce(id,mujer_id,categoria) VALUES
 	(22,11,"An"),
 	(23,11,"Po"),
 	(24,12,"Es"),
-	(25,12,"Cl");
-
+	(25,12,"Cl"),
+	(26,13,"Il"),
+	(27,13,"Po");
+	
 INSERT INTO site_web_evento(id,titulo,descripcion,link_imagen,nombre_organizador,logo_organizador,fecha_publicacion,link_organizador,fecha_evento,link_facebook) VALUES
 	(1,"26° FERIA INTERNACIONAL DEL LIBRO DE LIMA","Prepárate para disfrutar de esta gran fiesta de los libros. ¡Comparte con los tuyos la Experiencia FIL!","img/eventosAndDescuentos/evento-6.jpg","Cámara Peruana del Libro","img/eventosAndDescuentos/cpl.jpg","2022-05-09","https://cpl.org.pe/",null,"https://www.facebook.com/FilLimaPeru/posts/2512333538904033/"),
 	(2,"FERIA INTERNACIONAL DEL LIBRO DE IQUITOS",'Esta primera edición de la "FILI" (Feria Internacional del Libro de Iquitos) tiene el placer de dar a conocer a algunos de los escritores y críticos literarios que nos acompañarán del 15 al 22 de mayo.',"img/eventosAndDescuentos/evento-7.jpg","Filiquitos","img/eventosAndDescuentos/fili.jpg","2022-05-09","https://www.filiquitos.pe/",null,"https://www.facebook.com/Filiquitos/photos/101298799255271/"),
